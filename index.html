@@ -3,62 +3,436 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<link rel="icon" type="image/x-icon" href="https://i.ibb.co/0pY2XHpT/akhil-logo-hd-upscaled.png">
+  <title>Akhil Car Travels</title>
+  <link rel="icon" type="image/x-icon" href="https://i.ibb.co/0pY2XHpT/akhil-logo-hd-upscaled.png">
   <title>Best Car Travels in Vijayawada | Akhil Car Travels</title>
 <meta name="description" content="Akhil Car Travels offers reliable, safe and on-time car rentals in Vijayawada. Book your ride now for local travel, airport drops, outstation trips and more.">
 <meta name="keywords" content="Vijayawada car travels, car rentals Vijayawada, Akhil Car Travels, best travel agency Vijayawada, taxi service Vijayawada, local car hire">
 
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css" />
-  <!-- AOS CSS -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,600&family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Rubik', sans-serif;
+      overflow-x: hidden;
+    }
 
-<div class="navbar">
-    <div class="logo-section">
-      <img src="https://i.ibb.co/0pY2XHpT/akhil-logo-hd-upscaled.png" alt="Akhil Logo">
-      <h1 class="brand-name">
-    <span class="brand-left">Akhil Car</span> <span class="brand-right">Travels</span>
-  </h1>
+    /* NAVBAR */
+    .navbar {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background: transparent;
+      color: white;
+      z-index: 100;
+    }
+
+    .navbar .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .navbar .logo img {
+      height: 45px;
+    }
+
+    .navbar .brand {
+      
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      
+font-size: 40px;
+        color: white;
+    
+    }
+
+    .navbar .links {
+      display: flex;
+      gap: 45px;
+    }
+
+    .navbar .links a {
+      color: white;
+      font-size:18px;
+      text-decoration: none;
+      font-weight: 500;
+      position: relative;
+      
+    }
+
+    .navbar .links a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+            background: linear-gradient(-107deg, #82009f 0%, #f7345e 100%);
+   
+      transition: width 0.3s;
+    }
+
+    .navbar .links a:hover::after {
+      width: 100%;
+    }
+
+    .action-btn {
+      
+      background: #ccff00;
+      border: none;
+      padding: 8px 18px;
+      border-radius: 25px;
+      font-weight: 600;
+      cursor: pointer;
+     
+    }
+    .akh-button-group {
+  display: flex;
+  gap: 15px;
+}
+
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 6px;
+      z-index: 1001;
+    }
+
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background: white;
+      transition: 0.3s;
+    }
+
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    /* HERO */
+    .hero {
+      height: 100vh;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero video {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -2;
+    }
+
+    .overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: -1;
+    }
+
+    
+.mobile-menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 90%;
+      height: 100vh;
+      background: white;
+      backdrop-filter: blur(10px);
+      transition: 0.4s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 100px;
+      z-index: 1000;
+      
+    }
+
+    .mobile-menu.show {
+      right: 0;
+    }
+
+    .mobile-menu .logo {
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+    
+
+
+    .mobile-menu img {
+      height: 100px;
+    }
+
+    .mobile-menu .brand {
+      color: rgb(0, 0, 0);
+      font-size: 22px;
+      margin-top: 10px;
+      
+    }
+
+    .mobile-menu a {
+      background: linear-gradient(-107deg, #82009f 0%, #f7345e 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+     
+    
+      font-size: 20px;
+      margin: 15px 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .mobile-menu a:hover {
+    color: rgb(195, 42, 42);
+     
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+      .navbar .links,
+      .action-btn {
+        display: none;
+      }
+      .hamburger {
+        display: flex;
+      }
+      .hero h1 {
+        font-size: 34px;
+      }
+      .akh-action-btn {
+        display: none;
+      
+      }
+    }
+
+
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo">
+      
+      <div class="brand">
+        Akhil Car Travels</div>
     </div>
-    <div class="center-nav">
-      <a href="home">Home</a>
+    <nav class="links">
+      <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
-      <a href="#cars.html">Our Cars</a>
-    </div>
-    <div class="right-nav">
-      <button><a href="tel:+919440404640"><i class="fas fa-phone"></i> Call Us</a></button>
-      <button><a href="https://wa.me/919440404640"><i class="fas fa-book"></i> Book Now</a></button>
-    </div>
-    <div class="hamburger" onclick="toggleMenu()">
+      <a href="cars.html">Our Cars</a>
+    </nav>
+    <div class="akh-button-group">
+  <button class="akh-action-btn" onclick="window.location.href='tel:+919440404640'">Call Us</button>
+  <button class="akh-action-btn" onclick="window.location.href='https://wa.me/919440404640'">Book Now</button>
+</div>
+
+    <div class="hamburger" onclick="toggleMenu(this)">
       <span></span>
       <span></span>
       <span></span>
     </div>
+  </header>
+<style>
+
+  .mobile-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px;
+    background: white;
+  }
+
+  .banner-logo {
+    height: 60px;
+    border-radius: 50%;
+  }
+
+  .brand-label {
+    display: flex;
+    overflow: hidden;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+   
+  }
+
+  .label-akhil {
+    background-color: #162960;
+    color: white;
+    padding: 10px 20px;
+  }
+
+  .label-travels {
+    background: linear-gradient(to right, #8f0e9f, #cb108d);
+    color: white;
+    padding: 10px 20px;
+  }
+</style>
+
+  <!-- MOBILE MENU -->
+  <!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <div style="position: absolute; top: 20px; right: 25px; font-size: 28px; color: rgb(0, 0, 0); cursor: pointer;" onclick="closeMenu()">
+    <i class="fas fa-times"></i>
   </div>
 
-  <!-- Mobile Menu -->
-  <div class="nav-mobile" id="mobileMenu">
-    <a href="index.html"><i class="fas fa-home"></i> Home</a>
-    <a href="about.html"><i class="fas fa-info-circle"id=about.html></i> About</a>
-    <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
-    <a href="cars.html"><i class="fas fa-car"></i> Our Cars</a>
-    <a href="tel:+919440404640"><i class="fas fa-phone"></i> Call Us</a>
-    <a href="https://wa.me/919440404640"><i class="fas fa-book"></i> Book Now</a>
+  <div class="logo">
+ <div class="mobile-banner" data-aos="fade-up">
+  <img src="https://i.ibb.co/0pY2XHpT/akhil-logo-hd-upscaled.png" alt="Akhil Car Travels Logo" class="banner-logo" />
+  
+  <div class="brand-label">
+    <span class="label-akhil">Akhil Car</span>
+    <span class="label-travels">Travels</span>
   </div>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+</div>
+  </div>
+
+  <a href="index.html" onclick="closeMenu()"><i class="fas fa-home"></i> Home</a>
+  <a href="about.html" onclick="closeMenu()"><i class="fas fa-user"></i> About</a>
+  <a href="contact.html" onclick="closeMenu()"><i class="fas fa-envelope"></i> Contact</a>
+  <a href="cars.html" onclick="closeMenu()"><i class="fas fa-car-side"></i> Our Cars</a>
+  <a href="tel:+919440404640"><i class="fas fa-phone"></i> Call Us</a>
+  <a href="https://wa.me/919440404640"><i class="fab fa-whatsapp"></i> Book Now</a>
+</div>
+
+<Style>
+  .hero-content {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 0 8%;
+      color: white;
+    }
+
+
+.akh-action-btn {
+   background: linear-gradient(to right, #aa076b, #61045f); /* purple gradient */
+  color: white;
+     
+      font-size: 16px;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 25px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .hero-modern {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+}
+
+
+    .hero-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 54px;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: fadeUp 1s ease forwards;
+}
+
+.hero-content p {
+  font-size: 20px;
+  margin-bottom: 30px;
+  opacity: 0;
+  animation: fadeUp 1s ease forwards;
+  animation-delay: 0.6s;
+}
+
+.hero-content button {
+  opacity: 0;
+  animation: fadeUp 1s ease forwards;
+  animation-delay: 1.2s;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Optional highlight style for "Luxury on Wheels" */
+.highlight {
+  background: linear-gradient(to right, #ff6a00, #ee0979);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+</Style>
+  <!-- HERO -->
+  <section class="hero">
+    <video autoplay muted loop playsinline>
+      <source src="https://res.cloudinary.com/dgpjzb7jj/video/upload/v1749984214/14190077-uhd_3840_2160_24fps_h65cf6.mp4" type="video/mp4">
+    </video>
+    <div class="overlay"></div>
+    <div class="hero-content">
+       <h1 class="animate fade-up delay-0"><span class="highlight">Luxury On Wheels</span><br> Akhil Car Travels</h1>
+    <p class="animate fade-up delay-1">Reliable. Stylish. Always On Time.</p>
+    <button class="akh-action-btn animate fade-up delay-2" onclick="window.location.href='https://wa.me/919440404640'">Book Now</button>
+     
+      
+    </div>
+  </section>
+
   <script>
-    AOS.init();
-    function toggleMenu() {
+    function toggleMenu(el) {
+      el.classList.toggle('active');
       document.getElementById('mobileMenu').classList.toggle('show');
     }
+
+    function closeMenu() {
+      document.querySelector('.hamburger').classList.remove('active');
+      document.getElementById('mobileMenu').classList.remove('show');
+    }
   </script>
-
-
+ <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
@@ -69,11 +443,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
  
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,600&family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+  
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      scroll-behavior: smooth;
     }
 html, body {
   margin: 0;
@@ -223,24 +599,6 @@ html, body {
   </style>
 </head>
 <body>
-
-  <section class="car-hero-section">
-    <video class="car-video-background" autoplay muted loop playsinline>
-      <source src="https://res.cloudinary.com/dgpjzb7jj/video/upload/v1749984214/14190077-uhd_3840_2160_24fps_h65cf6.mp4" type="video/mp4">
-      Your browser does not support video.
-    </video>
-
-    <div class="car-overlay"></div>
-
-    <div class="car-hero-content">
-      <h1 class="car-heading"><span class="italic">Welcome to</span><br> Akhil Car Travels</h1>
-      <p class="car-tagline">
-        Experience comfort and style in every ride. Trusted, premium car rental services tailored for your journey.
-      </p>
-      <button class="car-btn">Book Now</button>
-    </div>
-  </section>
-
 
 
 
@@ -401,10 +759,10 @@ html, body {
   <div class="circle-middle">
 
   <div class="mission-container">
-    <h2>Discover Our Mission and Values in</h2>
-    <h1>Reliable & Comfortable Travel Services</h1>
+    <h2 data-aos="fade-up">Discover Our Mission and Values in</h2>
+    <h1 data-aos="fade-up">Reliable & Comfortable Travel Services</h1>
 
-    <p>
+    <p data-aos="fade-right">
       At Akhil Car Travels, we’re committed to providing safe,
       <span class="highlight-blue"> on-time</span>,
       and <span class="highlight-pink">comfortable travel experiences</span>.
@@ -412,7 +770,7 @@ html, body {
       our fleet and drivers ensure a smooth journey.
     </p>
 
-    <div class="mission-buttons">
+    <div class="mission-buttons"data-aos="fade-right">
       
       <span>Our Mission behind every journey.</span>
       <div class="btn-group">
@@ -585,43 +943,45 @@ html, body {
     <div class="slider-container">
       <div class="car-slider" id="slider">
         <!-- Original Set -->
-        <div class="car-card">
-          <img src="https://www.capitalkia.in/uploads/common/20241809172664125666ea7468cb86d.png" />
+      
+        
+          <div class="car-card">
+          <img src="https://i.ibb.co/DggXJnnM/20241809172664125666ea7468cb86d.png" />
           <div class="info">
             <h3>KIA Carnival Classic</h3>
-            <p>2023</p>
-          </div>
-        </div>
-        <div class="car-card">
-          <img src="https://www.capitalkia.in/uploads/common/20241809172664125666ea7468cb86d.png" />
-          <div class="info">
-            <h3>KIA Carnival Limousine Plus</h3>
-            <p>2023</p>
-          </div>
-        </div>
-        <div class="car-card">
-          <img src="https://www.capitalkia.in/uploads/common/20241809172664125666ea7468cb86d.png" />
-          <div class="info">
-            <h3>KIA Carnival Prestige</h3>
-            <p>2023</p>
-          </div>
-        </div>
-        <div class="car-card">
-          <img src="https://www.capitalkia.in/uploads/common/20241809172664125666ea7468cb86d.png" />
-          <div class="info">
-            <h3>KIA Carnival Premium</h3>
-            <p>2022</p>
-          </div>
-        </div>
-        <div class="car-card">
-          <img src="https://www.capitalkia.in/uploads/common/20241809172664125666ea7468cb86d.png" />
-          <div class="info">
-            <h3>KIA Carnival Signature</h3>
             <p>2024</p>
           </div>
         </div>
         <div class="car-card">
-          <img src="https://www.capitalkia.in/uploads/common/20241809172664125666ea7468cb86d.png" />
+          <img src="https://i.ibb.co/WpKLqyXY/purepng-com-audi-q7-caraudicars-961524670848felfc.png" />
+          <div class="info">
+            <h3>AUDI Q7</h3>
+            <p>2023</p>
+          </div>
+        </div>
+        <div class="car-card">
+          <img src="https://i.ibb.co/Z6KfQxfV/images-1.jpg" />
+          <div class="info">
+            <h3>Jaguar XF</h3>
+            <p>2023</p>
+          </div>
+        </div>
+        <div class="car-card">
+          <img src="https://i.ibb.co/mVP7mQmv/bmw-3-series-gran-turismo-1.jpg" />
+          <div class="info">
+            <h3>BMW GT 320D</h3>
+            <p>2024</p>
+          </div>
+        </div>
+        <div class="car-card">
+          <img src="https://www.ccarprice.com/products/Mercedes_C-Class_C220_d_AMG_Line_Saloon.png" />
+          <div class="info">
+            <h3>Mercedes-Benz-C-Class 220D </h3>
+           
+          </div>
+        </div>
+        <div class="car-card">
+          <img src="https://i.ibb.co/4gtm0K39/20241809172664125666ea7468cb86d-1.png" />
           <div class="info">
             <h3>KIA Carnival Luxury</h3>
             <p>2024</p>
@@ -629,12 +989,13 @@ html, body {
         </div>
 
         <!-- Duplicate Set for infinite scroll -->
-        <div class="car-card"><img src="https://www.capitalkia.in/uploads/common/20241809172664125666ea7468cb86d.png" /><div class="info"><h3>KIA Carnival Classic</h3><p>2023</p></div></div>
-        <div class="car-card"><img src="https://www.capitalkia.in/uploads/common/20241809172664125666ea7468cb86d.png" /><div class="info"><h3>KIA Carnival Limousine Plus</h3><p>2023</p></div></div>
-        <div class="car-card"><img src="https://www.capitalkia.in/uploads/common/20241809172664125666ea7468cb86d.png" /><div class="info"><h3>KIA Carnival Prestige</h3><p>2023</p></div></div>
-        <div class="car-card"><img src="https://www.capitalkia.in/uploads/common/20241809172664125666ea7468cb86d.png" /><div class="info"><h3>KIA Carnival Premium</h3><p>2022</p></div></div>
-        <div class="car-card"><img src="https://www.capitalkia.in/uploads/common/20241809172664125666ea7468cb86d.png" /><div class="info"><h3>KIA Carnival Signature</h3><p>2024</p></div></div>
-        <div class="car-card"><img src="https://www.capitalkia.in/uploads/common/20241809172664125666ea7468cb86d.png" /><div class="info"><h3>KIA Carnival Luxury</h3><p>2024</p></div></div>
+        
+        <div class="car-card"><img src="https://i.ibb.co/WpKLqyXY/purepng-com-audi-q7-caraudicars-961524670848felfc.png" /><div class="info"><h3>AUDI Q7</h3><p>2023</p></div></div>
+        <div class="car-card"><img src="https://i.ibb.co/Z6KfQxfV/images-1.jpg" /><div class="info"><h3>Jaguar XF</h3><p>2023</p></div></div>
+        <div class="car-card"><img src="https://i.ibb.co/mVP7mQmv/bmw-3-series-gran-turismo-1.jpg" /><div class="info"><h3>BMW GT 320D</h3><p>2024</p></div></div>
+        <div class="car-card"><img src="https://www.ccarprice.com/products/Mercedes_C-Class_C220_d_AMG_Line_Saloon.png" /><div class="info"><h3>Mercedes-Benz-C-Class 220D</h3><p>2024</p></div></div>
+        <div class="car-card"><img src="https://i.ibb.co/Z6KfQxfV/images-1.jpg" /><div class="info"><h3>Jaguar XF</h3><p>2024</p></div></div>
+        <div class="car-card"><img src="https://i.ibb.co/DggXJnnM/20241809172664125666ea7468cb86d.png" /><div class="info"><h3>KIA Carnival Classic</h3><p>2024</p></div></div>
       </div>
     </div>
 
@@ -760,7 +1121,7 @@ html, body {
 </head>
 <body>
 
-<section class="featured-section" data-aos="fade-up">
+<section class="featured-section" >
   <h2 data-aos="fade-up">Organizations That Trust Akhil Travels</h2>
   <p>Akhil Travels is honored to serve a wide range of prestigious clients across government and corporate sectors.</p>
 
@@ -768,55 +1129,55 @@ html, body {
     <div class="swiper-wrapper">
       <!-- Each Slide with Logo and Client Name -->
         <div class="swiper-slide">
-        <img src="https://img-cdn.publive.online/fit-in/640x430/filters:format(webp)/entrackr/media/post_attachments/wp-content/uploads/2022/05/Dailyhunt.jpg" alt="Dailyhunt">
+        <img src="https://i.ibb.co/93VMvFCx/images-2.png" alt="Dailyhunt">
         <div class="client-name">Dailyhunt</div>
       </div>
        <div class="swiper-slide">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPAnk0yVFWipBdIa8m4DH3CtDJZhh-ewlamQ&s" alt="Dailyhunt">
+        <img src="https://i.ibb.co/JWzy66K3/images-4.jpg" alt="Dailyhunt">
         <div class="client-name">Johnson Trails</div>
       </div>
          <div class="swiper-slide">
-        <img src="https://w7.pngwing.com/pngs/609/989/png-transparent-tv9-television-channel-news-broadcasting-television-show-business-television-blue-text-thumbnail.png" alt="CNBC">
+        <img src="https://i.ibb.co/TBBSkY7v/png-transparent-tv9-television-channel-news-broadcasting-television-show-business-television-blue-te.png" alt="CNBC">
         <div class="client-name">TV 9</div>
       </div>
       <div class="swiper-slide">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Emblem_of_Andhra_Pradesh.svg/250px-Emblem_of_Andhra_Pradesh.svg.png" alt="Dailyhunt">
+        <img src="https://i.ibb.co/pBdF0Fbd/images-3.jpg" alt="Dailyhunt">
         <div class="client-name">Ap Mining Department</div>
       </div>
       <div class="swiper-slide">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtuwgpfH88K3P6FVPHJ7yV0dIDH6budGzFLg&s" alt="ET Tech">
+        <img src="https://i.ibb.co/Z1HtkcMv/images-1.png" alt="ET Tech">
         <div class="client-name">ONGC</div>
       </div>
       <div class="swiper-slide">
-        <img src="https://cdnbbsr.s3waas.gov.in/s316026d60ff9b54410b3435b403afd226/uploads/2023/01/2023012956.png" alt="BW Disrupt">
+        <img src="https://i.ibb.co/cjmR1HQ/2023012956.png" alt="BW Disrupt">
         <div class="client-name">Panchayat Raj Department</div>
       </div>
       <div class="swiper-slide">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiw4P2VCc6EQA9mXDEXz1TbHLktfFj6CkGCQ&s" alt="IndianWeb2">
+        <img src="https://i.ibb.co/pBdF0Fbd/images-3.jpg" alt="IndianWeb2">
         <div class="client-name">Educational Department</div>
       </div>
       <div class="swiper-slide">
-        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4e/National_Highways_Authority_of_India_logo.svg/1200px-National_Highways_Authority_of_India_logo.svg.png" alt="ET NOW">
+        <img src="https://i.ibb.co/TByf6mVL/National-Highways-Authority-of-India-logo-svg.png" alt="ET NOW">
         <div class="client-name">National Highway Authorities</div>
       </div>
       <div class="swiper-slide">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Emblem_of_Andhra_Pradesh.svg/640px-Emblem_of_Andhra_Pradesh.svg.png" alt="YourStory">
+        <img src="https://i.ibb.co/pBdF0Fbd/images-3.jpg" alt="YourStory">
         <div class="client-name">R&B Department</div>
       </div>
       <div class="swiper-slide">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/ITC_Limited_Logo.svg/1200px-ITC_Limited_Logo.svg.png" alt="CNBC">
+        <img src="https://i.ibb.co/JXf87nv/ITC-Limited-Logo-svg.png" alt="CNBC">
         <div class="client-name">ITC Company</div>
       </div>
       <div class="swiper-slide">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/e/ee/Toyota_logo_%28Red%29.svg" alt="CNBC">
+        <img src="https://i.ibb.co/KcjFbdTP/images-3.png" alt="CNBC">
         <div class="client-name">Toyota</div>
       </div>
       <div class="swiper-slide">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Emblem_of_Andhra_Pradesh.svg/640px-Emblem_of_Andhra_Pradesh.svg.png" alt="CNBC">
+        <img src="https://i.ibb.co/pBdF0Fbd/images-3.jpg" alt="CNBC">
         <div class="client-name">Protocol Vehicals</div>
       </div>
             <div class="swiper-slide">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kwality_Walls_logo.svg" alt="CNBC">
+        <img src="https://i.ibb.co/JRYv9zD8/download.png" alt="CNBC">
         <div class="client-name">Kwality Walls</div>
       </div>
     </div>
@@ -991,7 +1352,7 @@ html, body {
 <body>
   <section class="testimonial-section unique-testimonials">
     <h2 class="testimonial-title"data-aos="fade-up">What People Say About Us</h2>
-    <p class="subheading">Our clients love the experience we deliver. Here's what they have to say:</p>
+    <p class="subheading" data-aos="fade-right">Our clients love the experience we deliver. Here's what they have to say:</p>
     <div class="carousel-container">
       <div class="carousel-wrapper" id="carousel"data-aos="fade-up">
         <!-- Cards duplicated for infinite loop -->
@@ -1027,10 +1388,7 @@ html, body {
           <div class="location">Bangalore, India</div>
         </div>
       </div>
-      <div class="nav-buttons">
-        <button onclick="moveSlide(-1)">&#8249;</button>
-        <button onclick="moveSlide(1)">&#8250;</button>
-      </div>
+      
       <div class="dots" id="dots"></div>
     </div>
   </section>
@@ -1735,7 +2093,7 @@ html, body {
 
 <style>
 .interactive-map {
-  background: url('https://i.gifer.com/origin/42/42d27f7ac6eae1b77de05e69c505891e_w200.gif') center center/cover no-repeat;
+  background: url('https://i.gifer.com/EYuG.gif') center center/cover no-repeat;
   position: relative;
   height: 400px;
   display: flex;
@@ -2244,3 +2602,5 @@ html, body {
     once: true
   });
 </script>
+</body>
+</html>
