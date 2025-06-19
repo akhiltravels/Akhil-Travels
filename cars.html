@@ -1,330 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />  
-  <link rel="icon" type="image/x-icon" href="https://i.ibb.co/0pY2XHpT/akhil-logo-hd-upscaled.png">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <title>Contact Us - Akhil Car Travels</title>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Poppins:wght@300;400;600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script> 
-
-</head>
-<body>
-  <header>
+  <meta charset="UTF-8" />
+   <link rel="icon" type="image/x-icon" href="https://i.ibb.co/0pY2XHpT/akhil-logo-hd-upscaled.png">
+  <title> Akhil Car Travels | Best Car Travels in Vijayawada</title>
+<meta name="description" content="Akhil Car Travels offers reliable, safe and on-time car rentals in Vijayawada. Book your ride now for local travel, airport drops, outstation trips and more.">
+<meta name="keywords" content="Vijayawada car travels, car rentals Vijayawada, Akhil Car Travels, best travel agency Vijayawada, taxi service Vijayawada, local car hire">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css"/>
   
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Poppins', sans-serif;
-      background: #f9f9f9;
-    }
-
-    .contact-section {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 50px 20px;
-      background: #fff;
-    }
-
-    .contact-info, .contact-form {
-      flex: 1;
-      min-width: 300px;
-      max-width: 500px;
-      margin: 20px;
-    }
-
-    .contact-info h2 {
-      font-family: 'Outfit', sans-serif;
-      font-size: 36px;
-      margin-bottom: 10px;
-    }
-
-    .contact-info p {
-      font-size: 16px;
-      margin: 10px 0;
-    }
-
-    .social-icons a {
-      margin-right: 15px;
-      font-size: 24px;
-      text-decoration: none;
-      color: #4a00e0;
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-    }
-
-    form input, form textarea {
-      margin-bottom: 15px;
-      padding: 10px;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-      font-size: 16px;
-    }
-
-    form button {
-      padding: 12px;
-      background: linear-gradient(to right, #8e2de2, #4a00e0);
-      color: white;
-      border: none;
-      border-radius: 30px;
-      font-weight: 600;
-      cursor: pointer;
-    }
-
-    #success-message {
-      display: none;
-      margin-top: 15px;
-      color: green;
-      font-weight: bold;
-    }
-
-    .interactive-map {
-      background: url('https://i.gifer.com/EYuG.gif') center center/cover no-repeat;
-      position: relative;
-      height: 400px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
-    }
-
-    .overlay-content {
-      background: rgba(0, 0, 0, 0.5);
-      padding: 30px 40px;
-      border-radius: 15px;
-      max-width: 600px;
-    }
-
-    .overlay-content h2 {
-      font-size: 34px;
-      margin-bottom: 10px;
-      font-family: 'Outfit', sans-serif;
-      font-weight: 700;
-    }
-
-    .overlay-content p {
-      font-size: 18px;
-      margin-bottom: 20px;
-      font-family: 'Poppins', sans-serif;
-    }
-
-    .map-button {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      background: linear-gradient(to right, #8e2de2, #4a00e0);
-      color: #ffffff;
-      padding: 12px 24px;
-      font-weight: 600;
-      border-radius: 50px;
-      text-decoration: none;
-      font-family: 'Inter', sans-serif;
-      transition: all 0.3s ease;
-    }
-
-    .map-button:hover {
-      transform: scale(1.05);
-      background: linear-gradient(to bottom right, #9a38d5, #be69a6, #c5a2a2);
-    }
-
-    
-  </style>
-</head>
-
-<body>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: #fff;
-      color: #000;
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    .contact-container {
-      display: flex;
-      flex-wrap: wrap;
-      min-height: 100vh;
-      padding: 60px 5%;
-      gap: 30px;
-      animation: fadeInContainer 1.2s ease-in-out both;
-    }
-
-    @keyframes fadeInContainer {
-      from { opacity: 0; transform: translateY(50px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .contact-left {
-      flex: 1;
-      min-width: 300px;
-      animation: slideLeft 1.2s ease-in-out;
-    }
-
-    @keyframes slideLeft {
-      from { transform: translateX(-50px); opacity: 0; }
-      to { transform: translateX(0); opacity: 1; }
-    }
-
-    .contact-title {
-      font-size: 60px;
-      font-weight: 900;
-      background: linear-gradient(-107deg, #82009f 0%, #f7345e 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .contact-arrow-box {
-      display: flex;
-      align-items: center;
-      margin: 30px 0;
-      animation: slideIn 1s ease;
-    }
-
-    .contact-arrow-line {
-      width: 50px;
-      height: 2px;
-      background-color: black;
-      margin-right: 15px;
-    }
-
-    .contact-arrow-text {
-      font-size: 16px;
-      color: #666;
-    }
-
-    .contact-info {
-      margin-top: 40px;
-      font-size: 18px;
-      animation: fadeInInfo 1.3s ease-in-out;
-    }
-
-    @keyframes fadeInInfo {
-      0% { opacity: 0; transform: translateY(20px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-
-    .contact-info p {
-      margin: 10px 0;
-    }
-
-    .contact-info b {
-      display: block;
-      margin-top: 20px;
-    }
-
-    .contact-right {
-      flex: 1;
-      min-width: 300px;
-      background: linear-gradient(to bottom, #111, #000);
-      color: #fff;
-      padding: 40px;
-      border-radius: 12px;
-      position: relative;
-      overflow: hidden;
-      animation: fadeInForm 1.4s ease-in-out;
-    }
-
-    @keyframes fadeInForm {
-      0% { opacity: 0; transform: scale(0.95); }
-      100% { opacity: 1; transform: scale(1); }
-    }
-
-    .contact-form-title {
-      margin-bottom: 60px;
-      font-size: 28px;
-      text-align: center;
-      background: linear-gradient(-107deg, #82009f 0%, #f7345e 100%);
-      color: whitesmoke;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .contact-form {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-    }
-
-    .contact-form input,
-    .contact-form textarea {
-      padding: 12px;
-      border: none;
-      border-bottom: 1px solid #999;
-      background: transparent;
-      color: #fff;
-      font-size: 16px;
-      outline: none;
-      transition: border 0.3s ease;
-    }
-
-    .contact-form input:focus,
-    .contact-form textarea:focus {
-      border-bottom: 1px solid #f7345e;
-    }
-
-    .contact-form textarea {
-      grid-column: 1 / -1;
-      resize: none;
-      height: 100px;
-    }
-
-    .contact-submit-btn {
-      grid-column: 1 / -1;
-      margin-top: 50px;
-      padding: 15px;
-      
-      background: linear-gradient(-107deg, #82009f 0%, #f7345e 100%);
-      color: whitesmoke;
-      font-weight: bold;
-      font-size: 18px;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer; 
-      transition: all 0.3s ease;
-    }
-
-    .contact-submit-btn:hover {
-      background: #034e00;
-      transform: scale(1.03);
-    }
-
-    @media (max-width: 768px) {
-      .contact-container {
-        flex-direction: column;
-        padding: 30px 5%;
-      }
-
-      .contact-title {
-        font-size: 40px;
-      }
-
-      .contact-form {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
-</head>
-
-<link rel="stylesheet" href="style.css" />
-  <!-- AOS CSS -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet"/>
-
 <div class="navbar">
     <div class="logo-section">
       <img src="https://i.ibb.co/0pY2XHpT/akhil-logo-hd-upscaled.png" alt="Akhil Logo">
@@ -342,7 +26,7 @@
       <button><a href="tel:+919440404640"><i class="fas fa-phone"></i> Call Us</a></button>
       <button><a href="https://wa.me/919440404640"><i class="fas fa-book"></i> Book Now</a></button>
     </div>
-    <div class="hamburger" onclick="toggleMenu()">
+     <div class="hamburger" onclick="toggleMenu()">
       <span></span>
       <span></span>
       <span></span>
@@ -365,254 +49,783 @@
       document.getElementById('mobileMenu').classList.toggle('show');
     }
   </script>
+
+
+
+
+
+
+
   <style>
-        .contact-hero {
-      position: relative;
-      height: 350px;
-      background: url('https://i.ibb.co/DPvpxC9G/about.png') no-repeat center center/cover;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      margin: 0; 
+     background:  linear-gradient(to bottom right, #fdf1f6, #f5f7fa);
 
-    .contact-hero::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      background: linear-gradient(90deg, rgba(130, 0, 159, 0.8), rgba(0, 153, 255, 0.8));
-      z-index: 1;
     }
-
-    .contact-hero h2 {
-      color: white;
-      font-size: 42px;
-      font-weight: 700;
-      z-index: 2;
-      position: relative;
-      text-shadow: 1px 1px 6px rgba(0,0,0,0.3);
-    }
-
-    /* Optional content below hero */
-    .content-section {
-      padding: 60px 20px;
+  
+    #no-results {
+      display: none;
       text-align: center;
+      color: red;
+      font-weight: bold;
     }
-
-    .content-section h3 {
-      font-size: 28px;
-      font-weight: 600;
-      color: #333;
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
     }
-    /* Initial animation on load */
-.zoom-in-title {
-  opacity: 0;
-  transform: scale(0.85);
-  animation: zoomIn 1s ease-out forwards;
-  animation-delay: 0.3s;
-}
-
-@keyframes zoomIn {
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-/* Scroll-based zoom animation */
-.animate-on-scroll {
-  opacity: 0;
-  transform: scale(0.95);
-  transition: all 1s ease;
-}
-
-.animate-on-scroll.in-view {
-  opacity: 1;
-  transform: scale(1);
-}
-
+    .car-card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.2s;
+      position: relative;
+    }
+    .car-card:hover {
+      transform: translateY(-5px);
+    }
+    .car-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .car-title {
+      text-align: center;
+      color: #82009f;
+      font-weight: bold;
+      font-size: 20px;
+      padding: 10px 0;
+    }
+    .btn-group {
+      text-align: center;
+      margin: 10px 0;
+    }
+    .btn {
+      background: linear-gradient(to right, #82009f, #f7345e);
+      color: white;
+      border: none;
+      border-radius: 20px;
+      padding: 6px 14px;
+      margin: 0 4px;
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .btn.active {
+      background: #28a745;
+    }
+    .btn:hover {
+      opacity: 0.9;
+    }
+    .pricing-display {
+      position: relative;
+      height: 220px; /* fixed height */
+      overflow: hidden;
+    }
+    .details-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+      position: absolute;
+      top: 0; left: 0;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease-in-out;
+    }
+    .details-table.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .details-table td {
+      border: 1px solid #eee;
+      padding: 6px 8px;
+      text-align: center;
+      background: white;
+    }
+    .book-btn {
+      display: block;
+      background: linear-gradient(to right, #82009f, #f7345e);
+      color: white;
+      text-align: center;
+      padding: 10px;
+      border-radius: 0 0 12px 12px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .book-btn:hover {
+      background: #28a745;
+    }
   </style>
-  <section class="contact-hero animate-on-scroll">
-    <h2 data-aos="zoom-in">Contact Us</h2>
-  </section>
 
-<!-- Decorative Wave Section Below Navbar -->
-<script>
-  function isInViewport(element) {
-    const rect = element.getBoundingClientRect();
-    return (
-      rect.top <= (window.innerHeight || document.documentElement.clientHeight)
-    );
-  }
 
-  function animateOnScroll() {
-    const elements = document.querySelectorAll('.animate-on-scroll');
-    elements.forEach(el => {
-      if (isInViewport(el)) {
-        el.classList.add('in-view');
+</head>
+<body>
+
+ <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      
+    }
+
+    body {
+    
+      background-color: #f5f5f5;
+      overflow-x: hidden;
+    }
+
+    .text-container {
+      text-align: center;
+      padding: 1.5rem 1rem 0;
+    }
+
+    .gif-text {
+          font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      background: url('https://e7.pngegg.com/pngimages/796/593/png-clipart-travel-graphy-tourism-world-travel-building-world-thumbnail.png') repeat;
+      background-size: cover;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke: 1.5px black;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      animation: animateText 20s linear infinite;
+      font-size: 3.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    @keyframes animateText {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+
+    .sub-heading {
+      font-size: 2rem;
+      font-weight: bold;
+      background: linear-gradient(-107deg, #82009f 0%, #f7345e 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-top: 0.5rem;
+      animation: fadeInDown 1s ease;
+    }
+
+    @keyframes fadeInDown {
+      0% {
+        opacity: 0;
+        transform: translateY(-30px);
       }
-    });
-  }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
-  window.addEventListener('scroll', animateOnScroll);
-  window.addEventListener('load', animateOnScroll);
-</script>
+    .search-container {
+      text-align: center;
+      margin: 1.5rem 0 2rem;
+      animation: fadeInUp 1s ease;
+    }
 
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
-<div id="transition-loader" class="loader">
-  <div class="logo-animation">
-    <span>Akhil</span> <span class="amp">Car</span> <span>Travels</span>
-    <span class="dot">●</span>
+    #searchInput {
+      padding: 12px 20px;
+      width: 80%;
+      max-width: 600px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    #searchInput:focus {
+      border-color: #82009f;
+      outline: none;
+      box-shadow: 0 0 10px rgba(130, 0, 159, 0.3);
+    }
+
+    #no-results {
+      display: none;
+      text-align: center;
+      color: red;
+      font-weight: bold;
+      margin-top: 1rem;
+    }
+
+ 
+
+    @media (min-width: 768px) {
+      .gif-text { font-size: 3.5rem; }
+      .sub-heading { font-size: 2.5rem; }
+    }
+
+    @media (min-width: 1024px) {
+      .gif-text { font-size: 6.5rem; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="text-container">
+    <h1 class="gif-text">Akhil Car Travels</h1>
+    <h2 class="sub-heading">Book Your Favorite Ride</h2>
   </div>
-</div>
 
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder="Book your favorite car..." style="align-items: center;text-align: center;" />
+    <p id="no-results">🚫 No cars found matching your search.</p>
+  </div>
+  
+  <div class="grid" id="carContainer">
+    <!-- CAR 1 -->
+    <div class="car-card" data-title="Audi Q7">
+      <img src="https://i.ibb.co/WpKLqyXY/purepng-com-audi-q7.png" alt="Audi Q7" />
+      <h2 class="car-title">Audi Q7</h2>
+      <div class="btn-group">
+        <button class="btn active" data-type="dayrent">Day Rent</button>
+        <button class="btn" data-type="regular">Regular</button>
+        <button class="btn" data-type="outstation">Other Charges</button>
+      </div>
+      
+      <div class="pricing-display">
+        <table class="details-table active" data-type="dayrent">
+          <tr><td>4 Hrs - 40 Km</td><td>₹11,000</td></tr>
+          <tr><td>8 Hrs - 80 Km</td><td>₹22,000</td></tr>
+          <tr><td>10 Hrs - 100 Km</td><td>₹27,000</td></tr>
+          <tr><td>12 Hrs - 120 Km</td><td>₹32,000</td></tr>
+          <tr><td>Extra Hour</td><td>₹1000</td></tr>
+          <tr><td>Extra Km</td><td>₹50</td></tr>
+        </table>
 
+        <table class="details-table" data-type="regular">
+          <tr><td>Duration</td><td>12 Hrs</td></tr>
+          <tr><td>Price</td><td>₹14,000</td></tr> 
+          <tr><td>Duration</td><td>24 Hrs</td></tr>
+          <tr><td>Price</td><td>₹28,000</td></tr>
+          <tr><td>Fuel</td><td>6 Km/L</td></tr>
+          <tr><td>Extra Hour</td><td>₹1000</td></tr>
+          <tr><td>Driver</td><td>₹1000</td></tr>
+        </table>
 
-<!-- GSAP CDN -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+        <table class="details-table" data-type="outstation">
+          <tr><td>Toll / Parking </td><td>Chargeable to Customer</td></tr>
+          <tr><td>State Permit </td><td>Chargeable to Customer</td></tr>
+          <tr><td>Decoration Cleaning</td><td>Charges Applicable if Decoration Done</td></tr>
+          <tr><td>Km & Time</td><td>Calculated Office to Office</td></tr>
+          <tr><td>GST</td><td>5% Applicable</td></tr>
+        </table>
+      </div>
+      <a href="https://wa.me/919440404640" class="book-btn">Book Now</a>
+    </div>
+    
+    <!-- CAR 2 -->
+    <div class="car-card" data-title="BMW X5">
+      <img src="https://i.ibb.co/Hp9Vns97/bmw-3-series-gran-turismo-melbourne-red-metallic.png" />
+  <h2 class="car-title">BMW GT 320d</h2>
+      <div class="btn-group">
+        <button class="btn active" data-type="dayrent">Day Rent</button>
+        <button class="btn" data-type="regular">Regular</button>
+        <button class="btn" data-type="outstation">Other Charges</button>
+      </div>
+      <div class="pricing-display">
+        <table class="details-table active" data-type="dayrent">
+          <tr><td>4 Hrs - 40 Km</td><td>₹11,000</td></tr>
+          <tr><td>8 Hrs - 80 Km</td><td>₹22,000</td></tr>
+          <tr><td>10 Hrs - 100 Km</td><td>₹27,000</td></tr>
+          <tr><td>12 Hrs - 120 Km</td><td>₹32,000</td></tr>
+          <tr><td>Extra Hour</td><td>₹1000</td></tr>
+          <tr><td>Extra Km</td><td>₹50</td></tr>
+        </table>
 
-<script>
-  const loader = document.getElementById("transition-loader");
-  const logo = loader.querySelector(".logo-animation");
+        <table class="details-table" data-type="regular">
+          <tr><td>Duration</td><td>12 Hrs</td></tr>
+          <tr><td>Price</td><td>₹14,000</td></tr> 
+          <tr><td>Duration</td><td>24 Hrs</td></tr>
+          <tr><td>Price</td><td>₹28,000</td></tr>
+          <tr><td>Fuel</td><td>6 Km/L</td></tr>
+          <tr><td>Extra Hour</td><td>₹1000</td></tr>
+          <tr><td>Driver</td><td>₹1000</td></tr>
+        </table>
 
-  function animateLoaderIn() {
-    gsap.set(loader, { opacity: 1, pointerEvents: "auto" });
-    return gsap.timeline()
-      .fromTo(logo, { opacity: 0, scale: 0.8 }, { opacity: 1, scale: 1, duration: 0.6, ease: "power2.out" });
-  }
+        <table class="details-table" data-type="outstation">
+          <tr><td>Toll / Parking </td><td>Chargeable to Customer</td></tr>
+          <tr><td>State Permit </td><td>Chargeable to Customer</td></tr>
+          <tr><td>Decoration Cleaning</td><td>Charges Applicable if Decoration Done</td></tr>
+          <tr><td>Km & Time</td><td>Calculated Office to Office</td></tr>
+          <tr><td>GST</td><td>5% Applicable</td></tr>
+        </table>
+      </div>
+      <a href="https://wa.me/919440404640" class="book-btn">Book Now</a>
+    </div>
 
-  function animateLoaderOut() {
-    return gsap.timeline()
-      .to(logo, { opacity: 0, scale: 0.8, duration: 0.5, ease: "power2.in" })
-      .to(loader, { opacity: 0, pointerEvents: "none", duration: 0.4 }, "-=0.3");
-  }
+    <!-- CAR 3 -->
+    <div class="car-card" data-title="Mercedes GLE">
+       <img src="https://i.ibb.co/v6Bwgp3b/74fc756f-aec1-40b9-84ec-e70c4da1265e.webp" />
+  <h2 class="car-title">JAGUAR XF</h2>
+      <div class="btn-group">
+        <button class="btn active" data-type="dayrent">Day Rent</button>
+        <button class="btn" data-type="regular">Regular</button>
+        <button class="btn" data-type="outstation">Other Charges</button>
+      </div>
+     <div class="pricing-display">
+        <table class="details-table active" data-type="dayrent">
+          <tr><td>4 Hrs - 40 Km</td><td>₹11,000</td></tr>
+          <tr><td>8 Hrs - 80 Km</td><td>₹22,000</td></tr>
+          <tr><td>10 Hrs - 100 Km</td><td>₹27,000</td></tr>
+          <tr><td>12 Hrs - 120 Km</td><td>₹32,000</td></tr>
+          <tr><td>Extra Hour</td><td>₹1000</td></tr>
+          <tr><td>Extra Km</td><td>₹50</td></tr>
+        </table>
 
-  document.querySelectorAll("a[href^='#']").forEach(link => {
-    link.addEventListener("click", function (e) {
-      e.preventDefault();
-      const targetId = this.getAttribute("href");
+        <table class="details-table" data-type="regular">
+          <tr><td>Duration</td><td>12 Hrs</td></tr>
+          <tr><td>Price</td><td>₹14,000</td></tr> 
+          <tr><td>Duration</td><td>24 Hrs</td></tr>
+          <tr><td>Price</td><td>₹28,000</td></tr>
+          <tr><td>Fuel</td><td>6 Km/L</td></tr>
+          <tr><td>Extra Hour</td><td>₹1000</td></tr>
+          <tr><td>Driver</td><td>₹1000</td></tr>
+        </table>
 
-      animateLoaderIn().then(() => {
-        gsap.to(window, {
-          duration: 1,
-          scrollTo: targetId,
-          ease: "power2.inOut",
-          onComplete: () => {
-            animateLoaderOut();
-          }
-        });
+        <table class="details-table" data-type="outstation">
+          <tr><td>Toll / Parking </td><td>Chargeable to Customer</td></tr>
+          <tr><td>State Permit </td><td>Chargeable to Customer</td></tr>
+          <tr><td>Decoration Cleaning</td><td>Charges Applicable if Decoration Done</td></tr>
+          <tr><td>Km & Time</td><td>Calculated Office to Office</td></tr>
+          <tr><td>GST</td><td>5% Applicable</td></tr>
+        </table>
+      </div>
+      <a href="https://wa.me/919440404640" class="book-btn">Book Now</a>
+    </div>
+
+    <!-- CAR 4 -->
+    <div class="car-card" data-title="Toyota Fortuner">
+        <img src="https://i.ibb.co/W4S4rwcT/compressed-75e9b57629cdb6eb79f5f60c87e5bc6e.webp" />
+  <h2 class="car-title">Mercedes Benz C class 220 D</h2>
+      <div class="btn-group">
+        <button class="btn active" data-type="dayrent">Day Rent</button>
+        <button class="btn" data-type="regular">Regular</button>
+        <button class="btn" data-type="outstation">Other Charges</button>
+      </div>
+     <div class="pricing-display">
+        <table class="details-table active" data-type="dayrent">
+          <tr><td>4 Hrs - 40 Km</td><td>₹11,000</td></tr>
+          <tr><td>8 Hrs - 80 Km</td><td>₹22,000</td></tr>
+          <tr><td>10 Hrs - 100 Km</td><td>₹27,000</td></tr>
+          <tr><td>12 Hrs - 120 Km</td><td>₹32,000</td></tr>
+          <tr><td>Extra Hour</td><td>₹1000</td></tr>
+          <tr><td>Extra Km</td><td>₹50</td></tr>
+        </table>
+
+        <table class="details-table" data-type="regular">
+          <tr><td>Duration</td><td>12 Hrs</td></tr>
+          <tr><td>Price</td><td>₹14,000</td></tr> 
+          <tr><td>Duration</td><td>24 Hrs</td></tr>
+          <tr><td>Price</td><td>₹28,000</td></tr>
+          <tr><td>Fuel</td><td>6 Km/L</td></tr>
+          <tr><td>Extra Hour</td><td>₹1000</td></tr>
+          <tr><td>Driver</td><td>₹1000</td></tr>
+        </table>
+
+        <table class="details-table" data-type="outstation">
+          <tr><td>Toll / Parking </td><td>Chargeable to Customer</td></tr>
+          <tr><td>State Permit </td><td>Chargeable to Customer</td></tr>
+          <tr><td>Decoration Cleaning</td><td>Charges Applicable if Decoration Done</td></tr>
+          <tr><td>Km & Time</td><td>Calculated Office to Office</td></tr>
+          <tr><td>GST</td><td>5% Applicable</td></tr>
+        </table>
+      </div>
+      <a href="https://wa.me/919440404640" class="book-btn">Book Now</a>
+    </div>
+
+    <!-- CAR 5 -->
+    <div class="car-card" data-title="Innova Crysta">
+  <img src="https://i.ibb.co/DPMSVRqj/phantom-brown-4w9-1483072202.png" />
+  <h2 class="car-title">TOYOTA FORTUNER</h2>
+      <div class="btn-group">
+        <button class="btn active" data-type="dayrent">Day Rent</button>
+        <button class="btn" data-type="regular">Regular</button>
+        <button class="btn" data-type="outstation">Other Charges</button>
+      </div>
+      <div class="pricing-display">
+        <table class="details-table active" data-type="dayrent">
+          <tr><td>4 Hrs - 40 Km</td><td>₹11,000</td></tr>
+          <tr><td>8 Hrs - 80 Km</td><td>₹22,000</td></tr>
+          <tr><td>10 Hrs - 100 Km</td><td>₹27,000</td></tr>
+          <tr><td>12 Hrs - 120 Km</td><td>₹32,000</td></tr>
+          <tr><td>Extra Hour</td><td>₹1000</td></tr>
+          <tr><td>Extra Km</td><td>₹50</td></tr>
+        </table>
+
+        <table class="details-table" data-type="regular">
+          <tr><td>Duration</td><td>12 Hrs</td></tr>
+          <tr><td>Price</td><td>₹14,000</td></tr> 
+          <tr><td>Duration</td><td>24 Hrs</td></tr>
+          <tr><td>Price</td><td>₹28,000</td></tr>
+          <tr><td>Fuel</td><td>6 Km/L</td></tr>
+          <tr><td>Extra Hour</td><td>₹1000</td></tr>
+          <tr><td>Driver</td><td>₹1000</td></tr>
+        </table>
+
+        <table class="details-table" data-type="outstation">
+          <tr><td>Toll / Parking </td><td>Chargeable to Customer</td></tr>
+          <tr><td>State Permit </td><td>Chargeable to Customer</td></tr>
+          <tr><td>Decoration Cleaning</td><td>Charges Applicable if Decoration Done</td></tr>
+          <tr><td>Km & Time</td><td>Calculated Office to Office</td></tr>
+          <tr><td>GST</td><td>5% Applicable</td></tr>
+        </table>
+      </div>
+      <a href="https://wa.me/919440404640" class="book-btn">Book Now</a>
+    </div>
+
+    <!-- CAR 6 -->
+    <div class="car-card" data-title="Kia Carnival">
+   <img src="https://i.ibb.co/4gtm0K39/20241809172664125666ea7468cb86d-1.png" />
+  <h2 class="car-title">KIA CARNIVAL LIMOUSINE PLUS</h2>
+      <div class="btn-group">
+        <button class="btn active" data-type="dayrent">Day Rent</button>
+        <button class="btn" data-type="regular">Regular</button>
+        <button class="btn" data-type="outstation">Other Charges</button>
+      </div>
+     <div class="pricing-display">
+        <table class="details-table active" data-type="dayrent">
+          <tr><td>4 Hrs - 40 Km</td><td>₹11,000</td></tr>
+          <tr><td>8 Hrs - 80 Km</td><td>₹22,000</td></tr>
+          <tr><td>10 Hrs - 100 Km</td><td>₹27,000</td></tr>
+          <tr><td>12 Hrs - 120 Km</td><td>₹32,000</td></tr>
+          <tr><td>Extra Hour</td><td>₹1000</td></tr>
+          <tr><td>Extra Km</td><td>₹50</td></tr>
+        </table>
+
+        <table class="details-table" data-type="regular">
+          <tr><td>Duration</td><td>12 Hrs</td></tr>
+          <tr><td>Price</td><td>₹14,000</td></tr> 
+          <tr><td>Duration</td><td>24 Hrs</td></tr>
+          <tr><td>Price</td><td>₹28,000</td></tr>
+          <tr><td>Fuel</td><td>6 Km/L</td></tr>
+          <tr><td>Extra Hour</td><td>₹1000</td></tr>
+          <tr><td>Driver</td><td>₹1000</td></tr>
+        </table>
+
+        <table class="details-table" data-type="outstation">
+          <tr><td>Toll / Parking </td><td>Chargeable to Customer</td></tr>
+          <tr><td>State Permit </td><td>Chargeable to Customer</td></tr>
+          <tr><td>Decoration Cleaning</td><td>Charges Applicable if Decoration Done</td></tr>
+          <tr><td>Km & Time</td><td>Calculated Office to Office</td></tr>
+          <tr><td>GST</td><td>5% Applicable</td></tr>
+        </table>
+      </div>
+      <a href="https://wa.me/919440404640" class="book-btn">Book Now</a>
+    </div>
+
+    <!-- CAR 7 -->
+    <div class="car-card" data-title="Hyundai Tucson">
+      <img src="https://i.ibb.co/NgKwgNMb/images-q-tbn-ANd9-Gc-TEg-PCk0g-Rzo-Veo-HRRAb2-F31j-Hykktdgpnaa-A-s.jpg" />
+  <h2 class="car-title">TOYOTA CAMRY</h2>
+      <div class="btn-group">
+        <button class="btn active" data-type="dayrent">Day Rent</button>
+        <button class="btn" data-type="regular">Regular</button>
+        <button class="btn" data-type="outstation">Other Charges</button>
+      </div>
+       <div class="pricing-display">
+        <table class="details-table active" data-type="dayrent">
+          <tr><td>4 Hrs - 40 Km</td><td>₹11,000</td></tr>
+          <tr><td>8 Hrs - 80 Km</td><td>₹22,000</td></tr>
+          <tr><td>10 Hrs - 100 Km</td><td>₹27,000</td></tr>
+          <tr><td>12 Hrs - 120 Km</td><td>₹32,000</td></tr>
+          <tr><td>Extra Hour</td><td>₹1000</td></tr>
+          <tr><td>Extra Km</td><td>₹50</td></tr>
+        </table>
+
+        <table class="details-table" data-type="regular">
+          <tr><td>Duration</td><td>12 Hrs</td></tr>
+          <tr><td>Price</td><td>₹14,000</td></tr> 
+          <tr><td>Duration</td><td>24 Hrs</td></tr>
+          <tr><td>Price</td><td>₹28,000</td></tr>
+          <tr><td>Fuel</td><td>6 Km/L</td></tr>
+          <tr><td>Extra Hour</td><td>₹1000</td></tr>
+          <tr><td>Driver</td><td>₹1000</td></tr>
+        </table>
+
+        <table class="details-table" data-type="outstation">
+          <tr><td>Toll / Parking </td><td>Chargeable to Customer</td></tr>
+          <tr><td>State Permit </td><td>Chargeable to Customer</td></tr>
+          <tr><td>Decoration Cleaning</td><td>Charges Applicable if Decoration Done</td></tr>
+          <tr><td>Km & Time</td><td>Calculated Office to Office</td></tr>
+          <tr><td>GST</td><td>5% Applicable</td></tr>
+        </table>
+      </div>
+      <a href="https://wa.me/919440404640" class="book-btn">Book Now</a>
+    </div>
+
+    <!-- CAR 8 -->
+    <div class="car-card" data-title="Mahindra XUV700">
+     <img src="https://i.ibb.co/k219vFwR/Maruti-Suzuki-Ertiga-tour-Midnight-Black-e5d8af346a.webp" />
+  <h2 class="car-title">MAURTI ERTIGA</h2>
+      <div class="btn-group">
+        <button class="btn active" data-type="dayrent">Day Rent</button>
+        <button class="btn" data-type="regular">Regular</button>
+        <button class="btn" data-type="outstation">Other Charges</button>
+      </div>
+      <div class="pricing-display">
+        <table class="details-table active" data-type="dayrent">
+          <tr><td>4 Hrs - 40 Km</td><td>₹11,000</td></tr>
+          <tr><td>8 Hrs - 80 Km</td><td>₹22,000</td></tr>
+          <tr><td>10 Hrs - 100 Km</td><td>₹27,000</td></tr>
+          <tr><td>12 Hrs - 120 Km</td><td>₹32,000</td></tr>
+          <tr><td>Extra Hour</td><td>₹1000</td></tr>
+          <tr><td>Extra Km</td><td>₹50</td></tr>
+        </table>
+
+        <table class="details-table" data-type="regular">
+          <tr><td>Duration</td><td>12 Hrs</td></tr>
+          <tr><td>Price</td><td>₹14,000</td></tr> 
+          <tr><td>Duration</td><td>24 Hrs</td></tr>
+          <tr><td>Price</td><td>₹28,000</td></tr>
+          <tr><td>Fuel</td><td>6 Km/L</td></tr>
+          <tr><td>Extra Hour</td><td>₹1000</td></tr>
+          <tr><td>Driver</td><td>₹1000</td></tr>
+        </table>
+
+        <table class="details-table" data-type="outstation">
+          <tr><td>Toll / Parking </td><td>Chargeable to Customer</td></tr>
+          <tr><td>State Permit </td><td>Chargeable to Customer</td></tr>
+          <tr><td>Decoration Cleaning</td><td>Charges Applicable if Decoration Done</td></tr>
+          <tr><td>Km & Time</td><td>Calculated Office to Office</td></tr>
+          <tr><td>GST</td><td>5% Applicable</td></tr>
+        </table>
+      </div>
+      <a href="https://wa.me/919440404640" class="book-btn">Book Now</a>
+    </div>
+
+    <!-- CAR 9 -->
+    <div class="car-card" data-title="Toyota Camry">
+       <img src="https://i.ibb.co/cS2HdDS0/toyota-innova-crysta-minivan-nrh9rqvaj1lkdzbh.png" />
+  <h2 class="car-title">TOYOTA INNOVA CRYSTA</h2>
+      <div class="btn-group">
+        <button class="btn active" data-type="dayrent">Day Rent</button>
+        <button class="btn" data-type="regular">Regular</button>
+        <button class="btn" data-type="outstation">Other Charges</button>
+      </div>
+    
+      <div class="pricing-display">
+        <table class="details-table active" data-type="dayrent">
+          <tr><td>4 Hrs - 40 Km</td><td>₹11,000</td></tr>
+          <tr><td>8 Hrs - 80 Km</td><td>₹22,000</td></tr>
+          <tr><td>10 Hrs - 100 Km</td><td>₹27,000</td></tr>
+          <tr><td>12 Hrs - 120 Km</td><td>₹32,000</td></tr>
+          <tr><td>Extra Hour</td><td>₹1000</td></tr>
+          <tr><td>Extra Km</td><td>₹50</td></tr>
+        </table>
+
+        <table class="details-table" data-type="regular">
+          <tr><td>Duration</td><td>12 Hrs</td></tr>
+          <tr><td>Price</td><td>₹14,000</td></tr> 
+          <tr><td>Duration</td><td>24 Hrs</td></tr>
+          <tr><td>Price</td><td>₹28,000</td></tr>
+          <tr><td>Fuel</td><td>6 Km/L</td></tr>
+          <tr><td>Extra Hour</td><td>₹1000</td></tr>
+          <tr><td>Driver</td><td>₹1000</td></tr>
+        </table>
+
+        <table class="details-table" data-type="outstation">
+          <tr><td>Toll / Parking </td><td>Chargeable to Customer</td></tr>
+          <tr><td>State Permit </td><td>Chargeable to Customer</td></tr>
+          <tr><td>Decoration Cleaning</td><td>Charges Applicable if Decoration Done</td></tr>
+          <tr><td>Km & Time</td><td>Calculated Office to Office</td></tr>
+          <tr><td>GST</td><td>5% Applicable</td></tr>
+        </table>
+      </div>
+      <a href="https://wa.me/919440404640" class="book-btn">Book Now</a>
+    </div>
+
+    <!-- CAR 10 -->
+   
+   <div class="car-card" data-title="Maruti Ciaz">
+  <img src="https://i.ibb.co/kVFHySN1/2517-1731400321.webp" />
+  <h2 class="car-title">SWIFT DZIRE</h2>
+
+    
+      <div class="btn-group">
+        <button class="btn active" data-type="dayrent">Day Rent</button>
+        <button class="btn" data-type="regular">Regular</button>
+        <button class="btn" data-type="outstation">Other Charges</button>
+      </div>
+      <div class="pricing-display">
+        <table class="details-table active" data-type="dayrent">
+          <tr><td>4 Hrs - 40 Km</td><td>₹11,000</td></tr>
+          <tr><td>8 Hrs - 80 Km</td><td>₹22,000</td></tr>
+          <tr><td>10 Hrs - 100 Km</td><td>₹27,000</td></tr>
+          <tr><td>12 Hrs - 120 Km</td><td>₹32,000</td></tr>
+          <tr><td>Extra Hour</td><td>₹1000</td></tr>
+          <tr><td>Extra Km</td><td>₹50</td></tr>
+        </table>
+
+        <table class="details-table" data-type="regular">
+          <tr><td>Duration</td><td>12 Hrs</td></tr>
+          <tr><td>Price</td><td>₹14,000</td></tr> 
+          <tr><td>Duration</td><td>24 Hrs</td></tr>
+          <tr><td>Price</td><td>₹28,000</td></tr>
+          <tr><td>Fuel</td><td>6 Km/L</td></tr>
+          <tr><td>Extra Hour</td><td>₹1000</td></tr>
+          <tr><td>Driver</td><td>₹1000</td></tr>
+        </table>
+
+        <table class="details-table" data-type="outstation">
+          <tr><td>Toll / Parking </td><td>Chargeable to Customer</td></tr>
+          <tr><td>State Permit </td><td>Chargeable to Customer</td></tr>
+          <tr><td>Decoration Cleaning</td><td>Charges Applicable if Decoration Done</td></tr>
+          <tr><td>Km & Time</td><td>Calculated Office to Office</td></tr>
+          <tr><td>GST</td><td>5% Applicable</td></tr>
+        </table>
+      
+      </div>
+      <a href="https://wa.me/919440404640" class="book-btn">Book Now</a>
+    </div>
+
+    <!-- CAR 11 -->
+    <div class="car-card" data-title="Maruti Ciaz">
+      <img src="https://i.ibb.co/WpF7c5vd/0918-01-L-1.jpg" />
+  <h2 class="car-title">TOYOTA ETIOS</h2>
+      <div class="btn-group">
+        <button class="btn active" data-type="dayrent">Day Rent</button>
+        <button class="btn" data-type="regular">Regular</button>
+        <button class="btn" data-type="outstation">Other Charges</button>
+      </div>
+      <div class="pricing-display">
+        <table class="details-table active" data-type="dayrent">
+          <tr><td>4 Hrs - 40 Km</td><td>₹11,000</td></tr>
+          <tr><td>8 Hrs - 80 Km</td><td>₹22,000</td></tr>
+          <tr><td>10 Hrs - 100 Km</td><td>₹27,000</td></tr>
+          <tr><td>12 Hrs - 120 Km</td><td>₹32,000</td></tr>
+          <tr><td>Extra Hour</td><td>₹1000</td></tr>
+          <tr><td>Extra Km</td><td>₹50</td></tr>
+        </table>
+
+        <table class="details-table" data-type="regular">
+          <tr><td>Duration</td><td>12 Hrs</td></tr>
+          <tr><td>Price</td><td>₹14,000</td></tr> 
+          <tr><td>Duration</td><td>24 Hrs</td></tr>
+          <tr><td>Price</td><td>₹28,000</td></tr>
+          <tr><td>Fuel</td><td>6 Km/L</td></tr>
+          <tr><td>Extra Hour</td><td>₹1000</td></tr>
+          <tr><td>Driver</td><td>₹1000</td></tr>
+        </table>
+
+        <table class="details-table" data-type="outstation">
+          <tr><td>Toll / Parking </td><td>Chargeable to Customer</td></tr>
+          <tr><td>State Permit </td><td>Chargeable to Customer</td></tr>
+          <tr><td>Decoration Cleaning</td><td>Charges Applicable if Decoration Done</td></tr>
+          <tr><td>Km & Time</td><td>Calculated Office to Office</td></tr>
+          <tr><td>GST</td><td>5% Applicable</td></tr>
+        </table>
+      </div>
+      <a href="https://wa.me/919440404640" class="book-btn">Book Now</a>
+    </div>
+
+    <!-- CAR 12 -->
+    <div class="car-card" data-title="Honda Amaze">
+    <img src="https://i.ibb.co/whRnrfXG/223-Golden-Brown-Metallic-564f4b.jpg" />
+  <h2 class="car-title">HONDA AMAZE</h2>
+      <div class="btn-group">
+        <button class="btn active" data-type="dayrent">Day Rent</button>
+        <button class="btn" data-type="regular">Regular</button>
+        <button class="btn" data-type="outstation">Other Charges</button>
+      </div>
+    <div class="pricing-display">
+        <table class="details-table active" data-type="dayrent">
+          <tr><td>4 Hrs - 40 Km</td><td>₹11,000</td></tr>
+          <tr><td>8 Hrs - 80 Km</td><td>₹22,000</td></tr>
+          <tr><td>10 Hrs - 100 Km</td><td>₹27,000</td></tr>
+          <tr><td>12 Hrs - 120 Km</td><td>₹32,000</td></tr>
+          <tr><td>Extra Hour</td><td>₹1000</td></tr>
+          <tr><td>Extra Km</td><td>₹50</td></tr>
+        </table>
+
+        <table class="details-table" data-type="regular">
+          <tr><td>Duration</td><td>12 Hrs</td></tr>
+          <tr><td>Price</td><td>₹14,000</td></tr> 
+          <tr><td>Duration</td><td>24 Hrs</td></tr>
+          <tr><td>Price</td><td>₹28,000</td></tr>
+          <tr><td>Fuel</td><td>6 Km/L</td></tr>
+          <tr><td>Extra Hour</td><td>₹1000</td></tr>
+          <tr><td>Driver</td><td>₹1000</td></tr>
+        </table>
+
+        <table class="details-table" data-type="outstation">
+          <tr><td>Toll / Parking </td><td>Chargeable to Customer</td></tr>
+          <tr><td>State Permit </td><td>Chargeable to Customer</td></tr>
+          <tr><td>Decoration Cleaning</td><td>Charges Applicable if Decoration Done</td></tr>
+          <tr><td>Km & Time</td><td>Calculated Office to Office</td></tr>
+          <tr><td>GST</td><td>5% Applicable</td></tr>
+        </table>
+      </div>
+      <a href="https://wa.me/919440404640" class="book-btn">Book Now</a>
+    </div>
+
+  </div>
+
+  <!-- JS for search & switching tabs -->
+  <script>
+     document.getElementById('searchInput').addEventListener('input', function () {
+      const filter = this.value.toLowerCase().trim();
+      const cards = document.querySelectorAll('.car-card');
+      let found = false;
+
+      cards.forEach(card => {
+        const title = card.querySelector('.car-title').textContent.toLowerCase();
+        if (title.includes(filter)) {
+          card.style.display = 'block';
+          found = true;
+        } else {
+          card.style.display = 'none';
+        }
       });
-    });
-  });
 
-  // Optional: hide loader on first load
-  window.addEventListener("load", () => {
-    gsap.set(loader, { opacity: 0, pointerEvents: "none" });
-  });
-</script>
+      document.getElementById('no-results').style.display = found ? 'none' : 'block';
+    });
+    
+    document.querySelectorAll('.btn-group').forEach(group => {
+      const buttons = group.querySelectorAll('.btn');
+      const card = group.closest('.car-card');
+      const tables = card.querySelectorAll('.details-table');
+      buttons.forEach(btn => btn.addEventListener('click', () => {
+        buttons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        tables.forEach(t => {
+          t.classList.toggle('active', t.dataset.type === btn.dataset.type);
+        });
+      }));
+    });
+  </script>
+</body>
+
+</html>
+
+</br></br>
+<!-- Footer -->
 
 
 
 <body>
-  <div class="contact-container">
-    <div class="contact-left">
-      <h1 class="contact-title animate-on-scroll"data-aos="fade-up">Let’s get<br>in touch</h1>
-      <div class="contact-arrow-box">
-        <div class="contact-arrow-line"></div>
-        <div class="contact-arrow-text "data-aos="fade-up">
-          Great! We're excited to hear from you and let's start something special together. Call us for any inquiry.
-        </div>
-      </div>
-      <div class="contact-info"data-aos="fade-up">
-        <p data-aos="fade-up"><strong>Don’t be afraid to say hello with us!</strong></p>
-        <b data-aos="fade-up">Phone</b>
-        <a href="tel:+919876543210">+91 9876543210</a><br>
-        <a href="tel:+919123456780">+91 9123456780</a>
-        <b data-aos="fade-up">Email</b>
-        <p>contactus@akhilcartravel.com</p>
-        <b data-aos="fade-up">Office</b>
-        <p>Akhil Travels</p>
-        <p>Endowments Colony</p>
-        <p>Near Nagarjuna Hospital</p>
-        <p>Kanur, Vijayawada</p>
-        <p>Andhra Pradesh - 520008</p>
-      </div>
-    </div>
-
-    <div class="contact-right" data-aos="fade-up">
-      <h2 class="contact-form-title">Contact Us</h2>
-   
-    <form id="contact-form" class="contact-form" action="https://api.web3forms.com/submit" method="POST">
-      <input type="hidden" name="access_key" value="8dd6e8df-7418-4760-8478-c3fe3a13323a">
-      <input type="text" name="name" placeholder="Name" required data-aos="fade-up">
-      <input type="email" name="email" placeholder="Email" required data-aos="fade-up">
-      <input type="text" name="phone" placeholder="Phone" required data-aos="fade-up">
-      <input type="text" name="subject" placeholder="Subject" data-aos="fade-up">
-      <textarea name="message" placeholder="Tell us about your interest" data-aos="fade-up"></textarea>
-      <button class="contact-submit-btn" type="submit" data-aos="fade-up">Send to us</button>
-    </form>
-
-    <!-- ✅ Success Message -->
-    <div id="success-message">
-      ✅ Message sent successfully! We will reach you shortly.
-    </div>
-  </div>
-
-  <!-- Scripts -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-
-    const form = document.getElementById('contact-form');
-    const successMsg = document.getElementById('success-message');
-
-    form.addEventListener('submit', async function (e) {
-      e.preventDefault();
-      const formData = new FormData(form);
-
-      const response = await fetch(form.action, {
-        method: "POST",
-        body: formData,
-        headers: { 'Accept': 'application/json' }
-      });
-
-      if (response.ok) {
-        successMsg.style.display = 'block';
-        form.reset();
-        // Hide after 5 seconds (optional)
-        setTimeout(() => {
-          successMsg.style.display = 'none';
-        }, 5000);
-      } else {
-        successMsg.innerText = "❌ There was an error. Please try again later.";
-        successMsg.style.display = 'block';
-      }
-    });
-  </script>
-
-  </div>
-</body>
-
-  <section class="interactive-map" data-aos="fade-up">
-    <div class="overlay-content"data-aos="fade-up">
-      <h2 data-aos="fade-up">Find Us on the Map</h2>
-      <p>🗺️ Visit Akhil Car Travels at our exact location</p>
-      <a href="https://www.google.com/maps?q=16.486485893760367,80.68463486592347" target="_blank" class="map-button">
-        Open Location in Google Maps
-        <span>&rarr;</span>
-      </a>
-    </div>
-  </section>
-
-  
-</body>
-
-</html>
-<!-- Expandable Chat Button -->
-<div class="chat-container">
+  <div class="chat-container">
   <div class="chat-options" id="chatOptions">
     <a href="https://wa.me/919440404640" target="_blank" title="WhatsApp">
       <i class="fab fa-whatsapp"></i>
@@ -697,227 +910,7 @@
 </script>
 
 
-
-</body>
-</html>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet"/>
-
-  <style>
-    body {
-      margin: 0;
-      width: 100%;
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to bottom right, #fdf1f6, #f5f7fa);
-    }
-
-    /* SUBSCRIPTION SECTION */
-    .subscribe-section {
-      background-color: #e6e6ed;
-      padding: 60px 20px 40px;
-      
-      border-radius:30px 30px 0px 0px;
-    }
-
-    .subscribe-container {
-      max-width: 1200px;
-      margin: auto;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 40px;
-    }
-
-    .subscribe-image {
-      flex: 1 1 300px;
-      text-align: center;
-    }
-
-    .subscribe-image img {
-      max-width: 100%;
-      height: auto;
-    }
-
-    .subscribe-content {
-      flex: 2 1 500px;
-    }
-
-    .subscribe-content h2 {
-      font-size: 24px;
-      color: #333;
-      margin-bottom: 10px;
-    }
-
-    .subscribe-content h1 {
-      font-size: 32px;
-      font-weight: 700;
-      color: #3e0f76;
-      margin-bottom: 25px;
-    }
-
-    .subscribe-form {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-    }
-
-    .subscribe-form input[type="email"] {
-      flex: 1 1 250px;
-      padding: 14px 20px;
-      border: none;
-      border-radius: 30px;
-      font-size: 16px;
-      outline: none;
-    }
-
-    .subscribe-form button {
-      background-color: #3e0f76;
-      color: white;
-      padding: 14px 28px;
-      border: none;
-      border-radius: 30px;
-      font-weight: 600;
-      font-size: 16px;
-      cursor: pointer;
-    }
-
-    /* FOOTER */
-    footer { 
-       background: linear-gradient(to bottom right, #9a38d5, #be69a6, #c5a2a2);
-   
-      color:#ffffff;
-      padding: 60px 20px 30px;
-    }
-
-    .footer-container {
-      max-width: 1200px;
-      margin: auto;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      
-    }
-
-    .footer-section {
-      flex: 1 1 250px;
-      min-width: 220px;
-      animation: fadeInUp 1s ease-in-out;
-    }
-
-    .footer-section h3 {
-      font-size: 20px;
-      margin-bottom: 20px;
-      position: relative;
-    }
-
-    .footer-section p,
-    .footer-section li,
-    .footer-section a {
-      
-       color: #ffffff;
-      font-size: 15px;
-      margin: 8px 0;
-      transition: all 0.3s ease;
-    }
-
-    .footer-section ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .footer-section a {
-      display: inline-block;
-      text-decoration: none;
-      padding: 2px 0;
-      border-bottom: 2px solid transparent;
-    }
-
-    .footer-section a:hover {
-      transform: translateX(5px) scale(1.03);
-      color: #ffe082;
-      border-bottom: 2px solid #ffe082;
-    }
-
-    .social-icons {
-      margin-top: 10px;
-    }
-
-    .social-icons a {
-      margin-right: 12px;
-      display: inline-block;
-      transition: transform 0.3s;
-    }
-
-    .social-icons img {
-      width: 28px;
-      height: 28px;
-    }
-
-    .social-icons a:hover {
-      transform: scale(1.2);
-    }
-
-    iframe {
-      border: none;
-      border-radius: 12px;
-      width: 100%;
-      height: 180px;
-    }
-
-    hr {
-      margin: 40px 0 20px;
-      border: 0;
-      border-top: 1px solid rgba(255, 255, 255, 0.2);
-    }
-
-    .footer-bottom {
-      text-align: center;
-      font-size: 14px;
-      opacity: 0.85;
-    }
-
-    @media (max-width: 768px) {
-      .footer-section {
-        flex: 1 1 100%;
-        margin-bottom: 30px;
-      }
-
-      .subscribe-container {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .subscribe-form {
-        flex-direction: column;
-        align-items: center;
-        gap: 40px;
-        
-      }
-    
-
-.subscribe-form input[type="email"] {
-    flex: 1 1 32px;
-    padding: 12px 73px;
-    border: none;
-    border-radius: 30px;
-    font-size: 16px;
-    outline: none;
-}
-      iframe {
-        height: 200px;
-      }
-    }
-
-    @keyframes fadeInUp {
-      0% {
-        transform: translateY(20px);
-        opacity: 0;
-      }
-      100% {
-        transform: translateY(0);
-        opacity: 1;
-      }
-    }
-  </style>
+ 
 <footer>
     
   <div class="footer-container">
@@ -992,3 +985,5 @@
     once: true
   });
 </script>
+
+
