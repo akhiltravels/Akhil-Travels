@@ -1,30 +1,346 @@
 <!DOCTYPE html>
-<html>
-<title>Trinadh-Our cars</title>
-<link rel="icon" type="image/x-icon" href="https://i.ibb.co/crQGmf7/1-modified.png">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href='https://fonts.googleapis.com/css?family=Berkshire Swash' rel='stylesheet'>
-<link rel="stylesheet" href="scripts.js" >
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />  
+  <link rel="icon" type="image/x-icon" href="https://i.ibb.co/0pY2XHpT/akhil-logo-hd-upscaled.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Contact Us - Akhil Car Travels</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Poppins:wght@300;400;600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script> 
 
-<link rel="stylesheet" href="style.css" >
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet"/>
+</head>
+<body>
+  <header>
+  
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f9f9f9;
+    }
+
+    .contact-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 50px 20px;
+      background: #fff;
+    }
+
+    .contact-info, .contact-form {
+      flex: 1;
+      min-width: 300px;
+      max-width: 500px;
+      margin: 20px;
+    }
+
+    .contact-info h2 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .contact-info p {
+      font-size: 16px;
+      margin: 10px 0;
+    }
+
+    .social-icons a {
+      margin-right: 15px;
+      font-size: 24px;
+      text-decoration: none;
+      color: #4a00e0;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    form input, form textarea {
+      margin-bottom: 15px;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    form button {
+      padding: 12px;
+      background: linear-gradient(to right, #8e2de2, #4a00e0);
+      color: white;
+      border: none;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    #success-message {
+      display: none;
+      margin-top: 15px;
+      color: green;
+      font-weight: bold;
+    }
+
+    .interactive-map {
+      background: url('https://i.gifer.com/EYuG.gif') center center/cover no-repeat;
+      position: relative;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+
+    .overlay-content {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 30px 40px;
+      border-radius: 15px;
+      max-width: 600px;
+    }
+
+    .overlay-content h2 {
+      font-size: 34px;
+      margin-bottom: 10px;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+    }
+
+    .overlay-content p {
+      font-size: 18px;
+      margin-bottom: 20px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .map-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(to right, #8e2de2, #4a00e0);
+      color: #ffffff;
+      padding: 12px 24px;
+      font-weight: 600;
+      border-radius: 50px;
+      text-decoration: none;
+      font-family: 'Inter', sans-serif;
+      transition: all 0.3s ease;
+    }
+
+    .map-button:hover {
+      transform: scale(1.05);
+      background: linear-gradient(to bottom right, #9a38d5, #be69a6, #c5a2a2);
+    }
+
+    
+  </style>
+</head>
+
+<body>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #fff;
+      color: #000;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .contact-container {
+      display: flex;
+      flex-wrap: wrap;
+      min-height: 100vh;
+      padding: 60px 5%;
+      gap: 30px;
+      animation: fadeInContainer 1.2s ease-in-out both;
+    }
+
+    @keyframes fadeInContainer {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .contact-left {
+      flex: 1;
+      min-width: 300px;
+      animation: slideLeft 1.2s ease-in-out;
+    }
+
+    @keyframes slideLeft {
+      from { transform: translateX(-50px); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+
+    .contact-title {
+      font-size: 60px;
+      font-weight: 900;
+      background: linear-gradient(-107deg, #82009f 0%, #f7345e 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .contact-arrow-box {
+      display: flex;
+      align-items: center;
+      margin: 30px 0;
+      animation: slideIn 1s ease;
+    }
+
+    .contact-arrow-line {
+      width: 50px;
+      height: 2px;
+      background-color: black;
+      margin-right: 15px;
+    }
+
+    .contact-arrow-text {
+      font-size: 16px;
+      color: #666;
+    }
+
+    .contact-info {
+      margin-top: 40px;
+      font-size: 18px;
+      animation: fadeInInfo 1.3s ease-in-out;
+    }
+
+    @keyframes fadeInInfo {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .contact-info p {
+      margin: 10px 0;
+    }
+
+    .contact-info b {
+      display: block;
+      margin-top: 20px;
+    }
+
+    .contact-right {
+      flex: 1;
+      min-width: 300px;
+      background: linear-gradient(to bottom, #111, #000);
+      color: #fff;
+      padding: 40px;
+      border-radius: 12px;
+      position: relative;
+      overflow: hidden;
+      animation: fadeInForm 1.4s ease-in-out;
+    }
+
+    @keyframes fadeInForm {
+      0% { opacity: 0; transform: scale(0.95); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    .contact-form-title {
+      margin-bottom: 60px;
+      font-size: 28px;
+      text-align: center;
+      background: linear-gradient(-107deg, #82009f 0%, #f7345e 100%);
+      color: whitesmoke;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .contact-form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      padding: 12px;
+      border: none;
+      border-bottom: 1px solid #999;
+      background: transparent;
+      color: #fff;
+      font-size: 16px;
+      outline: none;
+      transition: border 0.3s ease;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-bottom: 1px solid #f7345e;
+    }
+
+    .contact-form textarea {
+      grid-column: 1 / -1;
+      resize: none;
+      height: 100px;
+    }
+
+    .contact-submit-btn {
+      grid-column: 1 / -1;
+      margin-top: 50px;
+      padding: 15px;
+      
+      background: linear-gradient(-107deg, #82009f 0%, #f7345e 100%);
+      color: whitesmoke;
+      font-weight: bold;
+      font-size: 18px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer; 
+      transition: all 0.3s ease;
+    }
+
+    .contact-submit-btn:hover {
+      background: #034e00;
+      transform: scale(1.03);
+    }
+
+    @media (max-width: 768px) {
+      .contact-container {
+        flex-direction: column;
+        padding: 30px 5%;
+      }
+
+      .contact-title {
+        font-size: 40px;
+      }
+
+      .contact-form {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<link rel="stylesheet" href="style.css" />
+  <!-- AOS CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet"/>
 
 <div class="navbar">
     <div class="logo-section">
       <img src="https://i.ibb.co/0pY2XHpT/akhil-logo-hd-upscaled.png" alt="Akhil Logo">
-      <h1>Akhil Car Travels</h1>
+      <h1 class="brand-name">
+    <span class="brand-left">Akhil Car</span> <span class="brand-right">Travels</span>
+  </h1>
     </div>
     <div class="center-nav">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-      <a href="#cars">Our Cars</a>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="cars.html">Our Cars</a>
     </div>
     <div class="right-nav">
-      <button><a href="tel:+91XXXXXXXXXX"><i class="fas fa-phone"></i> Call Us</a></button>
-      <button><a href="#book"><i class="fas fa-book"></i> Book Now</a></button>
+      <button><a href="tel:+919440404640"><i class="fas fa-phone"></i> Call Us</a></button>
+      <button><a href="https://wa.me/919440404640"><i class="fas fa-book"></i> Book Now</a></button>
     </div>
     <div class="hamburger" onclick="toggleMenu()">
       <span></span>
@@ -35,12 +351,12 @@
 
   <!-- Mobile Menu -->
   <div class="nav-mobile" id="mobileMenu">
-    <a href="#home"><i class="fas fa-home"></i> Home</a>
-    <a href="#about"><i class="fas fa-info-circle"id=about.html></i> About</a>
-    <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
-    <a href="#cars"><i class="fas fa-car"></i> Our Cars</a>
-    <a href="tel:+91XXXXXXXXXX"><i class="fas fa-phone"></i> Call Us</a>
-    <a href="#book"><i class="fas fa-book"></i> Book Now</a>
+    <a href="index.html"><i class="fas fa-home"></i> Home</a>
+    <a href="about.html"><i class="fas fa-info-circle"id=about.html></i> About</a>
+    <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+    <a href="cars.html"><i class="fas fa-car"></i> Our Cars</a>
+    <a href="tel:+919440404640"><i class="fas fa-phone"></i> Call Us</a>
+    <a href="https://wa.me/919440404640"><i class="fas fa-book"></i> Book Now</a>
   </div>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script>
@@ -49,2505 +365,559 @@
       document.getElementById('mobileMenu').classList.toggle('show');
     }
   </script>
+  <style>
+        .contact-hero {
+      position: relative;
+      height: 350px;
+      background: url('https://i.ibb.co/DPvpxC9G/about.png') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
+    .contact-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(90deg, rgba(130, 0, 159, 0.8), rgba(0, 153, 255, 0.8));
+      z-index: 1;
+    }
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    .contact-hero h2 {
+      color: white;
+      font-size: 42px;
+      font-weight: 700;
+      z-index: 2;
+      position: relative;
+      text-shadow: 1px 1px 6px rgba(0,0,0,0.3);
+    }
 
+    /* Optional content below hero */
+    .content-section {
+      padding: 60px 20px;
+      text-align: center;
+    }
 
-   <style>
+    .content-section h3 {
+      font-size: 28px;
+      font-weight: 600;
+      color: #333;
+    }
+    /* Initial animation on load */
+.zoom-in-title {
+  opacity: 0;
+  transform: scale(0.85);
+  animation: zoomIn 1s ease-out forwards;
+  animation-delay: 0.3s;
+}
 
-  /* Default styles for larger screens */
-  .car-note {
-    width: 75%; /* Default width for larger screens */
-    max-width: 600px; /* Limit the maximum width */
-    margin: 0 auto;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    overflow: hidden;
-  }
-  .reveal{
-    position: relative;
-    transform: translateY(150px);
-    opacity: 0;
-    transition: all 2s ease;
-  }
-  .reveal.active{
+@keyframes zoomIn {
+  to {
     opacity: 1;
-    transform: translateY(0px);
+    transform: scale(1);
   }
-  .car-details {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-  }
-  
-  .car-details h2 {
-    font-size: 24px;
-    color: #f19000;
-    margin-bottom: 10px;
-    font-weight: bold;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    letter-spacing: 1.2px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-    text-align: center;
-  }
-  
-  .car-details ol {
-    padding-left: 20px;
-  }
-  
-  .car-details li {
-    margin-bottom: 10px;
-  }
-  
-  /* Media query for mobile view */
-  @media screen and (max-width: 768px) {
-    .car-note {
-      width: 100%;
-      padding: 0;
-    }
-    
-    .car-details {
-      text-align: left;
-      padding: 10px;
-    }
-    
-    .car-details ol {
-      padding-left: 0;
-    }
-  }
+}
 
+/* Scroll-based zoom animation */
+.animate-on-scroll {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: all 1s ease;
+}
 
-  .car-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between ;
-    padding: 30px;
-    background-color: #f2f2f2;
-    right: 2px;
-    animation: fade-in 0.8s ease-in-out;
-  }
-      @keyframes fade-in {
-            0% { opacity: 0; }
-            50%{opacity: 0.5;}
-            100% { opacity: 1; }
-          } 
-  
-  
-    
-  .car {
-  width: 300px;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
-  overflow: hidden;
-  }
-  @media screen and (max-width: 768px) {
-    .car-list {
-      width: 100%;
-      padding: 20;
-    }
-    .car {
-      width: 100%; /* Adjust the width value as needed */
-    }
-    .car-details{
-      width: 100%;
-    }
-    .car-note{
-      width: 100%;
-      padding: 0;
-      text-align: left;
-    }
-  }
-  
-  
-  .car-note {
-    width: 300px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    overflow: hidden;
-    }
-  
-  .car img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  }
-  
-  .car-details {
-    padding: 10px;
-    text-align: center;
-  }
-  
-  .car-name {
-    font-weight: bold;
-    margin-bottom: 5px;
-    
-  }
-  
-  .car-rate {
-    font-size: 20px;
-    color: #023901;
-    font-weight: bold;
-  text-shadow: #313030;
-    margin-bottom: 5px;
-  }
-  
-  .car-name {
-  font-weight: bold;
-  margin-bottom: 10px;
-  }
-  
-  .car-price {
-  font-size: 24px;
-  color: #3e0f76; ;
-  margin-bottom: 10px;
-  
-  font-weight: bold;
-  
-  letter-spacing: 2px;
-  }
-  
-  .button {
-  background-color: #000c1a;
-  color: #fff;
-  border: none;
-  border-radius: 7px;
-  padding: 10px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  }
-  
-  .button:hover {
-  background-color: #0062cc;
-  }
-  
-  .toggle-buttons {
-  position: static;
-  }
-  .toggle-button,.tab-button17,.tab-button18,.tab-button,.tab-button12,.tab-button13,.tab-button14
-  ,.tab-button15,.tab-button16,.tab-button11,.tab-button1{
-  margin-right: 15px;
-  background-color: #3e0f76; ;
-  color: white;
-  border: none;
-  padding: 5px 7px;
-  cursor: pointer;
-  }
-  .toggle-button.active,.tab-button17.active,.tab-button18.active,.tab-button.active,.tab-button13.active,
-  .tab-button14.active,.tab-button15.active,.tab-button16.active,.tab-button12.active,.tab-button1.active {
-  background-color:  #3e0f76;
-  }
-  @media screen and (max-width: 768px) {
-    .toggle-button {
-      padding: 6px; /* Decreased padding */
-    }
-  
-    .toggle-button,
-    .tab-button17,
-    .tab-button18,
-    .tab-button,
-    .tab-button12,
-    .tab-button13,
-    .tab-button14,
-    .tab-button15,
-    .tab-button16,
-    .tab-button11,
-    .tab-button1 {
-      padding: 6px 4px; /* Decreased padding */
-    }
-  }
-  .bookbutton{
-    background-color: #12b910;
-    padding: 15px 10px;
-    margin-right: 15px;
-    color: #fafafa;
-    align-items: center;
-  
-  }
-  h1{
-  text-align: center;
-  }
-  table {
-  border: 3px solid #b3adad;
-  border-collapse: collapse;
-  padding: 5px;
-  margin: 0px 10px 0px 10px;
-  --e-column-margin-right: 10px;
-  --e-column-margin-left: 10px;
-  
-  
-  }
-  
-  table th {
-  letter-spacing: normal;
-  border: 1px solid #b3adad;
-  padding: 5px;
-  background: #f0f0f0;
-  color: #313030;
-  }
-  
-  table td {
-  border: 1px solid #3e0f76;;
-  text-align: center;
-  padding: 5px;
-  background: #ffffff;
-  color: #313030;
-  }
-  .menu{
-  background-color:  #0f4c5c ;
-  position: relative;
-  
-  
-  }
-  
-  .btn-4 {
-    width: 130px;
-    color: #efefef;
-    height: 40px;
-    line-height: 42px;
-    padding: 0;
-    border: none;
-    background:  #25D366;
-    font-weight: bold;
-    font-size: medium;
-    text-align: center;
-  
-  }
-  .btn-4:hover {
-    color: #25D366;
-    background: transparent;
-     box-shadow:none;
-  }
-  
-  /* about page styles */
-  .parstyle {
-    font-family: 'Roboto', sans-serif;
-    color: #000000;
-    font-size: 18px;
-   
-    line-height: 1.5;
-    overflow: hidden;
-    padding: 0 15px;
-    text-align: justify;
-    text-justify: inter-word;
-    font-size: 18px;
-    margin-left: 280px;
-    margin-right: auto;
-    max-width: 800px; /* Adjust the width as needed */
-    line-height: 1.5;
-    overflow: hidden;/* Add some horizontal padding for better readability on mobile */
-  }
-  .fade-in {
-    animation: fadeIn 1s ease-in-out;
-  }
-  
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+.animate-on-scroll.in-view {
+  opacity: 1;
+  transform: scale(1);
+}
 
-
-  .car-note {
-    width: 75%; /* Default width for larger screens */
-    max-width: 600px; /* Limit the maximum width */
-    margin: 0 auto;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    overflow: hidden;
-    }
-    
-    .car-details {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    }
-    
-    .car-details h2 {
-    font-size: 24px;
-    color: #f19000;
-    margin-bottom: 10px;
-    font-weight: bold;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    letter-spacing: 1.2px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-    text-align: center;
-    }
-    
-    .car-details ol {
-    padding-left: 20px;
-    }
-    
-    .car-details li {
-    margin-bottom: 10px;
-    }
-    
-    /* Media query for mobile view */
-    @media screen and (max-width: 768px) {
-    .car-note {
-      width: 100%;
-      padding: 0;
-    }
-    
-    .car-details {
-      text-align: left;
-      padding: 10px;
-    }
-    
-    .car-details ol {
-      padding-left: 0;
-    }
-    }
-    
-   
-    .parallax {
-     height: 300px;
-     background-attachment: fixed;
-     background-position: center;
-     background-repeat: no-repeat;
-     background-size: cover;
-     background-image: url('https://edmundvehiclerental.com.sg/wp-content/uploads/2021/10/Short-Term-Car-Rental.jpg');
-     position: relative; /* Make sure the div is positioned relative for absolute positioning of text */
-  
-     
-   }
-   *{
-     margin: 0%;
-     padding: 0%;
-   }
-  
-   .parallax::before {
-     content: "";
-     position: absolute;
-     top: 0;
-     left: 0;
-     width: 100%;
-     height: 100%;
-     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background color */
-     z-index: 1; /* Place it above the image */
-   }
-  
-   .parallax-text {
-     position: absolute;
-     top: 50%; /* Adjust as needed to vertically center the text */
-     left: 50%; /* Adjust as needed to horizontally center the text */
-     transform: translate(-50%, -50%);
-     text-align: center;
-     color: #fff; /* Text color */
-     z-index: 2; /* Place it above the semi-transparent background */
-     white-space: nowrap;
-   }
-   @font-face {
-   font-family: 'CustomFont'; /* Choose a name for your font */
-   src: url('path-to-your-font.woff2') format('woff2'), /* Path to your font file */
-        url('path-to-your-font.woff') format('woff'); /* Path to your font file */
-   font-weight: normal;
-   font-style: normal;
-  }
-  
-   .parallax-text h1 {
-     font-family: 'CustomFont'; /* Choose a name for your font */
-     src:url('path-to-your-font.woff') format('woff');
-   font-size: 38px;
-   font-weight: 800;
-   text-shadow: 1px 1px 2px rgba(209, 205, 186, 0.719);
-   color: rgb(252, 250, 247);
-   
-   
-   /* Use the custom font followed by fallback fonts */
-  }
-  
-  
-  .parallax-text {
-     font-size: 52px;
-     font-weight: 900;
-     text-shadow: 1px 1px 2px rgba(158, 157, 152, 0.719);
-     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-                                                 
-   }
-  
-   /* Change the color for "YOUR" */
-   .your-text {
-     color:  rgb(255, 187, 0); /* Replace with your desired color code or color name */
-   }
-  
-   /* Change the color for "CAR" */
-   .carfu-text {
-     color:  rgb(255, 187, 0); /* Replace with your desired color code or color name */
-   }
-  
-  
-   @media (max-width: 768px) {
-    
-     
-     .parallax-text h1 {
-       font-size: 24px; /* Decrease font size for mobile */
-       padding-bottom:20%;
-     }
-     
-     .parallax-text h2 {
-       font-size: 22px; /* Decrease font size for mobile */
-     }
-     
-    .parallax{
-     height: 200px;
-    }
-   }
-  
-
-  
-
-
-
-
-    .parallax {
-     height: 300px;
-     background-attachment: fixed;
-     background-position: center;
-     background-repeat: no-repeat;
-     background-size: cover;
-     background-image: url('https://i.ibb.co/jL6Q062/Short-Term-Car-Rental.webp');
-     position: relative; /* Make sure the div is positioned relative for absolute positioning of text */
-  
-     
-   }
-   *{
-     margin: 0%;
-     padding: 0%;
-   }
-  
-   .parallax::before {
-     content: "";
-     position: absolute;
-     top: 0;
-     left: 0;
-     width: 100%;
-     height: 100%;
-     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background color */
-     z-index: 1; /* Place it above the image */
-   }
-  
-   .parallax-text {
-     position: absolute;
-     top: 50%; /* Adjust as needed to vertically center the text */
-     left: 50%; /* Adjust as needed to horizontally center the text */
-     transform: translate(-50%, -50%);
-     text-align: center;
-     color: #fff; /* Text color */
-     z-index: 2; /* Place it above the semi-transparent background */
-     white-space: nowrap;
-   }
-   @font-face {
-   font-family: 'CustomFont'; /* Choose a name for your font */
-   src: url('path-to-your-font.woff2') format('woff2'), /* Path to your font file */
-        url('path-to-your-font.woff') format('woff'); /* Path to your font file */
-   font-weight: normal;
-   font-style: normal;
-  }
-  
-   .parallax-text h1 {
-     font-family: 'CustomFont'; /* Choose a name for your font */
-     src:url('path-to-your-font.woff') format('woff');
-   font-size: 38px;
-   font-weight: 800;
-   text-shadow: 1px 1px 2px rgba(209, 205, 186, 0.719);
-   color: rgb(252, 250, 247);
-   
-   
-   /* Use the custom font followed by fallback fonts */
-  }
-  
-  
-  .parallax-text {
-     font-size: 52px;
-     font-weight: 900;
-     text-shadow: 1px 1px 2px rgba(158, 157, 152, 0.719);
-     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-                                                 
-   }
-  
-   /* Change the color for "YOUR" */
-   .your-text {
-     color:  rgb(255, 187, 0); /* Replace with your desired color code or color name */
-   }
-  
-   /* Change the color for "CAR" */
-   .carfu-text {
-     color:  rgb(255, 187, 0); /* Replace with your desired color code or color name */
-   }
-  .h4{
-    color: #020202; /* Change the text color */
-            animation: fadeIn 2s ease-in-out; /* Add animation */
-          padding-left: 130px;
-            font-weight: bold;
-            font-size: 52px;
-            margin-top: 50px;
-  }
-  
-  
-   @media (max-width: 768px) {
-    
-     
-     .parallax-text h1 {
-       font-size: 24px; /* Decrease font size for mobile */
-       padding-bottom:20%;
-     }
-     
-     .parallax-text h2 {
-       font-size: 22px; /* Decrease font size for mobile */
-     }
-     
-    .parallax{
-     height: 200px;
-    }
-   }
-  
-   .car-name-beyond{
-    font-size: 13px;
-    font-weight: 600;
-    color: rgb(0, 0, 0);
-   }
   </style>
-  
- 
-  <div class="parallax">
-    <div class="parallax-text">
-      <h1>OUR VEHICLES</h1>
-    
-  <h2 class="parallax-text">CHOOSE <span class="your-text">YOUR</span> PERFECT <span class="carfu-text">CAR</span></h2>
-    </div>
-  </div>
-  
- <div class="pu1 reveal">
+  <section class="contact-hero animate-on-scroll">
+    <h2 data-aos="zoom-in">Contact Us</h2>
+  </section>
 
-  <div class="cominter">
-      
-      <h4 class="tours">Trinadh Tour's & Travels 
-      <span class="animated-text" id="changingText"></span></h4>
-  </div>
-  
-  <script>
-      const textOptions = ["100+ Vehicles !", "Luxury Cars !","Affordable Rentals !"];
-      let currentIndex12 = 0;
-      const textElement = document.getElementById("changingText");
-  
-      function typeText(text, index = 0) {
-          if (index < text.length) {
-              textElement.textContent = text.substring(0, index + 1);
-              setTimeout(() => typeText(text, index + 1), 100); // Adjust typing speed as needed
-          } else {
-              setTimeout(() => {
-                  textElement.classList.remove("animated-text");
-                  textElement.classList.add("animated-text"); // Restart animation
-                  changeText();
-              }, 2000); // Wait for 2 seconds before changing text
-          }
+<!-- Decorative Wave Section Below Navbar -->
+<script>
+  function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+      rect.top <= (window.innerHeight || document.documentElement.clientHeight)
+    );
+  }
+
+  function animateOnScroll() {
+    const elements = document.querySelectorAll('.animate-on-scroll');
+    elements.forEach(el => {
+      if (isInViewport(el)) {
+        el.classList.add('in-view');
       }
-  
-      function changeText() {
-          const currentText = textOptions[currentIndex12];
-          currentIndex12 = (currentIndex12 + 1) % textOptions.length;
-          typeText(currentText);
-      }
-  
-      changeText(); // Start the animation
-  </script>
-
-   </div>
-<div class="car-list reveal">
-  <div class="car reveal">
-    <!-- etios -->
-   <img src="https://i.ibb.co/12vdJ36/toyota-etios-car-rental-services-1000x1000.webp" alt="Car 2">
-   <div class="car-details">
-     
-     <div class="car-price">ETIOS</div>
-     
-     <div class="car-name">Car-1</div>
-   </div>
-   <div class="tab-container17">
-       <button class="tab-button17 active" data-tab="1">Day Rent</button>
-       <button class="tab-button17" data-tab="2">Regular</button>
-       <button class="tab-button17" data-tab="3">Out station</button>
-     <div class="content17 active" data-tab="1" role="tabpanel" aria-labelledby="elementor-tab-title-6831" tabindex="0" style="display: block;">
-     </br>
-     <table>
-<thead>
-  <tr>
-    <th>Duration</th>
-    <th>Price</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>12 Hrs</td>
-    <td>1200</td>
-  </tr>
-
-  
-  <tr>
-    <td>Fuel Charge</td>
-    <td>10 Km/ 1 Litre</td>
-  </tr>
-  <tr>
-    <td>Chauffeur Allowance</td>
-    <td>300</td>
-  </tr>
-  <tr>
-    <td>Extra Hr</td>
-    <td>200</td>
-  </tr>
-  <tr>
-      <td>24 Hrs</td>
-      <td>1800</td>
-    </tr>
-  <tr>
-      <td>Chauffeur Allowance</td>
-      <td>500</td>
-    </tr>
-</tbody>
-</table>
-</br>
-<div class="car-name-beyond">Note: >350km Out station tariff  will be applied</div>
-  
-     </div>
-   
-     <div class="content17" data-tab="2" role="tabpanel" aria-labelledby="elementor-tab-title-6831" tabindex="0" style="display: none;">
-     </br>
-     <table>
-       <thead>
-         <tr>
-           <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Duration&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
-           <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
-         </tr>
-       </thead>
-       <tbody>
-         <tr>
-           <td>&nbsp;4 Hrs-40KMS &nbsp;</td>
-           <td>&nbsp;1200 &nbsp;</td>
-         </tr>
-         <tr>
-           <td>&nbsp;8 Hrs-80KMS&nbsp;</td>
-           <td>&nbsp;2000&nbsp;</td>
-         </tr>
-         <tr>
-           <td>&nbsp;EXTRA HOUR&nbsp;&nbsp;&nbsp;</td>
-           <td>&nbsp;200&nbsp;</td>
-         </tr>
-         
-         <tr>
-           <td>&nbsp;&nbsp;&nbsp;Extra Km&nbsp;</td>
-           <td>&nbsp;&nbsp;&nbsp;13&nbsp;</td>
-         </tr>
-       </tbody>
-     </table>
-     </br>
-   </br>
- </br>
-</br>
-</br>
-</br> 
-     </div>
-     <div class="content17" data-tab="3" role="tabpanel" aria-labelledby="elementor-tab-title-6831" tabindex="0" style="display: none;">
-     </br>
-     <table>
-       <thead>
-         <tr>
-           <th>Duration&nbsp;&nbsp;&nbsp;</th>
-           <th>Price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
-         </tr>
-       </thead>
-       <tbody>
-         <tr>
-           <td>RATE PER EACH KM</td>
-           <td>13</td>
-         </tr>
-         <tr>
-           <td>Chauffeur Allowance</td>
-           <td>500</td>
-         </tr>
-         
-       </tbody>
-     </table>
-     </br>
-    </div>
-     
-   </div>
- </br>
- <a href="https://api.whatsapp.com/send/?phone=918698209999&text&type=phone_number&app_absent=0" class="btn btn-outline-success my-2 my-sm-0">Book Now</a>
-  
- </div>
-
- <div class="car reveal">
-   <!-- Dezire/etios -->
-  <img src="https://i.ibb.co/LhVkzxz/PEARL-ARCTIC-WHITE-939393.webp" alt="Car 2">
-  <div class="car-details">
-    
-    <div class="car-price">SWIFT DEZIRE</div>
-    <div class="car-name">Car-2</div>
-  </div>
-  <div class="tab-container18">
-   <button class="tab-button18 active" data-tab="1">Day Rent</button>
-   <button class="tab-button18" data-tab="2">Regular</button>
-   <button class="tab-button18" data-tab="3">Out station</button>
-    
-    <div class="content18 active" data-tab="1" role="tabpanel" aria-labelledby="elementor-tab-title-6831" tabindex="0" style="display: block;">
-   </br>
-   <table>
-    <thead>
-      <tr>
-        <th>Duration</th>
-        <th>Price</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>12 Hrs</td>
-        <td>1200</td>
-      </tr>
-    
-      
-      <tr>
-        <td>Fuel Charge</td>
-        <td>10 Km/ 1 Litre</td>
-      </tr>
-      <tr>
-        <td>Chauffeur Allowance</td>
-        <td>300</td>
-      </tr>
-      <tr>
-        <td>Extra Hr</td>
-        <td>200</td>
-      </tr>
-      <tr>
-          <td>24 Hrs</td>
-          <td>1800</td>
-        </tr>
-      <tr>
-          <td>Chauffeur Allowance</td>
-          <td>500</td>
-        </tr>
-    </tbody>
-  </table>
-</br>
-<div class="car-name-beyond">Note: >350km Out station tariff  will be applied</div>
-  
-  
- </br>
-    </div>
-     
-    <div class="content18" data-tab="2" role="tabpanel" aria-labelledby="elementor-tab-title-6831" tabindex="0" style="display: none;">
-   </br>
-   <table>
-    <thead>
-      <tr>
-        <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Duration&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
-        <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>&nbsp;4 Hrs-40KMS &nbsp;</td>
-        <td>&nbsp;1200 &nbsp;</td>
-      </tr>
-      <tr>
-        <td>&nbsp;8 Hrs-80KMS&nbsp;</td>
-        <td>&nbsp;2000&nbsp;</td>
-      </tr>
-      <tr>
-        <td>&nbsp;EXTRA HOUR&nbsp;&nbsp;&nbsp;</td>
-        <td>&nbsp;200&nbsp;</td>
-      </tr>
-      
-      <tr>
-        <td>&nbsp;&nbsp;&nbsp;Extra Km&nbsp;</td>
-        <td>&nbsp;&nbsp;&nbsp;13&nbsp;</td>
-      </tr>
-    </tbody>
-  </table>
-   </br>
-  </br>
-</br>
-</br>
-</br></br>
-</br>
-    </div>
-    <div class="content18" data-tab="3" role="tabpanel" aria-labelledby="elementor-tab-title-6831" tabindex="0" style="display: none;">
-    </br>
-    <table>
-     <thead>
-       <tr>
-         <th>Duration&nbsp;&nbsp;&nbsp;</th>
-         <th>Price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
-       </tr>
-     </thead>
-     <tbody>
-       <tr>
-         <td>RATE PER EACH KM</td>
-         <td>13</td>
-       </tr>
-       <tr>
-         <td>Chauffeur Allowance</td>
-         <td>500</td>
-       </tr>
-       
-     </tbody>
-   </table>
-    </br>
-   </div>
- </div>
- <a href="https://api.whatsapp.com/send/?phone=918698209999&text&type=phone_number&app_absent=0" class="btn btn-outline-success my-2 my-sm-0">Book Now</a>
-  
- </div>
-
- <div class="car reveal">
-   <!--Innova -->
-  <img src="https://i.ibb.co/LCZSJRB/PHOTO-2023-09-07-18-06-27.jpg" alt="Car 2">
-  <div class="car-details">
-    <div class="car-price">Innova</div>
-    <div class="car-name">Car-3</div>
-  </div>
-  <div class="tab-container">
-      <button class="tab-button active" data-tab="1">Day Rent</button>
-      <button class="tab-button" data-tab="2">Regular</button>
-      <button class="tab-button" data-tab="3">Out station</button>
-    
-    <div class="content active" data-tab="1" role="tabpanel" aria-labelledby="elementor-tab-title-6831" tabindex="0" style="display: block;">
-   </br>
-   <table>
-     <thead>
-       <tr>
-         <th>Duration</th>
-         <th>Price</th>
-       </tr>
-     </thead>
-     <tbody>
-       <tr>
-         <td>12 Hrs</td>
-         <td>2000</td>
-       </tr>
-     
-       
-       <tr>
-         <td>Fuel Charge</td>
-         <td>8Km/ 1 Litre</td>
-       </tr>
-       <tr>
-         <td>Chauffeur Allowance</td>
-         <td>500</td>
-       </tr>
-       <tr>
-         <td>Extra Hr</td>
-         <td>300</td>
-       </tr>
-       <tr>
-           <td>24 Hrs</td>
-           <td>3000</td>
-         </tr>
-       <tr>
-           <td>Chauffeur Allowance</td>
-           <td>700</td>
-         </tr>
-     </tbody>
-   </table>
-  </br>
-  <div class="car-name-beyond">Note: >450km Out station tariff  will be applied</div>
-  
-  
-   
-   
-    </div>
-     
-    <div class="content" data-tab="2" role="tabpanel" aria-labelledby="elementor-tab-title-6831" tabindex="0" style="display: none;">
-   </br>
-   <table>
-       <thead>
-         <tr>
-           <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Duration&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
-           <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
-         </tr>
-       </thead>
-       <tbody>
-         <tr>
-           <td>&nbsp;4 Hrs-40KMS &nbsp;</td>
-           <td>&nbsp;2500 &nbsp;</td>
-         </tr>
-         <tr>
-           <td>&nbsp;8 Hrs-80KMS&nbsp;</td>
-           <td>&nbsp;3000&nbsp;</td>
-         </tr>
-         <tr>
-           <td>&nbsp;EXTRA HOUR&nbsp;&nbsp;&nbsp;</td>
-           <td>&nbsp;300&nbsp;</td>
-         </tr>
-         
-         <tr>
-           <td>&nbsp;&nbsp;&nbsp;Extra Km&nbsp;</td>
-           <td>&nbsp;&nbsp;&nbsp;17&nbsp;</td>
-         </tr>
-       </tbody>
-     </table>
- </br>
-</br>
-</br>
-</br>
-</br>
-</br>
-    </div>
-    <div class="content" data-tab="3" role="tabpanel" aria-labelledby="elementor-tab-title-6831" tabindex="0" style="display: none;">
-  </br>
-  <table>
-    <thead>
-      <tr>
-        <th>Duration&nbsp;&nbsp;&nbsp;</th>
-        <th>Price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>RATE PER EACH KM</td>
-        <td>17</td>
-      </tr>
-      <tr>
-        <td>Chauffeur Allowance</td>
-        <td>700</td>
-      </tr>
-      
-    </tbody>
-  </table>
-  </br>
- </div>
-   
-  </div>
-</br>
-<a href="https://api.whatsapp.com/send/?phone=918698209999&text&type=phone_number&app_absent=0" class="btn btn-outline-success my-2 my-sm-0">Book Now</a>
-  
-</div>
-
-<div class="car reveal">
- <!-- crysta -->
-<img src="https://i.ibb.co/J521ZCf/c-h-6-500x500.webp" alt="Car 2">
-<div class="car-details">
-
-<div class="car-price">CRYSTA</div>
-<div class="car-name">Car-4</div>
-</div>
-<div class="tab-container16">
-<button class="tab-button16 active" data-tab="1">Day Rent</button>
-<button class="tab-button16" data-tab="2">Regular</button>
-<button class="tab-button16" data-tab="3">Out station</button>
-
-<div class="content16 active" data-tab="1" role="tabpanel" aria-labelledby="elementor-tab-title-6831" tabindex="0" style="display: block;">
-</br>
-<table>
-<thead>
-<tr>
- <th>Duration</th>
- <th>Price</th>
-</tr>
-</thead>
-<tbody>
-<tr>
- <td>12 Hrs</td>
- <td>2500</td>
-</tr>
-
-
-<tr>
- <td>Fuel Charge</td>
- <td>8 Km/ 1 Litre</td>
-</tr>
-<tr>
- <td>Chauffeur Allowance</td>
- <td>500</td>
-</tr>
-<tr>
- <td>Extra Hr</td>
- <td>350</td>
-</tr>
-<tr>
-   <td>24 Hrs</td>
-   <td>3500</td>
- </tr>
-<tr>
-   <td>Chauffeur Allowance</td>
-   <td>700</td>
- </tr>
-
-</tbody>
-</table>
-</br>
-<div class="car-name-beyond">Note: >450km Out station tariff  will be applied</div>
-</div>
- 
-<div class="content16" data-tab="2" role="tabpanel" aria-labelledby="elementor-tab-title-6831" tabindex="0" style="display: none;">
-</br>
-<table>
-  <thead>
-    <tr>
-      <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Duration&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
-      <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>&nbsp;4 Hrs-40KMS &nbsp;</td>
-      <td>&nbsp;3000 &nbsp;</td>
-    </tr>
-    <tr>
-      <td>&nbsp;8 Hrs-80KMS&nbsp;</td>
-      <td>&nbsp;4000&nbsp;</td>
-    </tr>
-    <tr>
-      <td>&nbsp;EXTRA HOUR&nbsp;&nbsp;&nbsp;</td>
-      <td>&nbsp;350&nbsp;</td>
-    </tr>
-    
-    <tr>
-      <td>&nbsp;&nbsp;&nbsp;Extra Km&nbsp;</td>
-      <td>&nbsp;&nbsp;&nbsp;19&nbsp;</td>
-    </tr>
-  </tbody>
-</table>
-</br>
-</br>
-</br>
-</br>
-</br>
-</div>
-<div class="content16" data-tab="3" role="tabpanel" aria-labelledby="elementor-tab-title-6831" tabindex="0" style="display: none;">
-</br>
-<table>
-  <thead>
-    <tr>
-      <th>Duration&nbsp;&nbsp;&nbsp;</th>
-      <th>Price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>RATE PER EACH KM</td>
-      <td>19</td>
-    </tr>
-    <tr>
-      <td>Chauffeur Allowance</td>
-      <td>700</td>
-    </tr>
-    
-  </tbody>
-</table>
-
-</br>
-</div>
-
-</div>
-</br>
-<a href="https://api.whatsapp.com/send/?phone=918698209999&text&type=phone_number&app_absent=0" class="btn btn-outline-success my-2 my-sm-0">Book Now</a>
-
-</div>  
-  
-  <!-- Audi Q7 -->
-    <div class="car reveal">
-      <img src="https://i.ibb.co/sj0BFfH/93c7oua-1555653.webp" alt="Car 2" >
-    
-      <div class="car-details">
-        
-        <div class="car-price">AUDI Q7</div>
-        <div class="car-name">Car 5</div>
-      </div>
-      <div class="toggle-buttons">
-        <button class="toggle-button active" data-tab="1">Day Rent</button>
-        <button class="toggle-button" data-tab="2">Regular </button>
-        <button class="toggle-button" data-tab="3">Out station</button>
-        
-        <div class="content active" data-tab="1" role="tabpanel" aria-labelledby="elementor-tab-title-6831" tabindex="0" style="display: block;">
-        </br>
-        <table>
-          <thead>
-            <tr>
-              <th>Duration</th>
-              <th>Price</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>12 Hrs</td>
-              <td>25000</td>
-            </tr>
-          
-            
-            <tr>
-              <td>Fuel Charge</td>
-              <td>6 Km/ 1 Litre</td>
-            </tr>
-            <tr>
-              <td>Chauffeur Allowance</td>
-              <td>1000</td>
-            </tr>
-            <tr>
-              <td>Extra Hr</td>
-              <td>1000</td>
-            </tr>
-            <tr>
-                <td>24 Hrs</td>
-                <td>35000</td>
-              </tr>
-            <tr>
-                <td>Chauffeur Allowance</td>
-                <td>1500</td>
-              </tr>
-          </tbody>
-        </table>
-      </br>
-    
-  </div>
-         
-        <div class="content" data-tab="2" role="tabpanel" aria-labelledby="elementor-tab-title-6831" tabindex="0" style="display: none;">
-        </br>
-        <table>
-          <thead>
-            <tr>
-              <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Duration&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
-              <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>&nbsp;4 Hrs-40KMS &nbsp;</td>
-              <td>&nbsp;12500 &nbsp;</td>
-            </tr>
-            <tr>
-              <td>&nbsp;8 Hrs-80KMS&nbsp;</td>
-              <td>&nbsp;25000&nbsp;</td>
-            </tr>
-            <tr>
-              <td>&nbsp;EXTRA HOUR&nbsp;&nbsp;&nbsp;</td>
-              <td>&nbsp;600&nbsp;</td>
-            </tr>
-            
-            <tr>
-              <td>&nbsp;&nbsp;&nbsp;Extra Km&nbsp;</td>
-              <td>&nbsp;&nbsp;&nbsp;110&nbsp;</td>
-            </tr>
-          </tbody>
-        </table>
-      </br>
-    </br>
-  </br>
-</br>
-</br>
-        </div>
-        <div class="content1" data-tab="3" role="tabpanel" aria-labelledby="elementor-tab-title-6831" tabindex="0" style="display: none;">
-        </br>
-          <table>
-            <thead>
-              <tr>
-                <th>Duration&nbsp;&nbsp;&nbsp;</th>
-                <th>Price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>RATE PER EACH KM</td>
-                <td>110</td>
-              </tr>
-              <tr>
-                <td>Chauffeur Allowance</td>
-                <td>1500</td>
-              </tr>
-              
-            </tbody>
-          </table>
-        </br>
-
-
-      </div>
-      
-      </div> 
-
-      <a href="https://api.whatsapp.com/send/?phone=918698209999&text&type=phone_number&app_absent=0" class="btn btn-outline-success my-2 my-sm-0">Book Now</a>
-
-  </div>
-  <div class="car reveal">
-    <!-- BMW 7S -->
-   <img src="https://i.ibb.co/6wn2Dc4/bmw.jpg" alt="Car 2">
-   <div class="car-details">
-     
-     <div class="car-price">BMW 7S</div>
-     <div class="car-name">Car 6</div>
-   </div>
-   <div class="tab-container">
-     <button class="tab-button active" data-tab="1">Day Rent</button>
-     <button class="tab-button" data-tab="2">Regular</button>
-     <button class="tab-button" data-tab="3">Out station</button>
-     
-     <div class="content10 active" data-tab="1" role="tabpanel" aria-labelledby="elementor-tab-title-6831" tabindex="0" style="display: block;">
-     </br>
-     <table>
-       <thead>
-         <tr>
-           <th>Duration</th>
-           <th>Price</th>
-         </tr>
-       </thead>
-       <tbody>
-         <tr>
-           <td>12 Hrs</td>
-           <td>18000</td>
-         </tr>
-       
-         
-         <tr>
-           <td>Fuel Charge</td>
-           <td>6 Km/ 1 Litre</td>
-         </tr>
-         <tr>
-           <td>Chauffeur Allowance</td>
-           <td>1000</td>
-         </tr>
-         <tr>
-           <td>Extra Hr</td>
-           <td>1000</td>
-         </tr>
-         <tr>
-             <td>24 Hrs</td>
-             <td>28000</td>
-           </tr>
-         <tr>
-             <td>Chauffeur Allowance</td>
-             <td>1500</td>
-           </tr>
-       </tbody>
-     </table>
-     </br>
-
-     </div>
-      
-     <div class="content10" data-tab="2" role="tabpanel" aria-labelledby="elementor-tab-title-6831" tabindex="0" style="display: none;">
-     </br>
-     <table>
-       <thead>
-         <tr>
-           <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Duration&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
-           <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
-         </tr>
-       </thead>
-       <tbody>
-         <tr>
-           <td>&nbsp;4 Hrs-40KMS &nbsp;</td>
-           <td>&nbsp;9000 &nbsp;</td>
-         </tr>
-         <tr>
-           <td>&nbsp;8 Hrs-80KMS&nbsp;</td>
-           <td>&nbsp;18000&nbsp;</td>
-         </tr>
-         <tr>
-           <td>&nbsp;EXTRA HOUR&nbsp;&nbsp;&nbsp;</td>
-           <td>&nbsp;500&nbsp;</td>
-         </tr>
-         
-         <tr>
-           <td>&nbsp;&nbsp;&nbsp;Extra Km&nbsp;</td>
-           <td>&nbsp;&nbsp;&nbsp;100&nbsp;</td>
-         </tr>
-       </tbody>
-     </table>
-   </br>
- </br>
-</br>
-</br>
-</br>
-     </div>
-     
-     <div class="content10" data-tab="3" role="tabpanel" aria-labelledby="elementor-tab-title-6831" tabindex="0" style="display: none;">
-     </br>
-     <table>
-       <thead>
-         <tr>
-           <th>Duration&nbsp;&nbsp;&nbsp;</th>
-           <th>Price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
-         </tr>
-       </thead>
-       <tbody>
-         <tr>
-           <td>RATE PER EACH KM</td>
-           <td>110</td>
-         </tr>
-         <tr>
-           <td>Chauffeur Allowance</td>
-           <td>1500</td>
-         </tr>
-         
-       </tbody>
-     </table>
-     </br>
-    </div>
-     
-   </div>
- 
-   <a href="https://api.whatsapp.com/send/?phone=918698209999&text&type=phone_number&app_absent=0" class="btn btn-outline-success my-2 my-sm-0">Book Now</a>
-
-</div>
-        <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const tabButtons12 = document.querySelectorAll('.tab-button');
-    const tabContents12 = document.querySelectorAll('.content10');
-
-    tabButtons12.forEach((button) => {
-      button.addEventListener('click', () => {
-        const tab = button.dataset.tab;
-
-        // Remove 'active' class from all buttons
-        tabButtons12.forEach((btn) => {
-          btn.classList.remove('active');
-        });
-
-        // Hide all content sections and display the selected one
-        tabContents12.forEach((content) => {
-          if (content.dataset.tab === tab) {
-            content.style.display = 'block';
-          } else {
-            content.style.display = 'none';
-          }
-        });
-
-        // Add 'active' class to the clicked button
-        button.classList.add('active');
-      });
     });
-  });
+  }
+
+  window.addEventListener('scroll', animateOnScroll);
+  window.addEventListener('load', animateOnScroll);
 </script>
 
-<div class="car reveal">
-  <!-- Benz c 220 -->
- <img src="https://i.ibb.co/n0bMBBq/benz-c-220.jpg" alt="Car 2">
- <div class="car-details">
-   
-   <div class="car-price">BENZ C 220</div>
-   <div class="car-name">Car 7</div>
- </div>
- <div class="tab-container1">
-     <button class="tab-button1 active" data-tab="1">Day Rent</button>
-     <button class="tab-button1" data-tab="2">Regular</button>
-     <button class="tab-button1" data-tab="3">Out station</button>
- 
-   
-   <div class="content12 active" data-tab="1" role="tabpanel" aria-labelledby="elementor-tab-title-6831" tabindex="0" style="display: block;">
-   </br>
-   <table>
-     <thead>
-       <tr>
-         <th>Duration</th>
-         <th>Price</th>
-       </tr>
-     </thead>
-     <tbody>
-       <tr>
-         <td>12 Hrs</td>
-         <td>12000</td>
-       </tr>
-     
-       
-       <tr>
-         <td>Fuel Charge</td>
-         <td>6 Km/ 1 Litre</td>
-       </tr>
-       <tr>
-         <td>Chauffeur Allowance</td>
-         <td>750</td>
-       </tr>
-       <tr>
-         <td>Extra Hr</td>
-         <td>700</td>
-       </tr>
-       <tr>
-           <td>24 Hrs</td>
-           <td>18000</td>
-         </tr>
-       <tr>
-           <td>Chauffeur Allowance</td>
-           <td>1500</td>
-         </tr>
-     </tbody>
-   </table>
-   </br>
-   </div>
-    
-   <div class="content12" data-tab="2" role="tabpanel" aria-labelledby="elementor-tab-title-6831" tabindex="0" style="display: none;">
-   </br>
-   <table>
-     <thead>
-       <tr>
-         <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Duration&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
-         <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
-       </tr>
-     </thead>
-     <tbody>
-       <tr>
-         <td>&nbsp;4 Hrs-40KMS &nbsp;</td>
-         <td>&nbsp;6000 &nbsp;</td>
-       </tr>
-       <tr>
-         <td>&nbsp;8 Hrs-80KMS&nbsp;</td>
-         <td>&nbsp;12000&nbsp;</td>
-       </tr>
-       <tr>
-         <td>&nbsp;EXTRA HOUR&nbsp;&nbsp;&nbsp;</td>
-         <td>&nbsp;400&nbsp;</td>
-       </tr>
-       
-       <tr>
-         <td>&nbsp;&nbsp;&nbsp;Extra Km&nbsp;</td>
-         <td>&nbsp;&nbsp;&nbsp;70&nbsp;</td>
-       </tr>
-     </tbody>
-   </table>
-  
- </br>
-</br>
-</br>
-</br>
-</br>
-   </div>
-   <div class="content12" data-tab="3" role="tabpanel" aria-labelledby="elementor-tab-title-6831" tabindex="0" style="display: none;">
-   </br>
-   <table>
-     <thead>
-       <tr>
-         <th>Duration&nbsp;&nbsp;&nbsp;</th>
-         <th>Price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
-       </tr>
-     </thead>
-     <tbody>
-       <tr>
-         <td>RATE PER EACH KM</td>
-         <td>70</td>
-       </tr>
-       <tr>
-         <td>Chauffeur Allowance</td>
-         <td>1500</td>
-       </tr>
-       
-     </tbody>
-   </table>
-   </br>
-  </div>
-  <a href="https://api.whatsapp.com/send/?phone=918698209999&text&type=phone_number&app_absent=0" class="btn btn-outline-success my-2 my-sm-0">Book Now</a>
- 
- </div>
- 
 
-<!--  cars here -->
-
-</div>
-<div class="car reveal">
-  <!-- New fortuner -->
- <img src="https://i.ibb.co/H7d0sxs/fortuner.webp" alt="Car 2">
- <div class="car-details">
-   
-   <div class="car-price">NEW FORTUNER</div>
-   <div class="car-name">Car 8</div>
- </div>
- <div class="tab-container12">
-     <button class="tab-button12 active" data-tab="1">Day Rent</button>
-     <button class="tab-button12 " data-tab="2">Regular</button>
-     <button class="tab-button12" data-tab="3">Out station</button>
-   
-   <div class="content22 active" data-tab="1" role="tabpanel" aria-labelledby="elementor-tab-title-6831" tabindex="0" style="display: block;">
-   </br>
-   <table>
-     <thead>
-       <tr>
-         <th>Duration</th>
-         <th>Price</th>
-       </tr>
-     </thead>
-     <tbody>
-       <tr>
-         <td>12 Hrs</td>
-         <td>15000</td>
-       </tr>
-     
-       
-       <tr>
-         <td>Fuel Charge</td>
-         <td>6 Km/ 1 Litre</td>
-       </tr>
-       <tr>
-         <td>Chauffeur Allowance</td>
-         <td>750</td>
-       </tr>
-       <tr>
-         <td>Extra Hr</td>
-         <td>400</td>
-       </tr>
-       <tr>
-           <td>24 Hrs</td>
-           <td>20000</td>
-         </tr>
-       <tr>
-           <td>Chauffeur Allowance</td>
-           <td>1000</td>
-         </tr>
-     </tbody>
-   </table>
-   
-
-   </div>
-    
-   <div class="content22" data-tab="2" role="tabpanel" aria-labelledby="elementor-tab-title-6831" tabindex="0" style="display: none;">
-   </br>
-   <table>
-       <thead>
-         <tr>
-           <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Duration&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
-           <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
-         </tr>
-       </thead>
-       <tbody>
-         <tr>
-           <td>&nbsp;4 Hrs-40KMS &nbsp;</td>
-           <td>&nbsp;7500 &nbsp;</td>
-         </tr>
-         <tr>
-           <td>&nbsp;8 Hrs-80KMS&nbsp;</td>
-           <td>&nbsp;15000&nbsp;</td>
-         </tr>
-         <tr>
-           <td>&nbsp;EXTRA HOUR&nbsp;&nbsp;&nbsp;</td>
-           <td>&nbsp;400&nbsp;</td>
-         </tr>
-         
-         <tr>
-           <td>&nbsp;&nbsp;&nbsp;Extra Km&nbsp;</td>
-           <td>&nbsp;&nbsp;&nbsp;60&nbsp;</td>
-         </tr>
-       </tbody>
-     </table>
- </br>
-</br>
-</br>
-</br>
-   </div>
-   <div class="content22" data-tab="3" role="tabpanel" aria-labelledby="elementor-tab-title-6831" tabindex="0" style="display: none;">
- </br>
- <table>
-   <thead>
-     <tr>
-       <th>Duration&nbsp;&nbsp;&nbsp;</th>
-       <th>Price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
-     </tr>
-   </thead>
-   <tbody>
-     <tr>
-       <td>RATE PER EACH KM</td>
-       <td>60</td>
-     </tr>
-     <tr>
-       <td>Chauffeur Allowance</td>
-       <td>1000</td>
-     </tr>
-     
-   </tbody>
- </table>
- </br>
-</div>
-  
- </div>
-</br>
-<a href="https://api.whatsapp.com/send/?phone=918698209999&text&type=phone_number&app_absent=0" class="btn btn-outline-success my-2 my-sm-0">Book Now</a>
-
-</div>
-
-<div class="car reveal">
-     <!--fortuner -->
-    <img src="https://i.ibb.co/JHwCJDq/fortuner-2.webp" alt="Car 2">
-    <div class="car-details">
-      
-      <div class="car-price">FORTUNER</div>
-      <div class="car-name">Car 9</div>
-    </div>
-    <div class="tab-container13">
-        <button class="tab-button13 active" data-tab="1">Day Rent</button>
-        <button class="tab-button13" data-tab="2">Regular</button>
-        <button class="tab-button13" data-tab="3">Out station</button>
-      
-      <div class="content13 active" data-tab="1" role="tabpanel" aria-labelledby="elementor-tab-title-6831" tabindex="0" style="display: block;">
-      </br>
-      <table>
-        <thead>
-          <tr>
-            <th>Duration</th>
-            <th>Price</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>12 Hrs</td>
-            <td>10000</td>
-          </tr>
-        
-          
-          <tr>
-            <td>Fuel Charge</td>
-            <td>6 Km/ 1 Litre</td>
-          </tr>
-          <tr>
-            <td>Chauffeur Allowance</td>
-            <td>750</td>
-          </tr>
-          <tr>
-            <td>Extra Hr</td>
-            <td>300</td>
-          </tr>
-          <tr>
-              <td>24 Hrs</td>
-              <td>15000</td>
-            </tr>
-          <tr>
-              <td>Chauffeur Allowance</td>
-              <td>1000</td>
-            </tr>
-        </tbody>
-      </table>
-      </br>
-      </div>
-    
-      <div class="content13" data-tab="2" role="tabpanel" aria-labelledby="elementor-tab-title-6831" tabindex="0" style="display: none;">
-      </br>
-      <table>
-        <thead>
-          <tr>
-            <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Duration&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
-            <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>&nbsp;4 Hrs-40KMS &nbsp;</td>
-            <td>&nbsp;5000 &nbsp;</td>
-          </tr>
-          <tr>
-            <td>&nbsp;8 Hrs-80KMS&nbsp;</td>
-            <td>&nbsp;10000&nbsp;</td>
-          </tr>
-          <tr>
-            <td>&nbsp;EXTRA HOUR&nbsp;&nbsp;&nbsp;</td>
-            <td>&nbsp;400&nbsp;</td>
-          </tr>
-          
-          <tr>
-            <td>&nbsp;&nbsp;&nbsp;Extra Km&nbsp;</td>
-            <td>&nbsp;&nbsp;&nbsp;50&nbsp;</td>
-          </tr>
-        </tbody>
-      </table>
-      </br>
-    </br>
-  </br>
-</br>
-</br>
-</br>
-      </div>
-      <div class="content13" data-tab="3" role="tabpanel" aria-labelledby="elementor-tab-title-6831" tabindex="0" style="display: none;">
-      </br>
-      <table>
-        <thead>
-          <tr>
-            <th>Duration&nbsp;&nbsp;&nbsp;</th>
-            <th>Price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>RATE PER EACH KM</td>
-            <td>50</td>
-          </tr>
-          <tr>
-            <td>Chauffeur Allowance</td>
-            <td>1000</td>
-          </tr>
-          
-        </tbody>
-      </table>
-
-     </div>
-      
-    </div>
-
-    <a href="https://api.whatsapp.com/send/?phone=918698209999&text&type=phone_number&app_absent=0" class="btn btn-outline-success my-2 my-sm-0">Book Now</a>
-   
-   
-</div>
-<div class="car reveal">
-     <!-- carmy -->
-  <img src="https://i.ibb.co/dDgyK4p/Camry.webp" alt="Car 2">
-  <div class="car-details">
-    
-    <div class="car-price">CAMRY</div>
-    <div class="car-name">Car 10</div>
-  </div>
-  <div class="tab-container14">
-    <button class="tab-button14 active" data-tab="1">Day Rent</button>
-    <button class="tab-button14" data-tab="2">Regular</button>
-    <button class="tab-button14" data-tab="3">Out station</button>
-    
-    <div class="content14 active" data-tab="1" role="tabpanel" aria-labelledby="elementor-tab-title-6831" tabindex="0" style="display: block;">
-    </br>
-    <table>
-      <thead>
-        <tr>
-          <th>Duration</th>
-          <th>Price</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>12 Hrs</td>
-          <td>10000</td>
-        </tr>
-      
-        
-        <tr>
-          <td>Fuel Charge</td>
-          <td>6 Km/ 1 Litre</td>
-        </tr>
-        <tr>
-          <td>Chauffeur Allowance</td>
-          <td>750</td>
-        </tr>
-        <tr>
-          <td>Extra Hr</td>
-          <td>300</td>
-        </tr>
-        <tr>
-            <td>24 Hrs</td>
-            <td>15000</td>
-          </tr>
-        <tr>
-            <td>Chauffeur Allowance</td>
-            <td>1000</td>
-          </tr>
-      </tbody>
-    </table>
-    
-    </div>
-     
-    <div class="content14" data-tab="2" role="tabpanel" aria-labelledby="elementor-tab-title-6831" tabindex="0" style="display: none;">
-    </br>
-    <table>
-      <thead>
-        <tr>
-          <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Duration&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
-          <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>&nbsp;4 Hrs-40KMS &nbsp;</td>
-          <td>&nbsp;5000 &nbsp;</td>
-        </tr>
-        <tr>
-          <td>&nbsp;8 Hrs-80KMS&nbsp;</td>
-          <td>&nbsp;10000&nbsp;</td>
-        </tr>
-        <tr>
-          <td>&nbsp;EXTRA HOUR&nbsp;&nbsp;&nbsp;</td>
-          <td>&nbsp;400&nbsp;</td>
-        </tr>
-        
-        <tr>
-          <td>&nbsp;&nbsp;&nbsp;Extra Km&nbsp;</td>
-          <td>&nbsp;&nbsp;&nbsp;70&nbsp;</td>
-        </tr>
-      </tbody>
-    </table>
-    </br>
-  </br>
-</br>
-</br>
-</br>
-    </div>
-    <div class="content14" data-tab="3" role="tabpanel" aria-labelledby="elementor-tab-title-6831" tabindex="0" style="display: none;">
-    </br>
-    <table>
-      <thead>
-        <tr>
-          <th>Duration&nbsp;&nbsp;&nbsp;</th>
-          <th>Price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>RATE PER EACH KM</td>
-          <td>70</td>
-        </tr>
-        <tr>
-          <td>Chauffeur Allowance</td>
-          <td>1000</td>
-        </tr>
-        
-      </tbody>
-    </table>
-    </br>
-   </div>
-    
-  </div>
-</br>
-<a href="https://api.whatsapp.com/send/?phone=918698209999&text&type=phone_number&app_absent=0" class="btn btn-outline-success my-2 my-sm-0">Book Now</a>
-   
-</div>
-<div class="car reveal">
-     <!-- Honda city -->
-  <img src="https://i.ibb.co/6mtM8f6/honda-city-obsidian-blue-pearl.jpg" alt="Car 2">
-  <div class="car-details">
-    
-    <div class="car-price">HONDA CITY</div>
-    <div class="car-name">Car 11</div>
-  </div>
-  <div class="tab-container15">
-    <button class="tab-button15 active" data-tab="1">Day Rent</button>
-    <button class="tab-button15" data-tab="2">Regular</button>
-    <button class="tab-button15" data-tab="3">Out station</button>
-    
-    <div class="content15 active" data-tab="1" role="tabpanel" aria-labelledby="elementor-tab-title-6831" tabindex="0" style="display: block;">
-    </br>
-    <table>
-      <thead>
-        <tr>
-          <th>Duration</th>
-          <th>Price</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>12 Hrs</td>
-          <td>5000</td>
-        </tr>
-      
-        
-        <tr>
-          <td>Fuel Charge</td>
-          <td>6 Km/ 1 Litre</td>
-        </tr>
-        <tr>
-          <td>Chauffeur Allowance</td>
-          <td>500</td>
-        </tr>
-        <tr>
-          <td>Extra Hr</td>
-          <td>200</td>
-        </tr>
-        <tr>
-            <td>24 Hrs</td>
-            <td>7500</td>
-          </tr>
-        <tr>
-            <td>Chauffeur Allowance</td>
-            <td>1000</td>
-          </tr>
-      </tbody>
-    </table>
-    </br>
-    </div>
-     
-    <div class="content15" data-tab="2" role="tabpanel" aria-labelledby="elementor-tab-title-6831" tabindex="0" style="display: none;">
-    </br>
-    <table>
-      <thead>
-        <tr>
-          <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Duration&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
-          <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>&nbsp;4 Hrs-40KMS &nbsp;</td>
-          <td>&nbsp;2500 &nbsp;</td>
-        </tr>
-        <tr>
-          <td>&nbsp;8 Hrs-80KMS&nbsp;</td>
-          <td>&nbsp;5000&nbsp;</td>
-        </tr>
-        <tr>
-          <td>&nbsp;EXTRA HOUR&nbsp;&nbsp;&nbsp;</td>
-          <td>&nbsp;200&nbsp;</td>
-        </tr>
-        
-        <tr>
-          <td>&nbsp;&nbsp;&nbsp;Extra Km&nbsp;</td>
-          <td>&nbsp;&nbsp;&nbsp;50&nbsp;</td>
-        </tr>
-      </tbody>
-    </table>
-  </br>
-</br>
-</br>
-</br>
-</br>
-    </br>
-    </div>
-    <div class="content15" data-tab="3" role="tabpanel" aria-labelledby="elementor-tab-title-6831" tabindex="0" style="display: none;">
-    </br>
-    <table>
-      <thead>
-        <tr>
-          <th>Duration&nbsp;&nbsp;&nbsp;</th>
-          <th>Price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>RATE PER EACH KM</td>
-          <td>50</td>
-        </tr>
-        <tr>
-          <td>Chauffeur Allowance</td>
-          <td>500</td>
-        </tr>
-        
-      </tbody>
-    </table>
-   
-   </div>
-    
-  </div>
-  <a href="https://api.whatsapp.com/send/?phone=918698209999&text&type=phone_number&app_absent=0" class="btn btn-outline-success my-2 my-sm-0">Book Now</a>
-   
-</div>
-
-
- 
-  
-    <div class="car reveal">
-      <!-- Nissan Sunny -->
-     <img src="https://i.ibb.co/Yc27rsk/PHOTO-2023-09-07-18-13-18.jpg" alt="Car 2">
-     <div class="car-details">
-       
-       <div class="car-price">Nissan Sunny</div>
-       <div class="car-name">Car 12</div>
-     </div>
-     <div class="tab-container">
-         <button class="tab-button active" data-tab="1">Day Rent</button>
-         <button class="tab-button" data-tab="2">Regular</button>
-         <button class="tab-button" data-tab="3">Out station</button>
-       
-       <div class="content active" data-tab="1" role="tabpanel" aria-labelledby="elementor-tab-title-6831" tabindex="0" style="display: block;">
-      </br>
-      <table>
-        <thead>
-          <tr>
-            <th>Duration</th>
-            <th>Price</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>12 Hrs</td>
-            <td>2000</td>
-          </tr>
-        
-          
-          <tr>
-            <td>Fuel Charge</td>
-            <td>8 Km/ 1 Litre</td>
-          </tr>
-          <tr>
-            <td>Chauffeur Allowance</td>
-            <td>500</td>
-          </tr>
-          <tr>
-            <td>Extra Hr</td>
-            <td>200</td>
-          </tr>
-          <tr>
-              <td>24 Hrs</td>
-              <td>2500</td>
-            </tr>
-          <tr>
-              <td>Chauffeur Allowance</td>
-              <td>600</td>
-            </tr>
-        </tbody>
-      </table>
-   
-
-
-       </div>
-        
-       <div class="content" data-tab="2" role="tabpanel" aria-labelledby="elementor-tab-title-6831" tabindex="0" style="display: none;">
-      </br>
-      <table>
-          <thead>
-            <tr>
-              <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Duration&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
-              <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>&nbsp;4 Hrs-40KMS &nbsp;</td>
-              <td>&nbsp;2000 &nbsp;</td>
-            </tr>
-            <tr>
-              <td>&nbsp;8 Hrs-80KMS&nbsp;</td>
-              <td>&nbsp;3000&nbsp;</td>
-            </tr>
-            <tr>
-              <td>&nbsp;EXTRA HOUR&nbsp;&nbsp;&nbsp;</td>
-              <td>&nbsp;100&nbsp;</td>
-            </tr>
-            
-            <tr>
-              <td>&nbsp;&nbsp;&nbsp;Extra Km&nbsp;</td>
-              <td>&nbsp;&nbsp;&nbsp;12&nbsp;</td>
-            </tr>
-          </tbody>
-        </table>
-    </br>
-   </br>
- </br>
- </br>
- </br>
-</br>
-       </div>
-       <div class="content" data-tab="3" role="tabpanel" aria-labelledby="elementor-tab-title-6831" tabindex="0" style="display: none;">
-     </br>
-     <table>
-       <thead>
-         <tr>
-           <th>Duration&nbsp;&nbsp;&nbsp;</th>
-           <th>Price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
-         </tr>
-       </thead>
-       <tbody>
-         <tr>
-           <td>RATE PER EACH KM</td>
-           <td>12</td>
-         </tr>
-         <tr>
-           <td>Chauffeur Allowance</td>
-           <td>500</td>
-         </tr>
-         
-       </tbody>
-     </table>
-     </br>
-    </div>
-      
-     </div>
- </br>
- <a href="https://api.whatsapp.com/send/?phone=918698209999&text&type=phone_number&app_absent=0" class="btn btn-outline-success my-2 my-sm-0">Book Now</a>
-   
-   </div>
-   
- <style>
-  /* Default styles for larger screens */
-  .car-note {
-  width: 75%; /* Default width for larger screens */
-  max-width: 600px; /* Limit the maximum width */
-  margin: 0 auto;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
-  overflow: hidden;
-}
-
-.car-details {
-  padding: 20px;
-}
-
-.car-details h2 {
-  font-size: 24px;
-  color: #000c1a;
-  margin-bottom: 10px;
-  font-weight: bold;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  letter-spacing: 1.2px;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-  text-align: center;
-}
-
-.car-details ol {
-  padding-left: 10; /* Remove default padding */
-  list-style-type: decimal; /* Use decimal numbering */
-}
-
-.car-details li {
-  margin-bottom: 10px;
-  text-align: justify; /* Justify text for equal line widths */
-}
-
-/* Media query for mobile view */
-@media screen and (max-width: 768px) {
-  .car-note {
-    width: 100%;
-    padding: 0;
-  }
-  
-  .car-details {
-    text-align: left;
-  padding: 5px;
-  }
-  
-  .car-details ol {
-    padding-left: 0;
-  }
-}
-
- </style>
- <div class="car-note reveal">
-  <div class="car-details">
-    <h2>Note:</h2>
-  </br></br></br>
-    <ol>
-      <li>Toll gate, parking, and other state permit are chargeable to the customer only.</li>
-      <li>If any decoration has been made, cleaning charges will be applicable.</li>
-      <li>For the tariffs where chauffeur charges are not mentioned, charges will be applied accordingly.</li>
-      <li>Kilometres and time will be calculated from office to office.</li>
-      <li>5% GST will be applicable.</li>
-      <li>We will choose the tariff which is comparatively lesser at cost.</li>
-      <li>Extra waiting hours will be applicable for up to extra 4 hours only.</li>
-    </ol>
+<div id="transition-loader" class="loader">
+  <div class="logo-animation">
+    <span>Akhil</span> <span class="amp">Car</span> <span>Travels</span>
+    <span class="dot">●</span>
   </div>
 </div>
 
 
-</div>
-<script src="script.js"></script>  
-</body>
 
-    <script type="text/javascript">
-      window.addEventListener('scroll', reveal);
-    
-      function reveal() {
-        var reveals = document.querySelectorAll('.reveal');
-    
-        for (var i = 0; i < reveals.length; i++) {
-    
-          var windowheight = window.innerHeight;
-          var revealtop = reveals[i].getBoundingClientRect().top;
-          var revealpoint = 150;
-    
-          if (revealtop < windowheight - revealpoint) {
-            reveals[i].classList.add('active');
-          } else {
-            reveals[i].classList.remove('active');
-          }
-        }
-      }
-    </script>
-
+<!-- GSAP CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    // Your JavaScript code here
+  const loader = document.getElementById("transition-loader");
+  const logo = loader.querySelector(".logo-animation");
 
+  function animateLoaderIn() {
+    gsap.set(loader, { opacity: 1, pointerEvents: "auto" });
+    return gsap.timeline()
+      .fromTo(logo, { opacity: 0, scale: 0.8 }, { opacity: 1, scale: 1, duration: 0.6, ease: "power2.out" });
+  }
 
-const buttons = document.querySelectorAll('.toggle-button');
-const contents = document.querySelectorAll('.content');
-const content1 = document.querySelectorAll('.content1'); 
-const tabContainer = document.querySelector('.tab-container');
-const tabButtons = tabContainer.querySelectorAll('.tab-button');
-const tabContents = tabContainer.querySelectorAll('.content10');
+  function animateLoaderOut() {
+    return gsap.timeline()
+      .to(logo, { opacity: 0, scale: 0.8, duration: 0.5, ease: "power2.in" })
+      .to(loader, { opacity: 0, pointerEvents: "none", duration: 0.4 }, "-=0.3");
+  }
 
-const tabContainer1 = document.querySelector('.tab-container1');
-const tabButtons1 = tabContainer1.querySelectorAll('.tab-button1');
-const tabContents1 = tabContainer1.querySelectorAll('.content12');
-const tabContainer12 = document.querySelector('.tab-container12');
-const tabButtons12 = tabContainer12.querySelectorAll('.tab-button12');
-const tabContents12 = tabContainer12.querySelectorAll('.content22');
-const tabContainer13 = document.querySelector('.tab-container13');
-const tabButtons13 = tabContainer13.querySelectorAll('.tab-button13');
-const tabContents13 = tabContainer13.querySelectorAll('.content13');
-const tabContainer14 = document.querySelector('.tab-container14');
-const tabButtons14 = tabContainer14.querySelectorAll('.tab-button14');
-const tabContents14 = tabContainer14.querySelectorAll('.content14');
-const tabContainer15 = document.querySelector('.tab-container15');
-const tabButtons15 = tabContainer15.querySelectorAll('.tab-button15');
-const tabContents15 = tabContainer15.querySelectorAll('.content15');
-const tabContainer16 = document.querySelector('.tab-container16');
-const tabButtons16 = tabContainer16.querySelectorAll('.tab-button16');
-const tabContents16 = tabContainer16.querySelectorAll('.content16');
-const tabContainer17 = document.querySelector('.tab-container17');
-const tabButtons17 = tabContainer17.querySelectorAll('.tab-button17');
-const tabContents17 = tabContainer17.querySelectorAll('.content17');
-const tabContainer18 = document.querySelector('.tab-container18');
-const tabButtons18 = tabContainer18.querySelectorAll('.tab-button18');
-const tabContents18 = tabContainer18.querySelectorAll('.content18');
+  document.querySelectorAll("a[href^='#']").forEach(link => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute("href");
 
-
-  buttons.forEach((button) => {
-    button.addEventListener('click', () => {
-      const tab = button.dataset.tab;
-  
-      buttons.forEach((btn) => {
-        btn.classList.remove('active');
+      animateLoaderIn().then(() => {
+        gsap.to(window, {
+          duration: 1,
+          scrollTo: targetId,
+          ease: "power2.inOut",
+          onComplete: () => {
+            animateLoaderOut();
+          }
+        });
       });
-  
-      contents.forEach((content) => {
-        if (content.dataset.tab === tab) {
-          content.style.display = 'block';
-        } else {
-          content.style.display = 'none';
-        }
-      });
-      content1.forEach((content1) => {
-        if (content1.dataset.tab === tab) {
-          content1.style.display = 'block';
-        } else {
-          content1.style.display = 'none';
-        }
-      });
-  
-      button.classList.add('active');
-    });
-  });
-  
-  tabButtons.forEach((button) => {
-    button.addEventListener('click', () => {
-      const tab = button.dataset.tab;
-  
-      tabButtons.forEach((btn) => {
-        btn.classList.remove('active');
-      });
-  
-      tabContents.forEach((content) => {
-        if (content.dataset.tab === tab) {
-          content.style.display = 'block';
-        } else {
-          content.style.display = 'none';
-        }
-      });
-  
-      button.classList.add('active');
     });
   });
 
-  tabButtons1.forEach((button) => {
-    button.addEventListener('click', () => {
-      const tab = button.dataset.tab;
-  
-      tabButtons1.forEach((btn) => {
-        btn.classList.remove('active');
-      });
-  
-      tabContents1.forEach((content) => {
-        if (content.dataset.tab === tab) {
-          content.style.display = 'block';
-        } else {
-          content.style.display = 'none';
-        }
-      });
-  
-      button.classList.add('active');
-    });
+  // Optional: hide loader on first load
+  window.addEventListener("load", () => {
+    gsap.set(loader, { opacity: 0, pointerEvents: "none" });
   });
-  
- 
-
-tabButtons12.forEach((button) => {
-  button.addEventListener('click', () => {
-    const tab = button.dataset.tab;
-
-    tabButtons12.forEach((btn) => {
-      btn.classList.remove('active');
-    });
-
-    tabContents12.forEach((content) => {
-      if (content.dataset.tab === tab) {
-        content.style.display = 'block';
-      } else {
-        content.style.display = 'none';
-      }
-    });
-
-    button.classList.add('active');
-  });
-});
-
-
-tabButtons13.forEach((button) => {
-  button.addEventListener('click', () => {
-    const tab = button.dataset.tab;
-
-    tabButtons13.forEach((btn) => {
-      btn.classList.remove('active');
-    });
-
-    tabContents13.forEach((content) => {
-      if (content.dataset.tab === tab) {
-        content.style.display = 'block';
-      } else {
-        content.style.display = 'none';
-      }
-    });
-
-    button.classList.add('active');
-  });
-});
-
-
-
-tabButtons14.forEach((button) => {
-  button.addEventListener('click', () => {
-    const tab = button.dataset.tab;
-
-    tabButtons14.forEach((btn) => {
-      btn.classList.remove('active');
-    });
-
-    tabContents14.forEach((content) => {
-      if (content.dataset.tab === tab) {
-        content.style.display = 'block';
-      } else {
-        content.style.display = 'none';
-      }
-    });
-
-    button.classList.add('active');
-  });
-});
-
-
-tabButtons15.forEach((button) => {
-  button.addEventListener('click', () => {
-    const tab = button.dataset.tab;
-
-    tabButtons15.forEach((btn) => {
-      btn.classList.remove('active');
-    });
-
-    tabContents15.forEach((content) => {
-      if (content.dataset.tab === tab) {
-        content.style.display = 'block';
-      } else {
-        content.style.display = 'none';
-      }
-    });
-
-    button.classList.add('active');
-  });
-});
-
-
-
-tabButtons16.forEach((button) => {
-  button.addEventListener('click', () => {
-    const tab = button.dataset.tab;
-
-    tabButtons16.forEach((btn) => {
-      btn.classList.remove('active');
-    });
-
-    tabContents16.forEach((content) => {
-      if (content.dataset.tab === tab) {
-        content.style.display = 'block';
-      } else {
-        content.style.display = 'none';
-      }
-    });
-
-    button.classList.add('active');
-  });
-});
-
-
-
-tabButtons17.forEach((button) => {
-  button.addEventListener('click', () => {
-    const tab = button.dataset.tab;
-
-    tabButtons17.forEach((btn) => {
-      btn.classList.remove('active');
-    });
-
-    tabContents17.forEach((content) => {
-      if (content.dataset.tab === tab) {
-        content.style.display = 'block';
-      } else {
-        content.style.display = 'none';
-      }
-    });
-
-    button.classList.add('active');
-  });
-});
-
-
-
-tabButtons18.forEach((button) => {
-  button.addEventListener('click', () => {
-    const tab = button.dataset.tab;
-
-    tabButtons18.forEach((btn) => {
-      btn.classList.remove('active');
-    });
-
-    tabContents18.forEach((content) => {
-      if (content.dataset.tab === tab) {
-        content.style.display = 'block';
-      } else {
-        content.style.display = 'none';
-      }
-    });
-
-    button.classList.add('active');
-  });
-});
-
-function initializeTabs(tabContainer) {
-  const tabButtons = tabContainer.querySelectorAll('.tab-button');
-  const tabContents = tabContainer.querySelectorAll('.content');
-
-  tabButtons.forEach((button) => {
-    button.addEventListener('click', () => {
-      const tab = button.dataset.tab;
-
-      tabButtons.forEach((btn) => {
-        btn.classList.remove('active');
-      });
-
-      tabContents.forEach((content) => {
-        if (content.dataset.tab === tab) {
-          content.style.display = 'block';
-        } else {
-          content.style.display = 'none';
-        }
-      });
-
-      button.classList.add('active');
-    });
-  });
-}
-
-// Initialize tab containers
-const tabContainers = document.querySelectorAll('.tab-container');
-
-tabContainers.forEach((tabContainer) => {
-  initializeTabs(tabContainer);
-});
-
-});
-
-
 </script>
 
+
+
+<body>
+  <div class="contact-container">
+    <div class="contact-left">
+      <h1 class="contact-title animate-on-scroll"data-aos="fade-up">Let’s get<br>in touch</h1>
+      <div class="contact-arrow-box">
+        <div class="contact-arrow-line"></div>
+        <div class="contact-arrow-text "data-aos="fade-up">
+          Great! We're excited to hear from you and let's start something special together. Call us for any inquiry.
+        </div>
+      </div>
+      <div class="contact-info"data-aos="fade-up">
+        <p data-aos="fade-up"><strong>Don’t be afraid to say hello with us!</strong></p>
+        <b data-aos="fade-up">Phone</b>
+        <a href="tel:+919876543210">+91 9876543210</a><br>
+        <a href="tel:+919123456780">+91 9123456780</a>
+        <b data-aos="fade-up">Email</b>
+        <p>contactus@akhilcartravel.com</p>
+        <b data-aos="fade-up">Office</b>
+        <p>Akhil Travels</p>
+        <p>Endowments Colony</p>
+        <p>Near Nagarjuna Hospital</p>
+        <p>Kanur, Vijayawada</p>
+        <p>Andhra Pradesh - 520008</p>
+      </div>
+    </div>
+
+    <div class="contact-right" data-aos="fade-up">
+      <h2 class="contact-form-title">Contact Us</h2>
+   
+    <form id="contact-form" class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="8dd6e8df-7418-4760-8478-c3fe3a13323a">
+      <input type="text" name="name" placeholder="Name" required data-aos="fade-up">
+      <input type="email" name="email" placeholder="Email" required data-aos="fade-up">
+      <input type="text" name="phone" placeholder="Phone" required data-aos="fade-up">
+      <input type="text" name="subject" placeholder="Subject" data-aos="fade-up">
+      <textarea name="message" placeholder="Tell us about your interest" data-aos="fade-up"></textarea>
+      <button class="contact-submit-btn" type="submit" data-aos="fade-up">Send to us</button>
+    </form>
+
+    <!-- ✅ Success Message -->
+    <div id="success-message">
+      ✅ Message sent successfully! We will reach you shortly.
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    const form = document.getElementById('contact-form');
+    const successMsg = document.getElementById('success-message');
+
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      const formData = new FormData(form);
+
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        successMsg.style.display = 'block';
+        form.reset();
+        // Hide after 5 seconds (optional)
+        setTimeout(() => {
+          successMsg.style.display = 'none';
+        }, 5000);
+      } else {
+        successMsg.innerText = "❌ There was an error. Please try again later.";
+        successMsg.style.display = 'block';
+      }
+    });
+  </script>
+
+  </div>
+</body>
+
+  <section class="interactive-map" data-aos="fade-up">
+    <div class="overlay-content"data-aos="fade-up">
+      <h2 data-aos="fade-up">Find Us on the Map</h2>
+      <p>🗺️ Visit Akhil Car Travels at our exact location</p>
+      <a href="https://www.google.com/maps?q=16.486485893760367,80.68463486592347" target="_blank" class="map-button">
+        Open Location in Google Maps
+        <span>&rarr;</span>
+      </a>
+    </div>
+  </section>
+
+  
+</body>
+
+</html>
+<!-- Expandable Chat Button -->
+<div class="chat-container">
+  <div class="chat-options" id="chatOptions">
+    <a href="https://wa.me/919440404640" target="_blank" title="WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="tel:+919440404640" title="Call Us">
+      <i class="fas fa-phone-alt"></i>
+    </a>
+  </div>
+  <div class="chat-toggle" onclick="toggleChatOptions()">
+    <i class="fas fa-comment-dots"></i>
+  </div>
+</div>
+
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+<style>
+  .chat-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+  }
+
+  .chat-toggle {
+    background-color: #25D366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+    cursor: pointer;
+    font-size: 24px;
+    transition: background-color 0.3s ease;
+  }
+
+  .chat-toggle:hover {
+    background-color: #1ebe57;
+  }
+
+  .chat-options {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .chat-options a {
+    background-color: #fff;
+    color: #25D366;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease;
+  }
+
+  .chat-options a:hover {
+    transform: scale(1.1);
+    background-color: #25D366;
+    color: white;
+  }
+
+  .chat-options a i {
+    font-size: 20px;
+  }
+</style>
+
+<script>
+  function toggleChatOptions() {
+    const options = document.getElementById('chatOptions');
+    options.style.display = options.style.display === 'flex' ? 'none' : 'flex';
+  }
+</script>
+
+
+
+</body>
+</html>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet"/>
+
+  <style>
+    body {
+      margin: 0;
+      width: 100%;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom right, #fdf1f6, #f5f7fa);
+    }
+
+    /* SUBSCRIPTION SECTION */
+    .subscribe-section {
+      background-color: #e6e6ed;
+      padding: 60px 20px 40px;
+      
+      border-radius:30px 30px 0px 0px;
+    }
+
+    .subscribe-container {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .subscribe-image {
+      flex: 1 1 300px;
+      text-align: center;
+    }
+
+    .subscribe-image img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .subscribe-content {
+      flex: 2 1 500px;
+    }
+
+    .subscribe-content h2 {
+      font-size: 24px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .subscribe-content h1 {
+      font-size: 32px;
+      font-weight: 700;
+      color: #3e0f76;
+      margin-bottom: 25px;
+    }
+
+    .subscribe-form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .subscribe-form input[type="email"] {
+      flex: 1 1 250px;
+      padding: 14px 20px;
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
+      outline: none;
+    }
+
+    .subscribe-form button {
+      background-color: #3e0f76;
+      color: white;
+      padding: 14px 28px;
+      border: none;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    /* FOOTER */
+    footer { 
+       background: linear-gradient(to bottom right, #9a38d5, #be69a6, #c5a2a2);
+   
+      color:#ffffff;
+      padding: 60px 20px 30px;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      
+    }
+
+    .footer-section {
+      flex: 1 1 250px;
+      min-width: 220px;
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    .footer-section h3 {
+      font-size: 20px;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .footer-section p,
+    .footer-section li,
+    .footer-section a {
+      
+       color: #ffffff;
+      font-size: 15px;
+      margin: 8px 0;
+      transition: all 0.3s ease;
+    }
+
+    .footer-section ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-section a {
+      display: inline-block;
+      text-decoration: none;
+      padding: 2px 0;
+      border-bottom: 2px solid transparent;
+    }
+
+    .footer-section a:hover {
+      transform: translateX(5px) scale(1.03);
+      color: #ffe082;
+      border-bottom: 2px solid #ffe082;
+    }
+
+    .social-icons {
+      margin-top: 10px;
+    }
+
+    .social-icons a {
+      margin-right: 12px;
+      display: inline-block;
+      transition: transform 0.3s;
+    }
+
+    .social-icons img {
+      width: 28px;
+      height: 28px;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.2);
+    }
+
+    iframe {
+      border: none;
+      border-radius: 12px;
+      width: 100%;
+      height: 180px;
+    }
+
+    hr {
+      margin: 40px 0 20px;
+      border: 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      font-size: 14px;
+      opacity: 0.85;
+    }
+
+    @media (max-width: 768px) {
+      .footer-section {
+        flex: 1 1 100%;
+        margin-bottom: 30px;
+      }
+
+      .subscribe-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .subscribe-form {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        
+      }
+    
+
+.subscribe-form input[type="email"] {
+    flex: 1 1 32px;
+    padding: 12px 73px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    outline: none;
+}
+      iframe {
+        height: 200px;
+      }
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        transform: translateY(20px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  </style>
 <footer>
     
   <div class="footer-container">
@@ -2572,20 +942,21 @@ tabContainers.forEach((tabContainer) => {
     <div class="footer-section" data-aos="fade-up" data-aos-delay="100">
       <h3>Quick Links</h3>
       <ul>
-        <li><a href="#home">› Home</a></li>
-        <li><a href="#about">› About Us</a></li>
-        <li><a href="#cars">› Our Cars</a></li>
-        <li><a href="#contact">› Contact Us</a></li>
+        <li><a href="#index.html">› Home</a></li>
+        <li><a href="#about.html">› About Us</a></li>
+        <li><a href="#contact.html">› Contact Us</a></li>
+        <li><a href="#cars.html">› Our Cars</a></li>
+        
       </ul>
     </div>
 
     <div class="footer-section" data-aos="fade-up" data-aos-delay="200">
       <h3>Navigation</h3>
       <ul>
-        <li><a href="#list">› List Car</a></li>
-        <li><a href="#gallery">› Our Gallery</a></li>
-        <li><a href="#blog">› Blog</a></li>
-        <li><a href="#policies">› Policies</a></li>
+        <li><a href="#cars.hmtl">› List Car</a></li>
+        <li><a href="#cars.html">› Our Gallery</a></li>
+        <li><a href="#about.html">› Blog</a></li>
+        <li><a href="#about.html">› Policies</a></li>
       </ul>
     </div>
 
@@ -2600,7 +971,7 @@ tabContainers.forEach((tabContainer) => {
     <div class="footer-section" data-aos="fade-up" data-aos-delay="400" style="text-align:center;">
       <h3>Follow Us</h3>
       <div class="social-icons">
-        <a href="https://wa.me/919876543210" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"></a>
+        <a href="https://wa.me/919440404640" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"></a>
         <a href="https://www.instagram.com/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram"></a>
         <a href="https://www.facebook.com/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
         <a href="mailto:info@akhiltravels.com"><img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email"></a>
@@ -2621,10 +992,3 @@ tabContainers.forEach((tabContainer) => {
     once: true
   });
 </script>
-  
-<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet"/>
-
-  <a href="https://wa.me/919999999999" class="whatsapp-button" target="_blank" title="Chat with us on WhatsApp">
-    <i class="fab fa-whatsapp"></i>
-  </a>
-</html>
