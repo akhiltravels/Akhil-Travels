@@ -203,8 +203,8 @@
 
 .nav-mobile a,
 .nav-mobile button {
-  padding: 14px 185px;
-  font-size: 20px;
+  font-size: 18px;
+  padding: 14px 20px; /* ✅ Mobile-safe horizontal padding */
   text-align: left;
   border-bottom: 1px solid #eee;
   background: none;
@@ -214,11 +214,11 @@
   align-items: center;
   gap: 12px;
   font-weight: 600;
-background-color: white;
-  
+  background-color: white;
   color: #6b0975;
- 
+  box-sizing: border-box; /* ✅ Ensures padding doesn't overflow */
 }
+
 
 .nav-mobile a:hover,
 .nav-mobile button:hover {
@@ -285,7 +285,7 @@ background-color: white;
     
     }
 .logo-section h1{
-  font-size: 16px;
+  font-size: 14px;
 }
       .hamburger {
         display: flex;
@@ -631,10 +631,6 @@ background-color: white;
         margin-bottom: 30px;
       }
 
-      .subscribe-container {
-        flex-direction: column;
-        text-align: center;
-      }
 
       .subscribe-form {
         flex-direction: column;
@@ -906,7 +902,11 @@ background-color: white;
         flex: 1 1 100%;
         margin-bottom: 30px;
       }
-
+.footer-section p, .footer-section li, .footer-section a {
+   
+    font-size: 17px;
+      
+      }
       .subscribe-container {
         flex-direction: column;
         text-align: center;
@@ -1301,6 +1301,18 @@ background-color: white;
   }
 
     
+ .bounce-heading {
+      
+      animation: bounce 2s infinite ease-in-out;
+    }
 
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
 
     
