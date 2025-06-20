@@ -8,12 +8,27 @@
 <meta name="keywords" content="Vijayawada car travels, car rentals Vijayawada, Akhil Car Travels, best travel agency Vijayawada, taxi service Vijayawada, local car hire">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="stylesheet" href="style.css"/>
-  
+  <style>
+   .glow-text {
+      
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 5px #888d00, 0 0 10px #ff0000;
+      }
+      to {
+        text-shadow: 0 0 20px #ff4500, 0 0 40px #ff4500;
+      }
+    }
+  </style>
+   <div class="gradient-separator">
 <div class="navbar">
-    <div class="logo-section">
+    <div class="logo-section glow-text">
       <img src="https://i.ibb.co/0pY2XHpT/akhil-logo-hd-upscaled.png" alt="Akhil Logo">
       <h1 class="brand-name">
-    <span class="brand-left">Akhil Car</span> <span class="brand-right">Travels</span>
+    <span class="brand-left glow-text">Akhil Car</span> <span class="brand-right glow-text ">Travels</span>
   </h1>
     </div>
     <div class="center-nav">
@@ -51,6 +66,11 @@
   </script>
 
 
+<!-- In the head -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+<!-- Before closing body tag -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
 
 
 
@@ -64,6 +84,8 @@
      background:  linear-gradient(to bottom right, #fdf1f6, #f5f7fa);
 
     }
+
+ 
   
     #no-results {
       display: none;
@@ -110,9 +132,9 @@
       color: white;
       border: none;
       border-radius: 20px;
-      padding: 6px 14px;
-      margin: 0 4px;
-      font-size: 13px;
+      padding: 8px 14px;
+      margin: 0 1px;
+      font-size: 16px;
       cursor: pointer;
       transition: all 0.3s;
     }
@@ -146,6 +168,7 @@
       padding: 6px 8px;
       text-align: center;
       background: white;
+      font-size: 15px;
     }
     .book-btn {
       display: block;
@@ -155,17 +178,25 @@
       padding: 10px;
       border-radius: 0 0 12px 12px;
       font-weight: bold;
+      font-size: 18px;
       text-decoration: none;
       transition: background 0.3s;
     }
     .book-btn:hover {
       background: #28a745;
     }
+
+      .gradient-separator {
+      height: 120px;
+      background: linear-gradient(to bottom, white 40%, #ffe6f0 100%);
+    }
   </style>
 
 
 </head>
 <body>
+
+ </div>
 
  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
@@ -268,13 +299,31 @@
       font-weight: bold;
       margin-top: 1rem;
     }
+  /* Bounce Animation */
+    .bounce-heading {
+      
+      animation: bounce 2s infinite ease-in-out;
+    }
 
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
  
 
     @media (min-width: 768px) {
       .gif-text { font-size: 3.5rem; }
       .sub-heading { font-size: 2.5rem; }
+
     }
+.car-title{
+
+  font-size: 23px;
+}
 
     @media (min-width: 1024px) {
       .gif-text { font-size: 6.5rem; }
@@ -283,21 +332,22 @@
 </head>
 
 <body>
+  </div>
   <div class="text-container">
-    <h1 class="gif-text">Akhil Car Travels</h1>
-    <h2 class="sub-heading">Book Your Favorite Ride</h2>
+    <h1 class="gif-text " data-aos="zoom-in" >Akhil Car Travels</h1>
+    <h2 class="sub-heading bounce-heading">Book Your Favorite Ride</h2>
   </div>
 
   <div class="search-container">
-    <input type="text" id="searchInput" placeholder="Book your favorite car..." style="align-items: center;text-align: center;" />
+    <input type="text" id="searchInput" placeholder="Book your favorite car..." style="align-items: center;text-align: center;" class="typewriter"/>
     <p id="no-results">🚫 No cars found matching your search.</p>
   </div>
   
-  <div class="grid" id="carContainer">
+  <div class="grid" id="carContainer"data-aos="fade-up">
     <!-- CAR 1 -->
-    <div class="car-card" data-title="Audi Q7">
+    <div class="car-card" data-title="Audi Q7"data-aos="fade-up">
       <img src="https://i.ibb.co/WpKLqyXY/purepng-com-audi-q7.png" alt="Audi Q7" />
-      <h2 class="car-title">Audi Q7</h2>
+      <h2 class="car-title"data-aos="fade-up">Audi Q7</h2>
       <div class="btn-group">
         <button class="btn active" data-type="dayrent">Day Rent</button>
         <button class="btn" data-type="regular">Regular</button>
@@ -332,11 +382,11 @@
           <tr><td>GST</td><td>5% Applicable</td></tr>
         </table>
       </div>
-      <a href="https://wa.me/919440404640" class="book-btn">Book Now</a>
+      <a href="https://wa.me/919440404640" class="book-btn"data-aos="zoom-in">Book Now</a>
     </div>
     
     <!-- CAR 2 -->
-    <div class="car-card" data-title="BMW X5">
+    <div class="car-card" data-title="BMW X5"data-aos="fade-up">
       <img src="https://i.ibb.co/Hp9Vns97/bmw-3-series-gran-turismo-melbourne-red-metallic.png" />
   <h2 class="car-title">BMW GT 320d</h2>
       <div class="btn-group">
@@ -372,13 +422,13 @@
           <tr><td>GST</td><td>5% Applicable</td></tr>
         </table>
       </div>
-      <a href="https://wa.me/919440404640" class="book-btn">Book Now</a>
+      <a href="https://wa.me/919440404640" class="book-btn"data-aos="zoom-in">Book Now</a>
     </div>
 
     <!-- CAR 3 -->
-    <div class="car-card" data-title="Mercedes GLE">
+    <div class="car-card" data-title="Mercedes GLE" data-aos="fade-up">
        <img src="https://i.ibb.co/v6Bwgp3b/74fc756f-aec1-40b9-84ec-e70c4da1265e.webp" />
-  <h2 class="car-title">JAGUAR XF</h2>
+  <h2 class="car-title"data-aos="fade-up">JAGUAR XF</h2>
       <div class="btn-group">
         <button class="btn active" data-type="dayrent">Day Rent</button>
         <button class="btn" data-type="regular">Regular</button>
@@ -412,13 +462,13 @@
           <tr><td>GST</td><td>5% Applicable</td></tr>
         </table>
       </div>
-      <a href="https://wa.me/919440404640" class="book-btn">Book Now</a>
+      <a href="https://wa.me/919440404640" class="book-btn" data-aos="zoom-in">Book Now</a>
     </div>
 
     <!-- CAR 4 -->
-    <div class="car-card" data-title="Toyota Fortuner">
+    <div class="car-card" data-title="Toyota Fortuner"data-aos="fade-up">
         <img src="https://i.ibb.co/W4S4rwcT/compressed-75e9b57629cdb6eb79f5f60c87e5bc6e.webp" />
-  <h2 class="car-title">Mercedes Benz C class 220 D</h2>
+  <h2 class="car-title" data-aos="fade-up">Mercedes Benz C class 220 D</h2>
       <div class="btn-group">
         <button class="btn active" data-type="dayrent">Day Rent</button>
         <button class="btn" data-type="regular">Regular</button>
@@ -452,13 +502,13 @@
           <tr><td>GST</td><td>5% Applicable</td></tr>
         </table>
       </div>
-      <a href="https://wa.me/919440404640" class="book-btn">Book Now</a>
+      <a href="https://wa.me/919440404640" class="book-btn"data-aos="zoom-in">Book Now</a>
     </div>
 
     <!-- CAR 5 -->
-    <div class="car-card" data-title="Innova Crysta">
+    <div class="car-card" data-title="Innova Crysta"data-aos="fade-up">
   <img src="https://i.ibb.co/DPMSVRqj/phantom-brown-4w9-1483072202.png" />
-  <h2 class="car-title">TOYOTA FORTUNER</h2>
+  <h2 class="car-title"data-aos="fade-up">TOYOTA FORTUNER</h2>
       <div class="btn-group">
         <button class="btn active" data-type="dayrent">Day Rent</button>
         <button class="btn" data-type="regular">Regular</button>
@@ -492,13 +542,13 @@
           <tr><td>GST</td><td>5% Applicable</td></tr>
         </table>
       </div>
-      <a href="https://wa.me/919440404640" class="book-btn">Book Now</a>
+      <a href="https://wa.me/919440404640" class="book-btn"data-aos="zoom-in">Book Now</a>
     </div>
 
     <!-- CAR 6 -->
-    <div class="car-card" data-title="Kia Carnival">
+    <div class="car-card" data-title="Kia Carnival"data-aos="fade-up">
    <img src="https://i.ibb.co/4gtm0K39/20241809172664125666ea7468cb86d-1.png" />
-  <h2 class="car-title">KIA CARNIVAL LIMOUSINE PLUS</h2>
+  <h2 class="car-title"data-aos="fade-up">KIA CARNIVAL LIMOUSINE PLUS</h2>
       <div class="btn-group">
         <button class="btn active" data-type="dayrent">Day Rent</button>
         <button class="btn" data-type="regular">Regular</button>
@@ -532,13 +582,13 @@
           <tr><td>GST</td><td>5% Applicable</td></tr>
         </table>
       </div>
-      <a href="https://wa.me/919440404640" class="book-btn">Book Now</a>
+      <a href="https://wa.me/919440404640" class="book-btn"data-aos="zoom-in">Book Now</a>
     </div>
 
     <!-- CAR 7 -->
-    <div class="car-card" data-title="Hyundai Tucson">
+    <div class="car-card" data-title="Hyundai Tucson"data-aos="fade-up">
       <img src="https://i.ibb.co/NgKwgNMb/images-q-tbn-ANd9-Gc-TEg-PCk0g-Rzo-Veo-HRRAb2-F31j-Hykktdgpnaa-A-s.jpg" />
-  <h2 class="car-title">TOYOTA CAMRY</h2>
+  <h2 class="car-title"data-aos="fade-up">TOYOTA CAMRY</h2>
       <div class="btn-group">
         <button class="btn active" data-type="dayrent">Day Rent</button>
         <button class="btn" data-type="regular">Regular</button>
@@ -572,13 +622,13 @@
           <tr><td>GST</td><td>5% Applicable</td></tr>
         </table>
       </div>
-      <a href="https://wa.me/919440404640" class="book-btn">Book Now</a>
+      <a href="https://wa.me/919440404640" class="book-btn"data-aos="zoom-in">Book Now</a>
     </div>
 
     <!-- CAR 8 -->
-    <div class="car-card" data-title="Mahindra XUV700">
+    <div class="car-card" data-title="Mahindra XUV700"data-aos="fade-up">
      <img src="https://i.ibb.co/k219vFwR/Maruti-Suzuki-Ertiga-tour-Midnight-Black-e5d8af346a.webp" />
-  <h2 class="car-title">MAURTI ERTIGA</h2>
+  <h2 class="car-title"data-aos="fade-up">MAURTI ERTIGA</h2>
       <div class="btn-group">
         <button class="btn active" data-type="dayrent">Day Rent</button>
         <button class="btn" data-type="regular">Regular</button>
@@ -612,13 +662,13 @@
           <tr><td>GST</td><td>5% Applicable</td></tr>
         </table>
       </div>
-      <a href="https://wa.me/919440404640" class="book-btn">Book Now</a>
+      <a href="https://wa.me/919440404640" class="book-btn"data-aos="zoom-in">Book Now</a>
     </div>
 
     <!-- CAR 9 -->
-    <div class="car-card" data-title="Toyota Camry">
+    <div class="car-card" data-title="Toyota Camry"data-aos="fade-up">
        <img src="https://i.ibb.co/cS2HdDS0/toyota-innova-crysta-minivan-nrh9rqvaj1lkdzbh.png" />
-  <h2 class="car-title">TOYOTA INNOVA CRYSTA</h2>
+  <h2 class="car-title"data-aos="fade-up">TOYOTA INNOVA CRYSTA</h2>
       <div class="btn-group">
         <button class="btn active" data-type="dayrent">Day Rent</button>
         <button class="btn" data-type="regular">Regular</button>
@@ -653,14 +703,14 @@
           <tr><td>GST</td><td>5% Applicable</td></tr>
         </table>
       </div>
-      <a href="https://wa.me/919440404640" class="book-btn">Book Now</a>
+      <a href="https://wa.me/919440404640" class="book-btn"data-aos="zoom-in">Book Now</a>
     </div>
 
     <!-- CAR 10 -->
    
-   <div class="car-card" data-title="Maruti Ciaz">
+   <div class="car-card" data-title="Maruti Ciaz"data-aos="fade-up">
   <img src="https://i.ibb.co/kVFHySN1/2517-1731400321.webp" />
-  <h2 class="car-title">SWIFT DZIRE</h2>
+  <h2 class="car-title"data-aos="zoom-in">SWIFT DZIRE</h2>
 
     
       <div class="btn-group">
@@ -697,13 +747,13 @@
         </table>
       
       </div>
-      <a href="https://wa.me/919440404640" class="book-btn">Book Now</a>
+      <a href="https://wa.me/919440404640" class="book-btn" data-aos="zoom-in">Book Now</a>
     </div>
 
     <!-- CAR 11 -->
-    <div class="car-card" data-title="Maruti Ciaz">
+    <div class="car-card" data-title="Maruti Ciaz"data-aos="fade-up">
       <img src="https://i.ibb.co/WpF7c5vd/0918-01-L-1.jpg" />
-  <h2 class="car-title">TOYOTA ETIOS</h2>
+  <h2 class="car-title"data-aos="zoom-in">TOYOTA ETIOS</h2>
       <div class="btn-group">
         <button class="btn active" data-type="dayrent">Day Rent</button>
         <button class="btn" data-type="regular">Regular</button>
@@ -737,13 +787,13 @@
           <tr><td>GST</td><td>5% Applicable</td></tr>
         </table>
       </div>
-      <a href="https://wa.me/919440404640" class="book-btn">Book Now</a>
+      <a href="https://wa.me/919440404640" class="book-btn"data-aos="zoom-in">Book Now</a>
     </div>
 
     <!-- CAR 12 -->
-    <div class="car-card" data-title="Honda Amaze">
+    <div class="car-card" data-title="Honda Amaze"data-aos="fade-up">
     <img src="https://i.ibb.co/whRnrfXG/223-Golden-Brown-Metallic-564f4b.jpg" />
-  <h2 class="car-title">HONDA AMAZE</h2>
+  <h2 class="car-title"data-aos="zoom-in">HONDA AMAZE</h2>
       <div class="btn-group">
         <button class="btn active" data-type="dayrent">Day Rent</button>
         <button class="btn" data-type="regular">Regular</button>
@@ -777,7 +827,7 @@
           <tr><td>GST</td><td>5% Applicable</td></tr>
         </table>
       </div>
-      <a href="https://wa.me/919440404640" class="book-btn">Book Now</a>
+      <a href="https://wa.me/919440404640" class="book-btn"data-aos="zoom-in">Book Now</a>
     </div>
 
   </div>
@@ -825,7 +875,7 @@
 
 
 <body>
-  <div class="chat-container">
+  <div class="chat-container bounce-heading">
   <div class="chat-options" id="chatOptions">
     <a href="https://wa.me/919440404640" target="_blank" title="WhatsApp">
       <i class="fab fa-whatsapp"></i>
