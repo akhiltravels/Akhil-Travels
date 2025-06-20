@@ -281,7 +281,7 @@ font-size: 40px;
     overflow: hidden;
     border-radius: 10px;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 15px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
    
   }
@@ -610,121 +610,19 @@ html, body {
 <script>
   AOS.init();
 </script>
-
-
-
-
-
-  <!-- Company Name Header -->
- <style>
-  .mission-section {
-  text-align: center;
-  padding: 80px 20px;
-  background: linear-gradient(to bottom, #fff, #f9f9f9);
-  font-family: 'Poppins', sans-serif;
-}
-
-.mission-container h2 {
-  font-size: 2.0rem;
- 
-  margin-bottom: 0.5rem;
-  background: linear-gradient(to right, #82009f, #f7345e);
-
-    -webkit-background-clip: text;
-    
-    -webkit-text-fill-color: transparent;
-}
-
-.mission-container h1 {
-  font-size: 2.8rem;
-  font-weight: 800;
-  background: linear-gradient(to right, #4c00ff, #7f57ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 2rem;
-}
-
-.mission-container p {
-  font-size: 1.1rem;
-  color: #555;
-  max-width: 850px;
-  margin: 0 auto 2rem;
-  line-height: 1.8;
-}
-
-.highlight-blue {
-  color: #00bfff;
-  font-weight: 600;
-}
-
-.highlight-pink {
-  color: #ff3cac;
-  font-weight: 600;
-}
-
-.highlight-purple {
-  background: linear-gradient(to right, #8e2de2, #4a00e0);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: 600;
-}
-
-.mission-buttons span {
-  display: block;
-  font-size: 1.1rem;
-  margin-bottom: 1rem;
-}
-
-.btn-group {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.btn-primary {
-  padding: 12px 30px;
-  background: linear-gradient(to right, #6a11cb, #2575fc);
-  color: white;
-  font-weight: 600;
-  border-radius: 50px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  text-decoration: none;
-  transition: 0.3s ease;
-}
-
-.btn-primary:hover {
-  opacity: 0.9;
-}
-
-.btn-outline {
-  padding: 12px 30px;
-  border: 2px solid #111;
-  color: #111;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: 0.3s ease;
-}
-
-.btn-outline:hover {
-  background: #111;
-  color: white;
-}
-
-
-.mission-section {
+<style>
+    .clients-section {
   position: relative;
+  padding: 80px 20px;
   text-align: center;
-  padding: 100px 20px;
   background: linear-gradient(to bottom, #fff, #f9f9f9);
   font-family: 'Poppins', sans-serif;
-  overflow: hidden; /* Important for circle cutoffs */
+  overflow: hidden; /* Enable decorative circles */
 }
 
 /* Circle Decorations */
-.mission-section::before,
-.mission-section::after {
+.clients-section::before,
+.clients-section::after {
   content: "";
   position: absolute;
   border-radius: 50%;
@@ -732,7 +630,7 @@ html, body {
   opacity: 0.25;
 }
 
-.mission-section::before {
+.clients-section::before {
   width: 300px;
   height: 300px;
   background: radial-gradient(circle, #ffccd5, #ffe6ea);
@@ -740,7 +638,7 @@ html, body {
   left: -80px;
 }
 
-.mission-section::after {
+.clients-section::after {
   width: 250px;
   height: 250px;
   background: radial-gradient(circle, #d6c8ff, #ede9ff);
@@ -748,51 +646,148 @@ html, body {
   right: -60px;
 }
 
-.mission-container {
+.clients-section .container {
   position: relative;
-  z-index: 1;
+  z-index: 1; /* Ensure content stays above the circles */
 }
 
- </style>
-  <!-- Main Section -->
-<section class="mission-section" data-aos="fade-up">
-  <div class="circle-middle">
+/* Existing Styles (Keep as-is or update if needed) */
+.clients-heading {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+  background: linear-gradient(-107deg, #82009f 0%, #f7345e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeSlideIn 1s ease forwards;
+}
 
-  <div class="mission-container">
-    <h2 data-aos="fade-up">Discover Our Mission and Values in</h2>
-    <h1 data-aos="fade-up">Reliable & Comfortable Travel Services</h1>
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-    <p data-aos="fade-right">
-      At Akhil Car Travels, we’re committed to providing safe,
-      <span class="highlight-blue"> on-time</span>,
-      and <span class="highlight-pink">comfortable travel experiences</span>.
-      Whether it’s a <span class="highlight-purple"> family outing</span>,business trip, or special event
-      our fleet and drivers ensure a smooth journey.
-    </p>
+.clients-subheading {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  color: #555;
+}
 
-    <div class="mission-buttons"data-aos="fade-right">
-      
-      <span>Our Mission behind every journey.</span>
-      <div class="btn-group">
-        <a href="about.html" class="btn-primary">Explore more</a>
-        <a href="https://wa.me/919440404640" class="btn-outline">Chat With US</a>
+.clients-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px 30px;
+}
+
+.client-item {
+  width: 120px;
+  text-align: center;
+  animation: zoomIn 0.6s ease;
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.client-item img {
+  width: 100%;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.client-item span {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+</style>
+
+
+<section class="clients-section" id="clients" data-aos="fade-up">
+  <div class="container">
+    <h2 class="clients-heading">Our Trusted Clients</h2>
+    <p class="clients-subheading">We proudly serve leading government bodies and private enterprises.</p>
+
+    <div class="clients-grid">
+      <!-- Repeat client-item blocks as needed -->
+            <div class="client-item" data-aos="zoom-in">
+        <img src="https://img-cdn.publive.online/fit-in/640x430/filters:format(webp)/entrackr/media/post_attachments/wp-content/uploads/2022/05/Dailyhunt.jpg" alt="Dailyhunt">
+        <span>Dailyhunt</span>
+      </div>
+      <div class="client-item" data-aos="zoom-in">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPAnk0yVFWipBdIa8m4DH3CtDJZhh-ewlamQ&s" alt="Johnson Trails">
+        <span>Johnson Trails</span>
+      </div>
+      <div class="client-item" data-aos="zoom-in">
+        <img src="https://w7.pngwing.com/pngs/609/989/png-transparent-tv9-television-channel-news-broadcasting-television-show-business-television-blue-text-thumbnail.png" alt="TV 9">
+        <span>TV9</span>
+      </div>
+      <div class="client-item" data-aos="zoom-in">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiw4P2VCc6EQA9mXDEXz1TbHLktfFj6CkGCQ&s" alt="AP Mining Department">
+        <span>AP Mining Department</span>
+      </div>
+      <div class="client-item" data-aos="zoom-in">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtuwgpfH88K3P6FVPHJ7yV0dIDH6budGzFLg&s" alt="ONGC">
+        <span>ONGC</span>
+      </div>
+      <div class="client-item" data-aos="zoom-in">
+        <img src="https://cdnbbsr.s3waas.gov.in/s316026d60ff9b54410b3435b403afd226/uploads/2023/01/2023012956.png" alt="Panchayat Raj Department">
+        <span>Panchayat Raj Dept.</span>
+      </div>
+      <div class="client-item" data-aos="zoom-in">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiw4P2VCc6EQA9mXDEXz1TbHLktfFj6CkGCQ&s" alt="Education Dept">
+        <span>Education Department</span>
+      </div>
+      <div class="client-item" data-aos="zoom-in">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4e/National_Highways_Authority_of_India_logo.svg/1200px-National_Highways_Authority_of_India_logo.svg.png" alt="NHAI">
+        <span>National Highway Authority</span>
+      </div>
+      <div class="client-item" data-aos="zoom-in">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiw4P2VCc6EQA9mXDEXz1TbHLktfFj6CkGCQ&s" alt="R&B Dept">
+        <span>R&B Department</span>
+      </div>
+      <div class="client-item" data-aos="zoom-in">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/ITC_Limited_Logo.svg/1200px-ITC_Limited_Logo.svg.png" alt="ITC">
+        <span>ITC Limited</span>
+      </div>
+      <div class="client-item" data-aos="zoom-in">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/ee/Toyota_logo_%28Red%29.svg" alt="Toyota">
+        <span>Toyota</span>
+      </div>
+      <div class="client-item" data-aos="zoom-in">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiw4P2VCc6EQA9mXDEXz1TbHLktfFj6CkGCQ&s" alt="Protocol Vehicles">
+        <span>Protocol Vehicles</span>
+      </div>
+      <div class="client-item" data-aos="zoom-in">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kwality_Walls_logo.svg" alt="Kwality Walls">
+        <span>Kwality Walls</span>
       </div>
     </div>
-    </div>
   </div>
+      <!-- ... -->
+
 </section>
 
-  <!-- Images Grid -->
 
-
-  <!-- AOS Animation Script -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 1200,
-      once: true,
-    });
-  </script>
+  <!-- Company Name Header -->
+ 
 
 
     <style>
@@ -905,7 +900,7 @@ html, body {
       background: rgba(0, 0, 0, 0.4);
       color: #fff;
       border: none;
-      font-size: 2rem;
+      font-size: 1rem;
       padding: 0.5rem 1rem;
       cursor: pointer;
       border-radius: 0.5rem;
@@ -920,8 +915,9 @@ html, body {
         font-size: 2rem;
       }
 
+ 
       .car-card {
-        width: 180px;
+        width: 241px;
       }
 
       .car-card img {
@@ -1016,181 +1012,7 @@ html, body {
     }
   </script>
  
- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
-  <!-- Swiper CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: #fff;
-    }
-
-    .featured-section {
-    
-      
-      padding: 40px 20px 30px;
-      text-align: center;
-      color: #4b0082;
-        background: linear-gradient(90deg, #e91e63, #9c27b0);
-
-    }
-
-    .featured-section h2 {
-      font-size: 26px;
-      font-weight: 600;
-      margin-bottom: 10px;
-        color: white;
-    display: inline-block;
-    }
-
-    .featured-section p {
-      font-size: 16px;
-      margin-bottom: 25px;
-       color: white;
-    }
-
-    .swiper {
-      padding: 10px 0;
-    }
-
-    .swiper-slide {
-      background: white;
-      border-radius: 10px;
-      height: 100px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
-    }
-
-    .swiper-slide:hover {
-      transform: scale(1.05);
-      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
-    }
-
-    .swiper-slide img {
-      max-height: 40px;
-      object-fit: contain;
-      margin-bottom: 6px;
-    }
-
-    .client-name {
-      font-size: 12px;
-      color: #444;
-    }
-
-    .swiper-button-prev,
-    .swiper-button-next {
-      color: #4b0082;
-      top: 35%;
-      width: 32px;
-      height: 42px;
-      border: 2px solid #4b0082;;
-      border-radius: 50%;
-      background: transparent;
-    }
-
-    .swiper-pagination-bullet {
-      background: #999;
-      opacity: 1;
-    }
-
-    .swiper-pagination-bullet-active {
-      background: white;
-    }
-
-    @media (max-width: 768px) {
-      .swiper-slide {
-        height: 90px;
-      }
-
-      .featured-section h2 {
-        font-size: 22px;
-      }
-
-      .client-name {
-        font-size: 11px;
-      }
-    }
-  </style>
-</head>
-<body>
-
-<section class="featured-section" >
-  <h2 data-aos="fade-up">Organizations That Trust Akhil Travels</h2>
-  <p>Akhil Travels is honored to serve a wide range of prestigious clients across government and corporate sectors.</p>
-
-  <div class="swiper featuredSwiper">
-    <div class="swiper-wrapper">
-      <!-- Each Slide with Logo and Client Name -->
-        <div class="swiper-slide">
-        <img src="https://i.ibb.co/93VMvFCx/images-2.png" alt="Dailyhunt">
-        <div class="client-name">Dailyhunt</div>
-      </div>
-       <div class="swiper-slide">
-        <img src="https://i.ibb.co/JWzy66K3/images-4.jpg" alt="Dailyhunt">
-        <div class="client-name">Johnson Trails</div>
-      </div>
-         <div class="swiper-slide">
-        <img src="https://i.ibb.co/TBBSkY7v/png-transparent-tv9-television-channel-news-broadcasting-television-show-business-television-blue-te.png" alt="CNBC">
-        <div class="client-name">TV 9</div>
-      </div>
-      <div class="swiper-slide">
-        <img src="https://i.ibb.co/pBdF0Fbd/images-3.jpg" alt="Dailyhunt">
-        <div class="client-name">Ap Mining Department</div>
-      </div>
-      <div class="swiper-slide">
-        <img src="https://i.ibb.co/Z1HtkcMv/images-1.png" alt="ET Tech">
-        <div class="client-name">ONGC</div>
-      </div>
-      <div class="swiper-slide">
-        <img src="https://i.ibb.co/cjmR1HQ/2023012956.png" alt="BW Disrupt">
-        <div class="client-name">Panchayat Raj Department</div>
-      </div>
-      <div class="swiper-slide">
-        <img src="https://i.ibb.co/pBdF0Fbd/images-3.jpg" alt="IndianWeb2">
-        <div class="client-name">Educational Department</div>
-      </div>
-      <div class="swiper-slide">
-        <img src="https://i.ibb.co/TByf6mVL/National-Highways-Authority-of-India-logo-svg.png" alt="ET NOW">
-        <div class="client-name">National Highway Authorities</div>
-      </div>
-      <div class="swiper-slide">
-        <img src="https://i.ibb.co/pBdF0Fbd/images-3.jpg" alt="YourStory">
-        <div class="client-name">R&B Department</div>
-      </div>
-      <div class="swiper-slide">
-        <img src="https://i.ibb.co/JXf87nv/ITC-Limited-Logo-svg.png" alt="CNBC">
-        <div class="client-name">ITC Company</div>
-      </div>
-      <div class="swiper-slide">
-        <img src="https://i.ibb.co/KcjFbdTP/images-3.png" alt="CNBC">
-        <div class="client-name">Toyota</div>
-      </div>
-      <div class="swiper-slide">
-        <img src="https://i.ibb.co/pBdF0Fbd/images-3.jpg" alt="CNBC">
-        <div class="client-name">Protocol Vehicals</div>
-      </div>
-            <div class="swiper-slide">
-        <img src="https://i.ibb.co/JRYv9zD8/download.png" alt="CNBC">
-        <div class="client-name">Kwality Walls</div>
-      </div>
-    </div>
-
-    <!-- Navigation buttons -->
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-
-    <!-- Pagination dots -->
-    <div class="swiper-pagination"></div>
-  </div>
-</section>
-
+ 
 <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
@@ -1271,15 +1093,15 @@ html, body {
       gap: 20px;
     }
 
-    .unique-testimonials .testimonial-card {
-      background: #fff;
-      padding: 25px;
-      border-radius: 16px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-      text-align: center;
-      flex: 0 0 100%;
-    }
-
+  
+.unique-testimonials .testimonial-card {
+    background: #fff;
+    padding: 42px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    flex: 0 0 95%;
+}
     .unique-testimonials .testimonial-card img {
       width: 60px;
       height: 60px;
@@ -1973,7 +1795,10 @@ html, body {
       .contact-title {
         font-size: 40px;
       }
-
+.contact-right {
+   
+    padding: 15px;
+  }
       .contact-form {
         grid-template-columns: 1fr;
       }
