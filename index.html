@@ -154,23 +154,22 @@ font-size: 40px;
       z-index: -1;
     }
 
-    
 .mobile-menu {
-      position: fixed;
-      top: 0;
-      right: -100%;
-      width: 90%;
-      height: 100vh;
-      background: white;
-      backdrop-filter: blur(10px);
-      transition: 0.4s ease;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding-top: 100px;
-      z-index: 1000;
-      
-    }
+    position: fixed;
+    top: 0px;
+    right: -100%;
+    width: 90%;
+    height: 85vh;
+    background: white;
+    backdrop-filter: blur(10px);
+    transition: 0.4s ease;
+    display: flex
+;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 56px;
+    z-index: 1000;
+}
 
     .mobile-menu.show {
       right: 0;
@@ -194,19 +193,27 @@ font-size: 40px;
       margin-top: 10px;
       
     }
-
-    .mobile-menu a {
-      background: linear-gradient(-107deg, #82009f 0%, #f7345e 100%);
+.akh-action-btn{
+  background: linear-gradient(-107deg, #82009f 0%, #f7345e 100%);
+    color: whitesmoke;
+    font-size: 16px;
+    padding:  6px 18px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+   .mobile-menu a {
+    background: linear-gradient(-107deg, #82009f 0%, #f7345e 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-     
-    
-      font-size: 20px;
-      margin: 15px 0;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
+    font-size: 15px;
+    margin: 12px 100px;
+    display: flex
+;
+    align-items: center;
+    gap: 10px;
+}
 
     .mobile-menu a:hover {
     color: rgb(195, 42, 42);
@@ -229,6 +236,15 @@ font-size: 40px;
         display: none;
       
       }
+
+      .navbar .brand {
+      
+     
+      
+font-size: 25px;
+        
+    
+    }
     }
 
 
@@ -267,7 +283,8 @@ font-size: 40px;
     align-items: center;
     justify-content: center;
     gap: 10px;
-    padding: 15px;
+   
+        padding: 3px;
     background: white;
   }
 
@@ -297,6 +314,14 @@ font-size: 40px;
     color: white;
     padding: 10px 20px;
   }
+
+  @media (max-width: 768px) {
+  .brand-label {
+ font-size: 12px;
+  }
+
+}
+ 
 </style>
 
   <!-- MOBILE MENU -->
@@ -325,112 +350,238 @@ font-size: 40px;
   <a href="https://wa.me/919440404640"><i class="fab fa-whatsapp"></i> Book Now</a>
 </div>
 
-<Style>
-  .hero-content {
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
-      padding: 0 8%;
-      color: white;
-    }
+ <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+   <style>
+   * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
+html, body {
+  height: 100%;
+  font-family: 'Playfair Display', serif;
+  overflow-x: hidden;
+}
 
-.akh-action-btn {
-   background: linear-gradient(to right, #aa076b, #61045f); /* purple gradient */
-  color: white;
-     
-      font-size: 16px;
-      padding: 12px 24px;
-      border: none;
-      border-radius: 25px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    .hero-modern {
+/* Video Background */
+.video-hero {
   position: relative;
-  width: 100%;
   height: 100vh;
+  width: 100%;
   overflow: hidden;
+}
+
+.video-hero video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+/* Hero Text */
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  height: 100%;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 0 20px;
+}
+
+.hero-inner h1 {
+  font-size: 3.5rem;
+  font-weight: 500;
+   font-family: 'Playfair Display', serif;
+  padding-top: 100px;
+  animation: fadeInDown 1s ease-out;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+
+}
+
+.hero-inner p {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.9rem;
+  margin-bottom: 40px;
+  animation: fadeInUp 1.2s ease-out;
+}
+
+/* Search Form */
+.ride-form-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  border-radius: 50px;
+  padding: 12px 24px;
+  max-width: 900px;
+  width: 100%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  gap: 15px;
+  animation: fadeInUp 1.5s ease-out;
+}
+
+.ride-form-container input,
+.ride-form-container select {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  font-size: 1rem;
+  border-radius: 30px;
+  flex: 1;
+  min-width: 150px;
+  background: #f3f3f3;
+}
+
+.ride-form-container button {
+  background: linear-gradient(to right, #82009f, #f7345e);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.ride-form-container button:hover {
+  background: linear-gradient(to right, #f7345e, #82009f);
+}
+
+/* Loading Overlay */
+.custom-loader-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+  display: none;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  font-family: 'Playfair Display', serif;
+  flex-direction: column;
+  z-index: 9999;
+  font-size: 1.5rem;
 }
 
-
-    .hero-content h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 54px;
-  font-weight: bold;
-  line-height: 1.2;
-  margin-bottom: 20px;
-  opacity: 0;
-  animation: fadeUp 1s ease forwards;
+.custom-spinner {
+  margin-top: 20px;
+  width: 40px;
+  height: 40px;
+  border: 4px solid #fff;
+  border-top: 4px solid #f7345e;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
 }
 
-.hero-content p {
-  font-size: 20px;
-  margin-bottom: 30px;
-  opacity: 0;
-  animation: fadeUp 1s ease forwards;
-  animation-delay: 0.6s;
+/* Animations */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-.hero-content button {
-  opacity: 0;
-  animation: fadeUp 1s ease forwards;
-  animation-delay: 1.2s;
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive for Mobile */
+@media (max-width: 768px) {
+  .hero-inner h1 {
+    font-size: 2.2rem;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+
+  .hero-inner p {
+    font-size: 1.1rem;
+  }
+
+  .ride-form-container {
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 20px;
+    gap: 12px;
+  }
+
+  .ride-form-container input,
+  .ride-form-container select,
+  .ride-form-container button {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .ride-form-container button {
+    padding: 12px;
   }
 }
 
-/* Optional highlight style for "Luxury on Wheels" */
-.highlight {
-  background: linear-gradient(to right, #ff6a00, #ee0979);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-
-</Style>
-  <!-- HERO -->
-  <section class="hero">
+  </style>
+  <section class="video-hero">
     <video autoplay muted loop playsinline>
       <source src="https://res.cloudinary.com/dgpjzb7jj/video/upload/v1749984214/14190077-uhd_3840_2160_24fps_h65cf6.mp4" type="video/mp4">
     </video>
-    <div class="overlay"></div>
-    <div class="hero-content">
-       <h1 class="animate fade-up delay-0"><span class="highlight">Luxury On Wheels</span><br> Akhil Car Travels</h1>
-    <p class="animate fade-up delay-1">Reliable. Stylish. Always On Time.</p>
-    <button class="akh-action-btn animate fade-up delay-2" onclick="window.location.href='https://wa.me/919440404640'">Book Now</button>
-     
-      
+    <div class="video-overlay"></div>
+    <div class="hero-inner">
+      <h1>Explore Luxury Rides Across Vijayawada</h1>
+      <p>Comfort, Class, Commitment</p>
+
+      <form class="ride-form-container" id="rideFormMain">
+        <input type="text" name="location" placeholder="Pick-up Location" required>
+        <input type="date" name="date" required>
+        <select name="passengers" required>
+          <option value="1">1 Passenger</option>
+          <option value="2">2 Passengers</option>
+          <option value="4">4 Passengers</option>
+          <option value="6+">6+ Passengers</option>
+        </select>
+        <button type="submit">Search</button>
+      </form>
     </div>
   </section>
 
-  <script>
-    function toggleMenu(el) {
-      el.classList.toggle('active');
-      document.getElementById('mobileMenu').classList.toggle('show');
-    }
+  <div class="custom-loader-bg" id="rideLoaderScreen">
+    Looking for available cars...
+    <div class="custom-spinner"></div>
+  </div>
 
-    function closeMenu() {
-      document.querySelector('.hamburger').classList.remove('active');
-      document.getElementById('mobileMenu').classList.remove('show');
-    }
+  <script>
+    const rideFormMain = document.getElementById("rideFormMain");
+    const rideLoaderScreen = document.getElementById("rideLoaderScreen");
+
+    rideFormMain.addEventListener("submit", function (e) {
+      e.preventDefault();
+      rideLoaderScreen.style.display = "flex";
+      setTimeout(() => {
+        window.location.href = "cars.html";
+      }, 2000);
+    });
   </script>
+
  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Google Font -->
@@ -912,11 +1063,11 @@ html, body {
 
  
       .car-card {
-        width: 241px;
+        width: 300px;
       }
 
       .car-card img {
-        height: 120px;
+        height: 195px;
       }
     }
   </style>
@@ -1291,31 +1442,32 @@ html, body {
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
+ 
   <style>
     body {
       font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f3f4f6;
     }
 
     .acr-highlight-wrapper {
       padding: 50px 20px;
-      background: #f3f4f6;
-      
     }
 
-  .acr-heading {
-  text-align: center;
-  font-size: 42px;
-  font-weight: 600;
-  margin: 0 auto 50px;
-  animation: acrFadeInTop 1s ease-out forwards;
-  opacity: 0;
-  background: linear-gradient(90deg, #e91e63, #9c27b0);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: block; /* changed from inline-block to block */
-  width: fit-content;
-}
-
+    .acr-heading {
+      text-align: center;
+      font-size: 42px;
+      font-weight: 600;
+      margin: 0 auto 50px;
+      animation: acrFadeInTop 1s ease-out forwards;
+      opacity: 0;
+      background: linear-gradient(90deg, #e91e63, #9c27b0);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: block;
+      width: fit-content;
+    }
 
     .acr-highlight-grid {
       display: flex;
@@ -1426,72 +1578,104 @@ html, body {
       }
 
       .acr-heading {
-        font-size: 24px;
+        font-size: 28px;
       }
     }
   </style>
 </head>
 <body>
-
-  <section class="acr-highlight-wrapper"data-aos="fade-up">
-    <h2 class="acr-heading" data-aos="fade-up" >Why Thousands Trust Akhil Car Rentals</h2>
+<section class="acr-highlight-wrapper">
+    <h2 class="acr-heading">Why Thousands Trust Akhil Car Rentals</h2>
 
     <div class="acr-highlight-grid">
-      <div class="acr-highlight-card acr-bg-pink" data-aos="fade-right">
+      <div class="acr-highlight-card acr-bg-pink">
         <div class="acr-icon"><i class="fas fa-users"></i></div>
-        <div class="acr-value">200K+</div>
+        <div class="acr-value" data-count="200000">0</div>
         <div class="acr-label">Happy Customers</div>
       </div>
 
-      <div class="acr-highlight-card acr-bg-blue" data-aos="fade-left">
+      <div class="acr-highlight-card acr-bg-blue">
         <div class="acr-icon"><i class="fas fa-shield-alt"></i></div>
-        <div class="acr-value">100%</div>
+        <div class="acr-value" data-count="100">0%</div>
         <div class="acr-label">Safe Rides Assured</div>
       </div>
 
       <div class="acr-highlight-card acr-bg-green">
         <div class="acr-icon"><i class="fas fa-road"></i></div>
-        <div class="acr-value">100M+ Kms</div>
+        <div class="acr-value" data-count="100000000">0</div>
         <div class="acr-label">Driven Nationwide</div>
       </div>
 
       <div class="acr-highlight-card acr-bg-purple">
         <div class="acr-icon"><i class="fas fa-city"></i></div>
-        <div class="acr-value">10+ Cities</div>
+        <div class="acr-value" data-count="10">0</div>
         <div class="acr-label">Fleet Presence</div>
       </div>
     </div>
 
-    <div class="acr-rating-box" data-aos="fade-up">
+    <div class="acr-rating-box">
       <div class="acr-stars">★ ★ ★ ★ ☆</div>
       <div class="acr-rating-text">
-        8 out of 10 customers love <strong>Akhil Car Rentals</strong>
+        10 out of 9 customers love <strong>Akhil Car Rentals</strong>
       </div>
     </div>
   </section>
 
-  <script>
-    const acrCards = document.querySelectorAll('.acr-highlight-card');
+ <script>
+  function animateCountUp(el, target, duration = 2000) {
+    let start = 0;
+    const startTime = performance.now();
 
-    const acrObserver = new IntersectionObserver(entries => {
-      entries.forEach((entry, i) => {
-        if (entry.isIntersecting) {
-          setTimeout(() => {
-            entry.target.classList.add('animate');
-          }, i * 150);
-          acrObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.3 });
+    const step = (now) => {
+      const elapsed = now - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const current = Math.floor(progress * target);
+      el.textContent = formatNumber(current, el.dataset.count);
+      if (progress < 1) {
+        requestAnimationFrame(step);
+      }
+    };
+    requestAnimationFrame(step);
+  }
 
-    acrCards.forEach(card => {
-      acrObserver.observe(card);
+  function formatNumber(num, originalValue) {
+    const val = parseInt(originalValue);
+
+    if (originalValue.includes('%')) return num + "%";
+    if (val >= 1000000) return (num / 1000000).toFixed(1) + "M+";
+    if (val >= 1000) return (num / 1000).toFixed(0) + "K+";
+    return num;
+  }
+
+  function triggerAllCounters() {
+    document.querySelectorAll('.acr-highlight-card .acr-value').forEach(valueEl => {
+      const target = parseInt(valueEl.dataset.count.replace(/\D/g, ''));
+      valueEl.textContent = '0'; // Reset
+      animateCountUp(valueEl, target);
     });
+  }
 
-    window.addEventListener('load', () => {
-      document.querySelector('.acr-heading').style.opacity = 1;
+  // First load trigger when in view
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate');
+        observer.unobserve(entry.target);
+      }
     });
-  </script>
+  }, { threshold: 0.3 });
+
+  document.querySelectorAll('.acr-highlight-card').forEach(card => {
+    observer.observe(card);
+  });
+
+  // Start animation loop every 10 seconds
+  window.addEventListener('load', () => {
+    document.querySelector('.acr-heading').style.opacity = 1;
+    triggerAllCounters(); // initial animation
+    setInterval(triggerAllCounters, 5000); // repeat every 10s
+  });
+</script>
 
 
 
@@ -1607,6 +1791,7 @@ html, body {
       padding: 12px 24px;
       font-weight: 600;
       border-radius: 50px;
+      font-size: 14px;
       text-decoration: none;
       font-family: 'Inter', sans-serif;
       transition: all 0.3s ease;
@@ -1794,7 +1979,7 @@ html, body {
       }
 .contact-right {
    
-    padding: 15px;
+    padding: 0px;
   }
       .contact-form {
         grid-template-columns: 1fr;
@@ -2003,7 +2188,8 @@ html, body {
   gap: 10px;
   background: linear-gradient(to right, #8e2de2, #4a00e0);
   color: #ffffff;
-  padding: 12px 24px;
+  padding: 12px 10px;
+  font-size: 14px;
   font-weight: 600;
   border-radius: 50px;
   text-decoration: none;
@@ -2261,7 +2447,7 @@ html, body {
       border: none;
       border-radius: 30px;
       font-weight: 600;
-      font-size: 16px;
+      font-size: 12px;
       cursor: pointer;
     }
 
