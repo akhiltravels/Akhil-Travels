@@ -129,6 +129,7 @@
       text-decoration: none;
       font-family: 'Inter', sans-serif;
       transition: all 0.3s ease;
+      font-size: 14px;
     }
 
     .map-button:hover {
@@ -463,58 +464,7 @@
 </script>
 
 
-<div id="transition-loader" class="loader">
-  <div class="logo-animation">
-    <span>Akhil</span> <span class="amp">Car</span> <span>Travels</span>
-    <span class="dot">●</span>
-  </div>
-</div>
 
-
-
-<!-- GSAP CDN -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
-
-<script>
-  const loader = document.getElementById("transition-loader");
-  const logo = loader.querySelector(".logo-animation");
-
-  function animateLoaderIn() {
-    gsap.set(loader, { opacity: 1, pointerEvents: "auto" });
-    return gsap.timeline()
-      .fromTo(logo, { opacity: 0, scale: 0.8 }, { opacity: 1, scale: 1, duration: 0.6, ease: "power2.out" });
-  }
-
-  function animateLoaderOut() {
-    return gsap.timeline()
-      .to(logo, { opacity: 0, scale: 0.8, duration: 0.5, ease: "power2.in" })
-      .to(loader, { opacity: 0, pointerEvents: "none", duration: 0.4 }, "-=0.3");
-  }
-
-  document.querySelectorAll("a[href^='#']").forEach(link => {
-    link.addEventListener("click", function (e) {
-      e.preventDefault();
-      const targetId = this.getAttribute("href");
-
-      animateLoaderIn().then(() => {
-        gsap.to(window, {
-          duration: 1,
-          scrollTo: targetId,
-          ease: "power2.inOut",
-          onComplete: () => {
-            animateLoaderOut();
-          }
-        });
-      });
-    });
-  });
-
-  // Optional: hide loader on first load
-  window.addEventListener("load", () => {
-    gsap.set(loader, { opacity: 0, pointerEvents: "none" });
-  });
-</script>
 
 
 
@@ -701,6 +651,57 @@
 
 
 </body>
+<!-- Page Transition Loader -->
+<div id="transition-loader" class="loader">
+  <div class="logo-animation">
+    <span>Akhil</span> <span class="amp">Car</span> <span>Travels</span>
+    <span class="dot">●</span>
+  </div>
+</div>
+
+<!-- GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+<script>
+  const loader = document.getElementById("transition-loader");
+  const logo = loader.querySelector(".logo-animation");
+
+  function showLoaderAndNavigate(href) {
+    gsap.set(loader, { opacity: 1, pointerEvents: "auto" });
+    gsap.fromTo(logo, 
+      { opacity: 0, scale: 0.8 }, 
+      { 
+        opacity: 1, 
+        scale: 1, 
+        duration: 0.6, 
+        ease: "power2.out",
+        onComplete: () => {
+          // Delay before navigating
+          setTimeout(() => {
+            window.location.href = href;
+          }, 500); // adjust duration as needed
+        }
+      }
+    );
+  }
+
+  document.querySelectorAll("a").forEach(link => {
+    const href = link.getAttribute("href");
+    // Only apply to internal links (not # or external)
+    if (href && !href.startsWith("http") && !href.startsWith("#") && !link.hasAttribute("target")) {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        showLoaderAndNavigate(href);
+      });
+    }
+  });
+
+  // Hide loader on page load
+  window.addEventListener("load", () => {
+    gsap.set(loader, { opacity: 0, pointerEvents: "none" });
+  });
+</script>
+
 </html>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet"/>
 
