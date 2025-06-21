@@ -242,6 +242,8 @@
     .gif-text {
       font-size: 2.3rem;
     }
+    .sub-heading {
+    font-size: 1.8rem;}
     }
     .sub-heading {
       font-size: 2rem;
@@ -881,6 +883,59 @@
 
 
 <body>
+<!-- Page Transition Loader -->
+<div id="transition-loader" class="loader">
+  <div class="logo-animation">
+    <span>Akhil</span> <span class="amp">Car</span> <span>Travels</span>
+    <span class="dot">●</span>
+  </div>
+</div>
+
+<!-- GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+<script>
+  const loader = document.getElementById("transition-loader");
+  const logo = loader.querySelector(".logo-animation");
+
+  function showLoaderAndNavigate(href) {
+    gsap.set(loader, { opacity: 1, pointerEvents: "auto" });
+    gsap.fromTo(logo, 
+      { opacity: 0, scale: 0.8 }, 
+      { 
+        opacity: 1, 
+        scale: 1, 
+        duration: 0.6, 
+        ease: "power2.out",
+        onComplete: () => {
+          // Delay before navigating
+          setTimeout(() => {
+            window.location.href = href;
+          }, 500); // adjust duration as needed
+        }
+      }
+    );
+  }
+
+  document.querySelectorAll("a").forEach(link => {
+    const href = link.getAttribute("href");
+    // Only apply to internal links (not # or external)
+    if (href && !href.startsWith("http") && !href.startsWith("#") && !link.hasAttribute("target")) {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        showLoaderAndNavigate(href);
+      });
+    }
+  });
+
+  // Hide loader on page load
+  window.addEventListener("load", () => {
+    gsap.set(loader, { opacity: 0, pointerEvents: "none" });
+  });
+</script>
+
+
+
   <div class="chat-container bounce-heading">
   <div class="chat-options" id="chatOptions">
     <a href="https://wa.me/919440404640" target="_blank" title="WhatsApp">
