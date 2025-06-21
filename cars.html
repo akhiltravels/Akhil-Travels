@@ -25,10 +25,10 @@
   </style>
    <div class="gradient-separator">
 <div class="navbar">
-    <div class="logo-section glow-text">
+    <div class="logo-section ">
       <img src="https://i.ibb.co/0pY2XHpT/akhil-logo-hd-upscaled.png" alt="Akhil Logo">
       <h1 class="brand-name">
-    <span class="brand-left glow-text">Akhil Car</span> <span class="brand-right glow-text ">Travels</span>
+    <span class="brand-left">Akhil Car</span> <span class="brand-right glow-text ">Travels</span>
   </h1>
     </div>
     <div class="center-nav">
@@ -238,7 +238,11 @@
       0% { background-position: 0% 50%; }
       100% { background-position: 100% 50%; }
     }
-
+@media (max-width: 768px) {
+    .gif-text {
+      font-size: 2.3rem;
+    }
+    }
     .sub-heading {
       font-size: 2rem;
       font-weight: bold;
@@ -428,7 +432,7 @@
     </div>
 
     <!-- CAR 3 -->
-    <div class="car-card" data-title="Mercedes GLE" data-aos="fade-up">
+    <div class="car-card" data-title="Mercedes GLE" >
        <img src="https://i.ibb.co/v6Bwgp3b/74fc756f-aec1-40b9-84ec-e70c4da1265e.webp" />
   <h2 class="car-title">JAGUAR XF</h2>
       <div class="btn-group">
@@ -755,7 +759,7 @@
     <!-- CAR 11 -->
     <div class="car-card" data-title="Maruti Ciaz">
       <img src="https://i.ibb.co/WpF7c5vd/0918-01-L-1.jpg" />
-  <h2 class="car-title"data-aos="zoom-in">TOYOTA ETIOS</h2>
+  <h2 class="car-title">TOYOTA ETIOS</h2>
       <div class="btn-group">
         <button class="btn active" data-type="dayrent">Day Rent</button>
         <button class="btn" data-type="regular">Regular</button>
