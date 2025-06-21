@@ -281,12 +281,14 @@
         display: none;
       }
 .logo-section img {
+    height: 101px;
     
-    margin-right: 0px;
+    width: 104px;
+    margin-right:0px;
     
     }
 .logo-section h1{
-  font-size: 16px;
+  font-size: 15px;
 }
       .hamburger {
         display: flex;
@@ -294,7 +296,7 @@
 
    .brand-name {
  
-  font-size: 16px;
+  font-size: 15px;
  
 }
 
